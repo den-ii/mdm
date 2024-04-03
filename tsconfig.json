@@ -1,8 +1,12 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
-    "baseUrl": ".",
-    "paths": { "@/*": ["./*"] },
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["./app/*"],
+
+      "@/vendor_img/*": ["./public/assets/vendor/*"]
+    },
     "target": "ESNext",
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "allowJs": true,
