@@ -1,4 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { redirect } from "next/navigation";
 
 export interface DefaultMemory {
   user?: CurrentUser | null;
@@ -54,12 +55,13 @@ export const memory = createSlice({
       state.subscription = payload;
     },
     logoutUser: (state: DefaultMemory) => {
-      if (window.top) {
-        window.top.location.href = "/";
-      }
       state.user = null;
       state.isAuthenticated = false;
       state.subscription = null;
+      redirect("/");
+      // if (window.top) {
+      //   window.top.location.href = "/";
+      // }
     },
     clearData: (state) => {
       return initialState;
