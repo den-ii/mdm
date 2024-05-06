@@ -4,7 +4,7 @@ import { useState, useEffect, useRef, FormEvent } from "react";
 import Ring from "@/components/ring";
 import Link from "next/link";
 
-function IndexPage() {
+function LoginPage() {
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
 
@@ -30,7 +30,7 @@ function IndexPage() {
         </div>
         <div>
           <div className="mt-14">
-            <div className="flex flex-col items-center">
+            <Link href="/" className="flex flex-col items-center">
               <Image
                 src="/assets/vendor/login/mdm_logo.svg"
                 width={70}
@@ -43,7 +43,7 @@ function IndexPage() {
               >
                 Vendor Web
               </p>
-            </div>
+            </Link>
             <p className="mt-12 text-white text-center font-semibold text-2xl">
               Empowering micro-merchants with digitized payments.
             </p>
@@ -53,7 +53,7 @@ function IndexPage() {
 
       <div className="hidden md:block bg-[url('/assets/vendor/login/background.png')] bg-fill bg-no-repeat w-[42%] min-h-screen">
         <div className="mt-[2.6rem]">
-          <div className="flex flex-col items-center">
+          <Link href="/" className="flex flex-col items-center">
             <Image
               src="/assets/vendor/login/mdm_logo.svg"
               width={80}
@@ -66,7 +66,7 @@ function IndexPage() {
             >
               Vendor Web
             </p>
-          </div>
+          </Link>
           <p className="mt-[3.1rem] text-white text-center font-semibold text-3xl px-1">
             Empowering micro-merchants with digitized payments.
           </p>
@@ -107,7 +107,7 @@ function IndexPage() {
                 <input
                   placeholder="vendor@info.ng"
                   type="email"
-                  className="p-3 pl-9 w-full text-sm border border-[#DADAE8] rounded-[8px] focus:outline focus:outline-base"
+                  className="p-3 pl-9 w-full text-sm border border-[#DADAE8] rounded-[8px] focus:outline focus:outline-primary_700"
                 />
                 <img
                   className="absolute top-[50%] -translate-y-[50%] left-2"
@@ -126,7 +126,7 @@ function IndexPage() {
                 <input
                   placeholder="**********"
                   type={showPassword ? "text" : "password"}
-                  className="p-3 px-9 w-full  text-sm border border-[#DADAE8] rounded-[8px] focus:outline focus:outline-base"
+                  className="p-3 px-9 w-full  text-sm border border-[#DADAE8] rounded-[8px] focus:outline focus:outline-primary_700"
                 />
                 <img
                   className="absolute top-[50%] -translate-y-[50%] left-2"
@@ -149,7 +149,7 @@ function IndexPage() {
               <button
                 className="bg-primary_700 flex justify-center items-center font-semibold 
               text-white w-full h-[46px] rounded-[8px] 
-              opacity-100 transition duration-300 ease-in-out hover:opacity-90 
+               transition duration-500 ease-in-out hover:bg-primary_900
               focus:bg-primary-accent-300 focus:shadow-primary-2 focus:outline-none focus:ring-0"
               >
                 {loading ? <Ring color="white" size={32} /> : "Log in"}
@@ -162,4 +162,4 @@ function IndexPage() {
   );
 }
 
-export default IndexPage;
+export default LoginPage;
