@@ -27,6 +27,10 @@ a {
   background-color: #1f65fd;
 }
 
+.modal_bg {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;

@@ -75,7 +75,12 @@ function LoginPage() {
           id="preview"
           className="mt-[5.3rem] w-[85%] max-w-[720px] relative"
         >
-          <img src="/assets/vendor/login/side1_img.svg" alt="Logo" />
+          <Image
+            width={500}
+            height={500}
+            src="/assets/vendor/login/side1_img.svg"
+            alt="Logo"
+          />
         </div>
       </div>
       <div className="md:w-[60%] bg-[#FBFBFD]">

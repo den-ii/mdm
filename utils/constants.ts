@@ -25,7 +25,7 @@ export const baseQueryWithAuth = async (args: any, api: any, extra: any) => {
   );
 };
 export const paths = new Map();
-paths.set("/", true);
-paths.set("/devices", true);
+paths.set("/", "Dashboard");
+paths.set("/devices", "Device Management");
 // paths.set('/', true);
 // paths.set('/', true);
