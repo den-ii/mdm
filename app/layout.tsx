@@ -2,6 +2,7 @@
 import "@/styles/globals.css";
 import { ReduxProvider } from "../redux/provider";
 import { usePathname } from "next/navigation";
+import Sidebar from "./components/sidebar";
 import Navbar from "./components/navbar";
 
 // export const metadata = {
@@ -20,13 +21,17 @@ export default function RootLayout({ children }: IRootLayout) {
   let body;
   if (pathName === "/login" || pathName === "/register") {
     body = <body>{children}</body>;
-  } else
+  } else {
     body = (
       <body className="flex p-3 bg-[#FAFAFA] gap-4">
-        <Navbar />
-        <div>{children}</div>
+        <Sidebar />
+        <div>
+          <Navbar />
+          <div>{children}</div>
+        </div>
       </body>
     );
+  }
 
   return (
     <ReduxProvider>
