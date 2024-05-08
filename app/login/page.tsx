@@ -51,7 +51,7 @@ function LoginPage() {
         </div>
       </div>
 
-      <div className="hidden md:block bg-[url('/assets/vendor/login/background.png')] bg-fill bg-no-repeat w-[42%] min-h-screen">
+      <div className="hidden md:block bg-[url('/assets/vendor/login/background.png')] bg-cover bg-no-repeat w-[42%] min-h-screen">
         <div className="mt-[2.6rem]">
           <Link href="/" className="flex flex-col items-center">
             <Image
@@ -67,7 +67,7 @@ function LoginPage() {
               Vendor Web
             </p>
           </Link>
-          <p className="mt-[3.1rem] text-white text-center font-semibold text-3xl px-1">
+          <p className="mt-[3.1rem] text-white text-center font-semibold text-3xl px-3">
             Empowering micro-merchants with digitized payments.
           </p>
         </div>
@@ -126,7 +126,7 @@ function LoginPage() {
                 <input
                   placeholder="**********"
                   type={showPassword ? "text" : "password"}
-                  className="p-3 px-9 w-full  text-sm border border-[#DADAE8] rounded-[8px] focus:outline focus:outline-primary_700"
+                  className="p-3 px-9 w-full  text-sm border border-[#DADAE8] rounded-[8px] focus:outline  focus:outline-primary_700"
                 />
                 <img
                   className="absolute top-[50%] -translate-y-[50%] left-2"
@@ -147,12 +147,12 @@ function LoginPage() {
             </div>
             <div className="mt-8">
               <button
-                className="bg-primary_700 flex justify-center items-center font-semibold 
-              text-white w-full h-[46px] rounded-[8px] 
+                className=" bg-primary_700 flex  justify-center items-center font-semibold 
+              text-white w-full h-[40px] md:h-[46px] rounded-[8px] 
                transition duration-500 ease-in-out hover:bg-primary_900
               focus:bg-primary-accent-300 focus:shadow-primary-2 focus:outline-none focus:ring-0"
               >
-                {loading ? <Ring color="white" size={32} /> : "Log in"}
+                {loading ? <Ring color="white" size={30} /> : "Log in"}
               </button>
             </div>
           </form>

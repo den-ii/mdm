@@ -62,14 +62,16 @@ function Business() {
               <label className="text-sm font-semibold">Business Name</label>
               <div className="relative">
                 <input
-                  placeholder="Business Name"
+                  placeholder="Devos Inc"
                   type="text"
-                  className="mt-1 p-3 pl-9 w-full text-sm border border-[#DADAE8] rounded-[8px] focus:outline focus:outline-primary_700"
+                  className="mt-1 p-3 pl-9 w-full text-sm border border-[#DADAE8] rounded-[8px] md:focus:outline :focus:outline-none"
                 />
-                <MdBusinessCenter
-                  fill="#AAAABF"
-                  size={22}
+                <Image
+                  src={"/assets/vendor/register/briefcase.svg"}
                   className="absolute top-[50%] -translate-y-[50%] left-2"
+                  width={20}
+                  height={20}
+                  alt="business"
                 />
               </div>
             </div>
@@ -77,9 +79,9 @@ function Business() {
               <label className="text-sm font-semibold">Business Address</label>
               <div className="relative">
                 <input
-                  placeholder="Location"
+                  placeholder="42 Saka Tinibu"
                   type="text"
-                  className="mt-1 p-3 pl-9 w-full text-sm border border-[#DADAE8] rounded-[8px] focus:outline focus:outline-primary_700"
+                  className="mt-1 p-3 pl-9 w-full text-sm border border-[#DADAE8] rounded-[8px] md:focus:outline :focus:outline-none"
                 />
                 <MdLocationPin
                   fill="#AAAABF"
@@ -96,13 +98,20 @@ function Business() {
                 <input
                   placeholder="Lagos"
                   type="text"
-                  className="mt-1 p-3 pl-9 w-full text-sm border border-[#DADAE8] rounded-[8px] focus:outline focus:outline-primary_700"
+                  className="mt-1 p-3 pl-9 w-full text-sm border border-[#DADAE8] rounded-[8px] md:focus:outline :focus:outline-none"
                 />
-                <FaCity
+                <Image
+                  src={"/assets/vendor/register/compass.svg"}
+                  className="absolute top-[50%] -translate-y-[50%] left-2"
+                  width={20}
+                  height={20}
+                  alt="business"
+                />
+                {/* <FaCity
                   fill="#AAAABF"
                   size={22}
                   className="absolute top-[50%] -translate-y-[50%] left-2"
-                />
+                /> */}
               </div>
             </div>
             <div className="w-full">
@@ -111,7 +120,7 @@ function Business() {
                 <input
                   placeholder="Lekki"
                   type="text"
-                  className="mt-1 p-3 pl-9 w-full text-sm border border-[#DADAE8] rounded-[8px] focus:outline focus:outline-primary_700"
+                  className="mt-1 p-3 pl-9 w-full text-sm border border-[#DADAE8] rounded-[8px] md:focus:outline :focus:outline-none"
                 />
                 <FaCity
                   fill="#AAAABF"
@@ -174,7 +183,7 @@ function Business() {
           </div>
           <div className="mt-8">
             <button
-              className="bg-primary_700 flex justify-center items-center font-semibold 
+              className="max-w-[1000px] mx-auto bg-primary_700 flex justify-center items-center font-semibold 
         text-white w-full h-[46px] rounded-[8px] 
         opacity-100 transition duration-500 ease-in-out hover:bg-primary_900
         focus:shadow-primary-2 focus:outline-none focus:ring-0"

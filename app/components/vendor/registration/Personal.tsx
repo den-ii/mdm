@@ -142,7 +142,7 @@ function Personal({ changeScreen }: IPersonal) {
           </div>
           <div className="mt-8">
             <button
-              className="bg-primary_700 flex justify-center items-center font-semibold 
+              className="max-w-[1000px] mx-auto bg-primary_700 flex justify-center items-center font-semibold 
         text-white w-full h-[46px] rounded-[8px] 
         opacity-100 transition duration-500 ease-in-out hover:bg-primary_900 
          focus:shadow-primary-2 focus:outline-none focus:ring-0"

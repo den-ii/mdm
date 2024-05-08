@@ -4,7 +4,8 @@
     "baseUrl": "./",
     "paths": {
       "@/*": ["./app/*"],
-
+      "@/assets/*": ["./public/assets/*"],
+      "@/components/*": ["./app/components/*"],
       "@/vendor_img/*": ["./public/assets/vendor/*"]
     },
     "target": "ESNext",

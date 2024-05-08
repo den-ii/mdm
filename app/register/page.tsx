@@ -20,7 +20,10 @@ function RegisterPage() {
 
   return (
     <main className="min-h-screen md:flex w-full">
-      <div className="min-h-[369px] flex flex-col md:block bg-[url('/assets/vendor/register/background.png')] bg-fill bg-no-repeat md:m-2 p-4 md:w-[30%]">
+      <div
+        className="min-h-[369px] flex flex-col md:block bg-[url('/assets/vendor/register/background.png')]
+       bg-cover bg-no-repeat md:m-2 p-4 md:w-[30%]"
+      >
         <Link href="/" className="hidden md:inline-block">
           <Image
             src="/assets/vendor/login/mdm_logo.svg"
