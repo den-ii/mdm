@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 interface IModal {
   maxWidth?: string;
@@ -7,9 +7,19 @@ interface IModal {
   children: React.ReactNode;
 }
 
-function Modal({ maxWidth, maxHeight, closeModal, children }: IModal) {
-  maxWidth = maxWidth ?? "max-w-[802px]";
-  maxHeight = maxHeight ?? "max-h-[370px]";
+function Modal({
+  maxWidth = "max-w-[802px]",
+  maxHeight = "max-h-[370px]",
+  closeModal,
+  children,
+}: IModal) {
+  useEffect(() => {
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  });
 
   return (
     <div className="fixed top-0 bottom-0 left-0 right-0 h-screen w-screen">

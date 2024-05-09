@@ -8,7 +8,7 @@ function Sidebar() {
   const pathname = usePathname();
 
   return (
-    <nav className="bg-primary_700 max-h-[750px] p-4 px-2 rounded-[16px] w-[132px] flex flex-col items-center">
+    <nav className="bg-primary_700 max-h-[700px] p-4 px-2 rounded-[16px] w-[132px] flex flex-col items-center">
       <div className="mb-5">
         <Link href="/" className="hidden md:inline-block">
           <Image
