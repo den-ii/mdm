@@ -9,16 +9,15 @@ function Sidebar() {
 
   return (
     <nav className="bg-primary_700 max-h-[700px] p-4 px-2 rounded-[16px] w-[132px] flex flex-col items-center">
-      <div className="mb-5">
-        <Link href="/" className="hidden md:inline-block">
-          <Image
-            src="/assets/vendor/login/mdm_logo.svg"
-            width={80}
-            height={32}
-            alt="Logo"
-          />
-        </Link>
-      </div>
+      <Link href="/" className="cursor-pointer mb-5">
+        <Image
+          src="/assets/vendor/login/mdm_logo.svg"
+          width={80}
+          height={32}
+          alt="Logo"
+          className="cursor-pointer"
+        />
+      </Link>
       <Link
         href="/"
         className={`  ${
@@ -68,7 +67,7 @@ function Sidebar() {
         </div>
       </Link>
       <Link
-        href="/notification"
+        href="/notifications"
         className={`  ${
           pathname === "/notifications" ? "dash_active" : "opacity-80"
         } mt-2 flex items-center justify-center  hover:opacity-100 w-full h-[70px] rounded-[12px]`}
@@ -116,7 +115,7 @@ function Sidebar() {
         </div>
       </Link>
       <Link
-        href="/teams"
+        href="/team"
         className={`  ${
           pathname === "/team" ? "dash_active" : "opacity-80"
         } mt-2 flex items-center justify-center  hover:opacity-100 w-full h-[70px] rounded-[12px]`}

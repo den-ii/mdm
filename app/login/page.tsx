@@ -112,7 +112,7 @@ function LoginPage() {
                 <input
                   placeholder="vendor@info.ng"
                   type="email"
-                  className="p-3 pl-9 w-full text-sm border border-[#DADAE8] rounded-[8px] focus:outline focus:outline-primary_700"
+                  className="p-3 pl-9 w-full text-sm border border-[#DADAE8] rounded-[8px] focus:outline focus:outline-1 focus:outline-black"
                 />
                 <img
                   className="absolute top-[50%] -translate-y-[50%] left-2"
@@ -131,7 +131,7 @@ function LoginPage() {
                 <input
                   placeholder="**********"
                   type={showPassword ? "text" : "password"}
-                  className="p-3 px-9 w-full  text-sm border border-[#DADAE8] rounded-[8px] focus:outline  focus:outline-primary_700"
+                  className="p-3 px-9 w-full  text-sm border border-[#DADAE8] rounded-[8px] focus:outline focus:outline-1 focus:outline-black"
                 />
                 <img
                   className="absolute top-[50%] -translate-y-[50%] left-2"

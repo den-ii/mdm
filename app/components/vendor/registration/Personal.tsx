@@ -52,7 +52,7 @@ function Personal({ changeScreen }: IPersonal) {
                 <input
                   placeholder="First Name"
                   type="text"
-                  className="mt-1 p-3 pl-9 w-full text-sm border border-[#DADAE8] rounded-[8px] focus:outline focus:outline-primary_700"
+                  className="mt-1 p-3 pl-9 w-full text-sm border border-[#DADAE8] rounded-[8px] focus:outline focus:outline-1 focus:outline-black"
                 />
                 <FaUser
                   fill="#AAAABF"
@@ -67,7 +67,7 @@ function Personal({ changeScreen }: IPersonal) {
                 <input
                   placeholder="Last Name"
                   type="text"
-                  className="mt-1 p-3 pl-9 w-full text-sm border border-[#DADAE8] rounded-[8px] focus:outline focus:outline-primary_700"
+                  className="mt-1 p-3 pl-9 w-full text-sm border border-[#DADAE8] rounded-[8px] focus:outline focus:outline-1 focus:outline-black"
                 />
                 <FaUser
                   fill="#AAAABF"
@@ -83,7 +83,7 @@ function Personal({ changeScreen }: IPersonal) {
               <input
                 placeholder="Enter First Name"
                 type="text"
-                className="mt-1 p-3 pl-9 w-full text-sm border border-[#DADAE8] rounded-[8px] focus:outline focus:outline-primary_700"
+                className="mt-1 p-3 pl-9 w-full text-sm border border-[#DADAE8] rounded-[8px] focus:outline focus:outline-1 focus:outline-black"
               />
             </div>
             <div className="w-full">
@@ -92,7 +92,7 @@ function Personal({ changeScreen }: IPersonal) {
                 <input
                   placeholder="vendor@info.ng"
                   type="email"
-                  className="mt-1 p-3 pl-9 w-full text-sm border border-[#DADAE8] rounded-[8px] focus:outline focus:outline-primary_700"
+                  className="mt-1 p-3 pl-9 w-full text-sm border border-[#DADAE8] rounded-[8px] focus:outline focus:outline-1 focus:outline-black"
                 />
                 <img
                   className="absolute top-[55%] -translate-y-[50%] left-2"
@@ -111,7 +111,7 @@ function Personal({ changeScreen }: IPersonal) {
                 <input
                   placeholder="***********"
                   type="password"
-                  className="mt-1 p-3 pl-9 w-full text-sm border border-[#DADAE8] rounded-[8px] focus:outline focus:outline-primary_700"
+                  className="mt-1 p-3 pl-9 w-full text-sm border border-[#DADAE8] rounded-[8px] focus:outline focus:outline-1 focus:outline-black"
                 />
                 <img
                   className="absolute top-[50%] -translate-y-[50%] left-2"
@@ -128,7 +128,7 @@ function Personal({ changeScreen }: IPersonal) {
                 <input
                   placeholder="***********"
                   type="password"
-                  className="mt-1 p-3 pl-9 w-full text-sm border border-[#DADAE8] rounded-[8px] focus:outline focus:outline-primary_700"
+                  className="mt-1 p-3 pl-9 w-full text-sm border border-[#DADAE8] rounded-[8px] focus:outline focus:outline-1 focus:outline-black"
                 />
                 <img
                   className="absolute top-[50%] -translate-y-[50%] left-2"
