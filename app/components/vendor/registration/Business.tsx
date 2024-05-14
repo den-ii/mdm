@@ -60,7 +60,7 @@ function Business() {
                 <input
                   placeholder="Devos Inc"
                   type="text"
-                  className="mt-1 p-3 pl-9 w-full text-sm border border-[#DADAE8] rounded-[8px] md:focus:outline :focus:outline-none"
+                  className="mt-1 p-3 pl-9 w-full text-sm border border-[#DADAE8] rounded-[8px] focus:outline focus:outline-1 focus:outline-black"
                 />
                 <Image
                   src={"/assets/vendor/register/briefcase.svg"}
@@ -77,7 +77,7 @@ function Business() {
                 <input
                   placeholder="42 Saka Tinibu"
                   type="text"
-                  className="mt-1 p-3 pl-9 w-full text-sm border border-[#DADAE8] rounded-[8px] md:focus:outline :focus:outline-none"
+                  className="mt-1 p-3 pl-9 w-full text-sm border border-[#DADAE8] rounded-[8px] focus:outline focus:outline-1 focus:outline-black"
                 />
                 <MdLocationPin
                   fill="#AAAABF"
@@ -94,7 +94,7 @@ function Business() {
                 <input
                   placeholder="Lagos"
                   type="text"
-                  className="mt-1 p-3 pl-9 w-full text-sm border border-[#DADAE8] rounded-[8px] md:focus:outline :focus:outline-none"
+                  className="mt-1 p-3 pl-9 w-full text-sm border border-[#DADAE8] rounded-[8px] focus:outline focus:outline-1 focus:outline-black"
                 />
                 <Image
                   src={"/assets/vendor/register/compass.svg"}
@@ -116,7 +116,7 @@ function Business() {
                 <input
                   placeholder="Lekki"
                   type="text"
-                  className="mt-1 p-3 pl-9 w-full text-sm border border-[#DADAE8] rounded-[8px] md:focus:outline :focus:outline-none"
+                  className="mt-1 p-3 pl-9 w-full text-sm border border-[#DADAE8] rounded-[8px] focus:outline focus:outline-1 focus:outline-black"
                 />
                 <FaCity
                   fill="#AAAABF"

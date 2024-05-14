@@ -8,23 +8,13 @@ interface IBillingInfoModal {
 function BillingInfoModal({ closeModal }: IBillingInfoModal) {
   return (
     <Modal
+      heading="Billing Information"
       closeModal={closeModal}
       maxWidth="max-w-[489px]"
       maxHeight="max-h-[90%]"
     >
-      <div className="px-4 py-4 border-b flex justify-between">
-        <h4 className="font-semibold text-xl">Billing Information</h4>
-        <button onClick={closeModal}>
-          <Image
-            width={32}
-            height={32}
-            src={"/assets/close_modal.svg"}
-            alt="close modal"
-          />
-        </button>
-      </div>
-      <div className="flex-1 px-4 flex flex-col justify-center gap-3  overflow-y-scroll">
-        <div>
+      <div className="flex-1 px-4 flex flex-col gap-3  overflow-y-auto">
+        <div className="mt-4">
           <div className="flex gap-2 items-center">
             <h4 className="font-semibold ">Billing Address</h4>
             <div className="h-[1px] flex-1 bg-[#DADAE8]"></div>
@@ -55,6 +45,42 @@ function BillingInfoModal({ closeModal }: IBillingInfoModal) {
                 type="text"
                 className="text-sm mt-2 block border rounded-lg p-2 w-full focus:outline focus:outline-1 focus:outline-black"
               />
+            </div>
+          </div>
+        </div>
+        <div className="mt-3">
+          <div className="flex gap-2 items-center">
+            <h4 className="font-semibold ">Card Details</h4>
+            <div className="h-[1px] flex-1 bg-[#DADAE8]"></div>
+          </div>
+          <div className="mt-3">
+            <label className="text-sm">CardHolder Name</label>
+            <input
+              type="text"
+              className="text-sm mt-2 block border rounded-lg p-2 w-full focus:outline focus:outline-1 focus:outline-black"
+            />
+            <div className="mt-3">
+              <label className="text-sm">Card Number</label>
+              <input
+                type="text"
+                className="text-sm mt-2 block border rounded-lg p-2 w-full focus:outline focus:outline-1 focus:outline-black"
+              />
+            </div>
+            <div className="flex gap-3 mb-6">
+              <div className="mt-3 flex-1">
+                <label className="text-sm">CCV</label>
+                <input
+                  type="text"
+                  className="text-sm mt-2 block border rounded-lg p-2 w-full focus:outline focus:outline-1 focus:outline-black"
+                />
+              </div>
+              <div className="mt-3 flex-1">
+                <label className="text-sm">Expiry Date</label>
+                <input
+                  type="text"
+                  className="text-sm mt-2 block border rounded-lg p-2 w-full focus:outline focus:outline-1 focus:outline-black"
+                />
+              </div>
             </div>
           </div>
         </div>

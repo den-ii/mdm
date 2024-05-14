@@ -17,8 +17,8 @@ function RequestDeviceModal({ closeModal }: IRequestDeviceModal) {
   } = useDeviceQty();
 
   return (
-    <Modal closeModal={closeModal}>
-      <div className="px-4 py-4 border-b flex justify-between">
+    <Modal heading="Request Device" closeModal={closeModal}>
+      {/* <div className="px-4 py-4 border-b flex justify-between">
         <h4 className="font-semibold text-xl">Request Device</h4>
         <button onClick={closeModal}>
           <Image
@@ -28,7 +28,7 @@ function RequestDeviceModal({ closeModal }: IRequestDeviceModal) {
             alt="close modal"
           />
         </button>
-      </div>
+      </div> */}
       <div className="flex-1 px-4 flex flex-col justify-center gap-3">
         <p>Select the quantity of sachet device you want</p>
         <DeviceQty

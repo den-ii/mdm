@@ -3,6 +3,8 @@ import Image from "next/image";
 import { MouseEventHandler, useState } from "react";
 import RequestDeviceModal from "../modals/RequestDeviceModal";
 import BillingInfoModal from "../modals/BillingInfo";
+import NotificationPrefModal from "../modals/NotificationPreferenceModal";
+import InviteUsersModal from "../modals/InviteUsersModal";
 
 interface IUseShow {
   handleRequestDeviceModal: (bool: boolean) => void;
@@ -11,6 +13,8 @@ interface IUseShow {
 function FTU() {
   const [requestDeviceModal, setRequestDeviceModal] = useState(false);
   const [billingInfoModal, setBillingInfoModal] = useState(false);
+  const [notificationPrefModal, setNotificationPrefModal] = useState(false);
+  const [inviteUsersModal, setInviteUsersModal] = useState(false);
 
   const [loadBar, setLoadBar] = useState(0.5);
   const [stages, setStages] = useState<{ [key: number]: boolean }>({
@@ -34,6 +38,16 @@ function FTU() {
   const handleBillingInfoModal = (bool: boolean, e?: any) => {
     e?.stopPropagation();
     setBillingInfoModal(bool);
+  };
+
+  const handleInviteUsersModal = (bool: boolean, e?: any) => {
+    e?.stopPropagation();
+    setInviteUsersModal(bool);
+  };
+
+  const handleNotificationPrefModal = (bool: boolean, e?: any) => {
+    e?.stopPropagation();
+    setNotificationPrefModal(bool);
   };
 
   const increaseLoadBar = () => setLoadBar((loadBar) => loadBar + 25.5);
@@ -62,7 +76,14 @@ function FTU() {
       {billingInfoModal && (
         <BillingInfoModal closeModal={() => handleBillingInfoModal(false)} />
       )}
-
+      {notificationPrefModal && (
+        <NotificationPrefModal
+          closeModal={() => handleNotificationPrefModal(false)}
+        />
+      )}
+      {inviteUsersModal && (
+        <InviteUsersModal closeModal={() => handleInviteUsersModal(false)} />
+      )}
       {/* ---------------------------------------------------------------------------------------- */}
       <h1 className="font-semibold text-xl">Hi Scarlett, Welcome to MDM</h1>
       <div className="bg-white p-3 mt-2 max-w-[835px] rounded-[16px]">
@@ -162,7 +183,11 @@ function FTU() {
                 <p className="text-[0.75rem] mt-1">
                   Tailor your notification experience to suit your preferences.
                 </p>
-                <button className="mt-3 bg-primary_700 transition duration-500 ease-in-out hover:bg-primary_900 py-3 px-4 rounded-lg text-sm text-white">
+                <button
+                  className="mt-3 bg-primary_700 transition duration-500 ease-in-out
+                 hover:bg-primary_900 py-3 px-4 rounded-lg text-sm text-white"
+                  onClick={(e) => handleNotificationPrefModal(true, e)}
+                >
                   Set Notification Preference
                 </button>
               </div>
@@ -194,7 +219,11 @@ function FTU() {
                   Strengthen your workforce by easily extending invitations to
                   join your platform.
                 </p>
-                <button className="mt-3 bg-primary_700 transition duration-500 ease-in-out hover:bg-primary_900 py-3 px-4 rounded-lg text-sm text-white">
+                <button
+                  className="mt-3 bg-primary_700 transition duration-500 ease-in-out
+                 hover:bg-primary_900 py-3 px-4 rounded-lg text-sm text-white"
+                  onClick={(e) => handleInviteUsersModal(true, e)}
+                >
                   Invite User
                 </button>
               </div>

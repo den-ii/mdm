@@ -1,7 +1,7 @@
 import FTU from "./components/dashboard/FTU";
 
 export const metadata = {
-  title: "MDM: Dashboard",
+  title: "Vendor: Dashboard",
   description: "",
 };
 
