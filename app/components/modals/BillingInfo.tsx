@@ -1,15 +1,21 @@
-import Image from "next/image";
+import { useDispatch } from "react-redux";
+import { OnboardingStageArgs, setOnboardingStage } from "@/lib/slice/authSlice";
+
 import Modal from ".";
+import { FormEvent, FormEventHandler } from "react";
+import { closeModals } from "@/lib/slice/modalSlice";
 
-interface IBillingInfoModal {
-  closeModal: () => void;
-}
+function BillingInfoModal() {
+  const dispatch = useDispatch();
 
-function BillingInfoModal({ closeModal }: IBillingInfoModal) {
+  const saveDetails = () => {
+    dispatch(setOnboardingStage(OnboardingStageArgs.Stage2));
+    dispatch(closeModals());
+  };
+
   return (
     <Modal
       heading="Billing Information"
-      closeModal={closeModal}
       maxWidth="max-w-[489px]"
       maxHeight="max-h-[90%]"
     >
@@ -86,7 +92,10 @@ function BillingInfoModal({ closeModal }: IBillingInfoModal) {
         </div>
       </div>
       <div className="flex justify-center py-3 border-t">
-        <button className="bg-primary_700 transition duration-500 ease-in-out hover:bg-primary_900 px-4 py-3 rounded-lg text-white">
+        <button
+          onClick={saveDetails}
+          className="bg-primary_700 transition duration-500 ease-in-out hover:bg-primary_900 px-4 py-3 rounded-lg text-white"
+        >
           Save Details
         </button>
       </div>

@@ -1,34 +1,23 @@
-import Image from "next/image";
 import Modal from ".";
 import useDeviceQty from "../device_qty/useDeviceQty";
 import DeviceQty from "../device_qty";
+import { useDispatch } from "react-redux";
+import { OnboardingStageArgs, setOnboardingStage } from "@/lib/slice/authSlice";
+import { closeModals } from "@/lib/slice/modalSlice";
 
-interface IRequestDeviceModal {
-  closeModal: () => void;
-}
+function RequestDeviceModal() {
+  const { deviceNo, increaseDevice, decreaseDevice, handleDeviceChange } =
+    useDeviceQty();
 
-function RequestDeviceModal({ closeModal }: IRequestDeviceModal) {
-  const {
-    deviceNo,
-    increaseDevice,
-    decreaseDevice,
-    handleDeviceChange,
-    submitRequest,
-  } = useDeviceQty();
+  const dispatch = useDispatch();
+
+  const submitRequest = () => {
+    dispatch(setOnboardingStage(OnboardingStageArgs.Stage1));
+    dispatch(closeModals());
+  };
 
   return (
-    <Modal heading="Request Device" closeModal={closeModal}>
-      {/* <div className="px-4 py-4 border-b flex justify-between">
-        <h4 className="font-semibold text-xl">Request Device</h4>
-        <button onClick={closeModal}>
-          <Image
-            width={32}
-            height={32}
-            src={"/assets/close_modal.svg"}
-            alt="close modal"
-          />
-        </button>
-      </div> */}
+    <Modal heading="Request Device">
       <div className="flex-1 px-4 flex flex-col justify-center gap-3">
         <p>Select the quantity of sachet device you want</p>
         <DeviceQty

@@ -1,21 +1,19 @@
-import React from "react";
 import Modal from ".";
 import Image from "next/image";
-import Buttons from "../Button";
+import { OnboardingStageArgs, setOnboardingStage } from "@/lib/slice/authSlice";
+import { useDispatch } from "react-redux";
+import { closeModals } from "@/lib/slice/modalSlice";
 
-interface INotificationPreferenceModal {
-  closeModal: () => void;
-}
+function NotificationPreferenceModal() {
+  const dispatch = useDispatch();
 
-function NotificationPreferenceModal({
-  closeModal,
-}: INotificationPreferenceModal) {
+  const saveDetails = () => {
+    dispatch(setOnboardingStage(OnboardingStageArgs.Stage3));
+    dispatch(closeModals());
+  };
+
   return (
-    <Modal
-      heading="Notification Preference"
-      closeModal={closeModal}
-      maxHeight="max-h-[90%]"
-    >
+    <Modal heading="Notification Preference" maxHeight="max-h-[90%]">
       <div className="flex-1 px-4 flex flex-col gap-3  overflow-y-auto">
         <div className="mt-4">
           <div className="rounded-2xl border border-neutral_300 px-2">
@@ -135,7 +133,10 @@ function NotificationPreferenceModal({
         </div>
       </div>
       <div className="flex justify-center py-3 border-t">
-        <button className="bg-primary_700 transition duration-500 ease-in-out hover:bg-primary_900 px-4 py-3 rounded-lg text-white">
+        <button
+          onClick={saveDetails}
+          className="bg-primary_700 transition duration-500 ease-in-out hover:bg-primary_900 px-4 py-3 rounded-lg text-white"
+        >
           Save Details
         </button>
       </div>

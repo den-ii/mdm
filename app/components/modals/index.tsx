@@ -1,11 +1,12 @@
-import Image from "next/image";
 import React, { useEffect } from "react";
+import Image from "next/image";
+import { useDispatch } from "react-redux";
+import { closeModals } from "@/lib/slice/modalSlice";
 
 interface IModal {
   heading: string;
   maxWidth?: string;
   maxHeight?: string;
-  closeModal: () => void;
   children: React.ReactNode;
 }
 
@@ -13,9 +14,10 @@ function Modal({
   heading,
   maxWidth = "max-w-[702px]",
   maxHeight = "max-h-[370px]",
-  closeModal,
   children,
 }: IModal) {
+  const dispatch = useDispatch();
+
   useEffect(() => {
     document.body.style.overflow = "hidden";
 
@@ -23,6 +25,8 @@ function Modal({
       document.body.style.overflow = "auto";
     };
   });
+
+  const closeModal = () => dispatch(closeModals());
 
   return (
     <div className="fixed top-0 bottom-0 left-0 right-0 h-screen w-screen">

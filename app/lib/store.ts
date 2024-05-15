@@ -1,8 +1,9 @@
-import authReducer from "./slice/authSlice";
 import { configureStore } from "@reduxjs/toolkit";
-import storage from "redux-persist/lib/storage";
 import { persistReducer, persistStore } from "redux-persist";
 import { authApi } from "./services/authApi";
+import storage from "redux-persist/lib/storage";
+import authReducer from "./slice/authSlice";
+import modalReducer from "./slice/modalSlice";
 
 const persistConfig = { key: "auth", storage };
 
@@ -12,6 +13,7 @@ export const store = configureStore({
   reducer: {
     [authApi.reducerPath]: authApi.reducer,
     auth: persistAuthReducer,
+    modal: modalReducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat(authApi.middleware),

@@ -1,28 +1,39 @@
 "use client";
+import { useCallback, useEffect, useLayoutEffect, useState } from "react";
+import {
+  openBillingInfoModal,
+  openInviteUsersModal,
+  openNotificationPrefModal,
+  openRequestDeviceModal,
+} from "@/lib/slice/modalSlice";
+import { useDispatch, useSelector } from "react-redux";
 import Image from "next/image";
-import { MouseEventHandler, useState } from "react";
-import RequestDeviceModal from "../modals/RequestDeviceModal";
-import BillingInfoModal from "../modals/BillingInfo";
-import NotificationPrefModal from "../modals/NotificationPreferenceModal";
-import InviteUsersModal from "../modals/InviteUsersModal";
-
-interface IUseShow {
-  handleRequestDeviceModal: (bool: boolean) => void;
-}
+import { RootState } from "@/lib/store";
+import { OnboardingStageArgs, setOnboardingStage } from "@/lib/slice/authSlice";
 
 function FTU() {
-  const [requestDeviceModal, setRequestDeviceModal] = useState(false);
-  const [billingInfoModal, setBillingInfoModal] = useState(false);
-  const [notificationPrefModal, setNotificationPrefModal] = useState(false);
-  const [inviteUsersModal, setInviteUsersModal] = useState(false);
+  const [completed, setCompleted] = useState(0);
+  const [loadBar, setLoadBar] = useState(0.4);
+  const stages = useSelector((state: RootState) => state.auth.onboardingStage);
+  const [aStages, setAStages] = useState([false, false, false, false]);
 
-  const [loadBar, setLoadBar] = useState(0.5);
-  const [stages, setStages] = useState<{ [key: number]: boolean }>({
-    1: false,
-    2: false,
-    3: false,
-    4: false,
-  });
+  useEffect(() => {
+    let lBar = 0.4;
+    let cNo = 0;
+    let dStages = { ...stages } as { [key: number]: boolean };
+    const dAStages = [false, false, false, false];
+    for (let stage in dStages) {
+      if (dStages[stage]) {
+        lBar += 24.9;
+        cNo += 1;
+        dAStages[Number(stage) - 1] = true;
+      }
+    }
+    setLoadBar(lBar);
+    setCompleted(cNo);
+    setAStages(dAStages);
+  }, [stages]);
+
   const [showStages, setShowStages] = useState<{ [key: number]: boolean }>({
     1: false,
     2: false,
@@ -30,30 +41,37 @@ function FTU() {
     4: false,
   });
 
-  const handleRequestDeviceModal = (bool: boolean, e?: any) => {
-    e?.stopPropagation();
-    setRequestDeviceModal(bool);
-  };
+  const dispatch = useDispatch();
 
-  const handleBillingInfoModal = (bool: boolean, e?: any) => {
+  const handleRequestDeviceModal = useCallback((e?: any) => {
     e?.stopPropagation();
-    setBillingInfoModal(bool);
-  };
+    dispatch(openRequestDeviceModal());
+  }, []);
 
-  const handleInviteUsersModal = (bool: boolean, e?: any) => {
+  const handleBillingInfoModal = useCallback((e?: any) => {
     e?.stopPropagation();
-    setInviteUsersModal(bool);
-  };
+    dispatch(openBillingInfoModal());
+  }, []);
 
-  const handleNotificationPrefModal = (bool: boolean, e?: any) => {
+  const handleInviteUsersModal = useCallback((e?: any) => {
     e?.stopPropagation();
-    setNotificationPrefModal(bool);
-  };
+    dispatch(openInviteUsersModal());
+  }, []);
 
-  const increaseLoadBar = () => setLoadBar((loadBar) => loadBar + 25.5);
+  const handleNotificationPrefModal = useCallback((e?: any) => {
+    e?.stopPropagation();
+    dispatch(openNotificationPrefModal());
+  }, []);
 
   const handleShowStages = (e: any) => {
     const num = Number(e.currentTarget.id);
+    if (num === 2) {
+      dispatch(setOnboardingStage(OnboardingStageArgs.Stage1));
+    }
+    if (num === 4) {
+      dispatch(setOnboardingStage(OnboardingStageArgs.Stage1));
+      dispatch(setOnboardingStage(OnboardingStageArgs.Stage3));
+    }
     setShowStages((showStages) => ({
       1: false,
       2: false,
@@ -64,27 +82,9 @@ function FTU() {
     console.log(showStages);
   };
 
+  const lBar = loadBar + "%";
   return (
     <div>
-      {/* -----------------------------------  Modals -------------------------------------------*/}
-
-      {requestDeviceModal && (
-        <RequestDeviceModal
-          closeModal={() => handleRequestDeviceModal(false)}
-        />
-      )}
-      {billingInfoModal && (
-        <BillingInfoModal closeModal={() => handleBillingInfoModal(false)} />
-      )}
-      {notificationPrefModal && (
-        <NotificationPrefModal
-          closeModal={() => handleNotificationPrefModal(false)}
-        />
-      )}
-      {inviteUsersModal && (
-        <InviteUsersModal closeModal={() => handleInviteUsersModal(false)} />
-      )}
-      {/* ---------------------------------------------------------------------------------------- */}
       <h1 className="font-semibold text-xl">Hi Scarlett, Welcome to MDM</h1>
       <div className="bg-white p-3 mt-2 max-w-[835px] rounded-[16px]">
         <h2 className="font-semibold font-Poppins">Setup Guide</h2>
@@ -92,9 +92,14 @@ function FTU() {
           Use this personalised guide to get your system up and running.
         </p>
         <div className="mt-2 flex gap-3 items-center">
-          <span className="text-neutral_500 text-sm font-Poppins">0/4</span>
+          <span className="text-neutral_500 text-sm font-Poppins">
+            {completed}/4
+          </span>
           <div className="bg-[#F0F5FF] h-2 flex-1 rounded-2xl">
-            <div className="bg-primary_700 h-2 w-[0.5%] rounded-2xl"></div>
+            <div
+              className={`bg-primary_700 h-2 rounded-2xl`}
+              style={{ width: lBar }}
+            ></div>
           </div>
         </div>
         <div className="mt-4 border border-neutral-300 px-3 py-4 rounded-[12px]">
@@ -105,7 +110,18 @@ function FTU() {
             } px-3 py-5 rounded-[12px] gap-3`}
             onClick={handleShowStages}
           >
-            <div className="h-[24px] w-[24px] rounded-[50%] border border-[#A19FA8] border-dashed"></div>
+            <div
+              className="h-[24px] w-[24px] rounded-[50%] border border-[#A19FA8] border-dashed 
+            flex items-center justify-center"
+            >
+              <Image
+                src="/assets/vendor/dashboard/ftu_check.svg"
+                className={`${aStages[0] ? "inline-block" : "hidden"}`}
+                width={20}
+                height={20}
+                alt="checked"
+              />
+            </div>
             <div className="flex-1">
               <h3 className="text-matte text-sm font-semibold">
                 Request Additional Devices (If Needed)
@@ -117,7 +133,7 @@ function FTU() {
                 </p>
                 <button
                   className="mt-3 bg-primary_700 transition duration-500 ease-in-out hover:bg-primary_900 py-3 px-4 rounded-lg text-sm text-white"
-                  onClick={(e) => handleRequestDeviceModal(true, e)}
+                  onClick={(e) => handleRequestDeviceModal(e)}
                 >
                   Request Device
                 </button>
@@ -139,7 +155,19 @@ function FTU() {
             } px-3 py-5 rounded-[12px] gap-3`}
             onClick={handleShowStages}
           >
-            <div className="h-[24px] w-[24px] rounded-[50%] border border-[#A19FA8] border-dashed"></div>
+            <div
+              className="h-[24px] w-[24px] rounded-[50%]
+            flex items-center justify-center
+            border border-[#A19FA8] border-dashed"
+            >
+              <Image
+                src="/assets/vendor/dashboard/ftu_check.svg"
+                className={`${aStages[1] ? "inline-block" : "hidden"}`}
+                width={20}
+                height={20}
+                alt="checked"
+              />
+            </div>
             <div className="flex-1 justify-between">
               <h3 className="text-matte text-sm font-semibold">
                 Add Billing Information
@@ -151,7 +179,7 @@ function FTU() {
                 </p>
                 <button
                   className="mt-3 bg-primary_700 transition duration-500 ease-in-out hover:bg-primary_900 py-3 px-4 rounded-lg text-sm text-white"
-                  onClick={(e) => handleBillingInfoModal(true, e)}
+                  onClick={(e) => handleBillingInfoModal(e)}
                 >
                   Initiate Billing Setup
                 </button>
@@ -174,7 +202,19 @@ function FTU() {
             } px-3 py-5 rounded-[12px] gap-3`}
             onClick={handleShowStages}
           >
-            <div className="h-[24px] w-[24px] rounded-[50%] border border-[#A19FA8] border-dashed"></div>
+            <div
+              className="h-[24px] w-[24px] rounded-[50%]
+            flex items-center justify-center
+            border border-[#A19FA8] border-dashed"
+            >
+              <Image
+                src="/assets/vendor/dashboard/ftu_check.svg"
+                className={`${aStages[2] ? "inline-block" : "hidden"}`}
+                width={20}
+                height={20}
+                alt="checked"
+              />
+            </div>
             <div className="flex-1 justify-between">
               <h3 className="text-matte text-sm font-semibold">
                 Set your notification preferences
@@ -186,7 +226,7 @@ function FTU() {
                 <button
                   className="mt-3 bg-primary_700 transition duration-500 ease-in-out
                  hover:bg-primary_900 py-3 px-4 rounded-lg text-sm text-white"
-                  onClick={(e) => handleNotificationPrefModal(true, e)}
+                  onClick={(e) => handleNotificationPrefModal(e)}
                 >
                   Set Notification Preference
                 </button>
@@ -209,7 +249,18 @@ function FTU() {
             } px-3 py-5 rounded-[12px] gap-3`}
             onClick={handleShowStages}
           >
-            <div className="h-[24px] w-[24px] rounded-[50%] border border-[#A19FA8] border-dashed"></div>
+            <div
+              className="h-[24px] w-[24px] rounded-[50%] border
+             flex items-center justify-center border-[#A19FA8] border-dashed"
+            >
+              <Image
+                src="/assets/vendor/dashboard/ftu_check.svg"
+                className={`${aStages[3] ? "inline-block" : "hidden"}`}
+                width={20}
+                height={20}
+                alt="checked"
+              />
+            </div>
             <div className="flex-1 justify-between">
               <h3 className="text-matte text-sm font-semibold">
                 Send Invites to Team Members
@@ -222,7 +273,7 @@ function FTU() {
                 <button
                   className="mt-3 bg-primary_700 transition duration-500 ease-in-out
                  hover:bg-primary_900 py-3 px-4 rounded-lg text-sm text-white"
-                  onClick={(e) => handleInviteUsersModal(true, e)}
+                  onClick={(e) => handleInviteUsersModal(e)}
                 >
                   Invite User
                 </button>

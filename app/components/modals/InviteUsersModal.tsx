@@ -1,15 +1,19 @@
-import Image from "next/image";
+import { useDispatch } from "react-redux";
+import { OnboardingStageArgs, setOnboardingStage } from "@/lib/slice/authSlice";
 import Modal from ".";
+import { closeModals } from "@/lib/slice/modalSlice";
 
-interface IInviteUsersModal {
-  closeModal: () => void;
-}
+function InviteUsersModal() {
+  const dispatch = useDispatch();
 
-function InviteUsersModal({ closeModal }: IInviteUsersModal) {
+  const inviteUser = () => {
+    dispatch(setOnboardingStage(OnboardingStageArgs.Stage4));
+    dispatch(closeModals());
+  };
+
   return (
     <Modal
       heading="Invite Users"
-      closeModal={closeModal}
       maxWidth="max-w-[489px]"
       maxHeight="max-h-[90%]"
     >
@@ -53,7 +57,10 @@ function InviteUsersModal({ closeModal }: IInviteUsersModal) {
         </div>
       </div>
       <div className="flex justify-center py-3 border-t">
-        <button className="bg-primary_700 transition duration-500 ease-in-out hover:bg-primary_900 px-4 py-3 rounded-lg text-white">
+        <button
+          onClick={inviteUser}
+          className="bg-primary_700 transition duration-500 ease-in-out hover:bg-primary_900 px-4 py-3 rounded-lg text-white"
+        >
           Invite User
         </button>
       </div>
