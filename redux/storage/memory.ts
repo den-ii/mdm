@@ -6,6 +6,7 @@ export interface DefaultMemory {
   subscription?: Subscription | null;
   token?: string;
   isAuthenticated: boolean;
+  onboarding?: OnboardingStatus;
 }
 
 export interface CurrentUser {
@@ -14,6 +15,13 @@ export interface CurrentUser {
   _id: string;
   email: string;
   role: string;
+}
+
+export interface OnboardingStatus {
+  1: boolean;
+  2: boolean;
+  3: boolean;
+  4: boolean;
 }
 
 export interface Subscription {
@@ -54,6 +62,12 @@ export const memory = createSlice({
     ) => {
       state.subscription = payload;
     },
+    setOnboardingStatus: (
+      state: DefaultMemory,
+      { payload }: PayloadAction<OnboardingStatus>
+    ) => {
+      state.onboarding = payload;
+    },
     logoutUser: (state: DefaultMemory) => {
       state.user = null;
       state.isAuthenticated = false;
@@ -75,6 +89,7 @@ export const {
   setToken,
   logoutUser,
   setAuthenticated,
+  setOnboardingStatus,
 } = memory.actions;
 
 export const selectToken = (state: any) => state.app.token;

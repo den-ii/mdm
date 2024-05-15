@@ -1,7 +1,8 @@
 "use client";
 import "@/styles/globals.css";
-import { ReduxProvider } from "../../../redux/provider";
 import { usePathname } from "next/navigation";
+import { Provider } from "react-redux";
+import { store } from "@/lib/store";
 import Sidebar from "../sidebar";
 import Navbar from "../navbar";
 
@@ -28,9 +29,9 @@ function index({ children }: IRootLayout) {
   }
 
   return (
-    <ReduxProvider>
+    <Provider store={store}>
       <html lang="en">{body}</html>
-    </ReduxProvider>
+    </Provider>
   );
 }
 

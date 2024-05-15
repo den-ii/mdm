@@ -3,11 +3,8 @@
 import Ring from "@/components/ring";
 import Image from "next/image";
 import { FormEvent, useState } from "react";
-import { FaUser } from "react-icons/fa";
-import { MdBusinessCenter } from "react-icons/md";
 import { MdLocationPin } from "react-icons/md";
 import { FaCity } from "react-icons/fa6";
-import { FaMobile } from "react-icons/fa";
 import DeviceQty from "@/components/device_qty";
 import useDeviceQty from "@/components/device_qty/useDeviceQty";
 
