@@ -5,7 +5,7 @@ import { Provider } from "react-redux";
 import { store } from "@/lib/store";
 import Sidebar from "../sidebar";
 import Navbar from "../navbar";
-import ModalHandler from "../modals/modalHandler"; // Fix: Correct the casing of the import statement
+import ModalHandler from "../modals/ModalHandler";
 
 interface IRootLayout {
   children: React.ReactNode;

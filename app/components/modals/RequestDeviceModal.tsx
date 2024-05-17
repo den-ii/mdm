@@ -3,7 +3,10 @@ import useDeviceQty from "../device_qty/useDeviceQty";
 import DeviceQty from "../device_qty";
 import { useDispatch } from "react-redux";
 import { OnboardingStageArgs, setOnboardingStage } from "@/lib/slice/authSlice";
-import { closeModals } from "@/lib/slice/modalSlice";
+import {
+  closeAModal,
+  openRequestDeviceSuccModal,
+} from "@/lib/slice/modalSlice";
 
 function RequestDeviceModal() {
   const { deviceNo, increaseDevice, decreaseDevice, handleDeviceChange } =
@@ -13,7 +16,7 @@ function RequestDeviceModal() {
 
   const submitRequest = () => {
     dispatch(setOnboardingStage(OnboardingStageArgs.Stage1));
-    dispatch(closeModals());
+    dispatch(openRequestDeviceSuccModal());
   };
 
   return (

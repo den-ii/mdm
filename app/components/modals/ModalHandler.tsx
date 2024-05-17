@@ -4,10 +4,14 @@ import RequestDeviceModal from "./RequestDeviceModal";
 import BillingInfoModal from "./BillingInfo";
 import InviteUsersModal from "./InviteUsersModal";
 import NotificationPrefModal from "./NotificationPreferenceModal";
+import RequestDevicePopUp from "./success_modals/RequestDevicePopUp";
 
 function ModalHandler() {
   const requestDeviceModal = useSelector(
     (state: RootState) => state.modal.requestDevice
+  );
+  const requestDeviceSuccModal = useSelector(
+    (state: RootState) => state.modal.requestDeviceSuccess
   );
   const billingInfoModal = useSelector(
     (state: RootState) => state.modal.billingInfo
@@ -23,11 +27,11 @@ function ModalHandler() {
   return (
     <>
       {/* -----------------------------------  Modals -------------------------------------------*/}
-
       {requestDeviceModal && <RequestDeviceModal />}
       {billingInfoModal && <BillingInfoModal />}
       {notificationPrefModal && <NotificationPrefModal />}
       {inviteUsersModal && <InviteUsersModal />}
+      {requestDeviceSuccModal && <RequestDevicePopUp />}
       {/* ---------------------------------------------------------------------------------------- */}
     </>
   );

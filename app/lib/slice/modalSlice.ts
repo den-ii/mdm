@@ -3,16 +3,20 @@ import type { PayloadAction } from "@reduxjs/toolkit";
 
 export interface IModalState {
   billingInfo: boolean;
+  billingInfoSuccess: boolean;
   inviteUsers: boolean;
   notificationPreference: boolean;
   requestDevice: boolean;
+  requestDeviceSuccess: boolean;
 }
 
 const initialState: IModalState = {
   billingInfo: false,
+  billingInfoSuccess: false,
   inviteUsers: false,
   notificationPreference: false,
   requestDevice: false,
+  requestDeviceSuccess: false,
 };
 
 export const modalSlice = createSlice({
@@ -21,6 +25,9 @@ export const modalSlice = createSlice({
   reducers: {
     openBillingInfoModal: (state) => {
       state.billingInfo = true;
+    },
+    openBillingInfoSuccModal: (state) => {
+      state.billingInfoSuccess = true;
     },
     openInviteUsersModal: (state) => {
       state.inviteUsers = true;
@@ -31,6 +38,16 @@ export const modalSlice = createSlice({
     openRequestDeviceModal: (state) => {
       state.requestDevice = true;
     },
+    openRequestDeviceSuccModal: (state) => {
+      state.requestDevice = false;
+      state.requestDeviceSuccess = true;
+    },
+    closeAModal: (state, action: PayloadAction<string>) => {
+      if (state[action.payload as keyof IModalState] === undefined) {
+        return state;
+      }
+      state[action.payload as keyof IModalState] = false;
+    },
     closeModals: (state) => {
       return {
         ...state,
@@ -38,6 +55,8 @@ export const modalSlice = createSlice({
         inviteUsers: false,
         notificationPreference: false,
         requestDevice: false,
+        billingInfoSuccess: false,
+        requestDeviceSuccess: false,
       };
     },
   },
@@ -45,9 +64,12 @@ export const modalSlice = createSlice({
 
 export const {
   openBillingInfoModal,
+  openBillingInfoSuccModal,
   openInviteUsersModal,
   openNotificationPrefModal,
   openRequestDeviceModal,
+  openRequestDeviceSuccModal,
+  closeAModal,
   closeModals,
 } = modalSlice.actions;
 
