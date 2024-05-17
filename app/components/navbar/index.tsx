@@ -6,7 +6,6 @@ import { PiBellSimpleFill } from "react-icons/pi";
 
 function Navbar() {
   const pathname = usePathname();
-  console.log(paths);
 
   let header = paths.get(pathname);
 
