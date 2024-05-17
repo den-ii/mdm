@@ -5,6 +5,7 @@ export interface IModalState {
   billingInfo: boolean;
   billingInfoSuccess: boolean;
   inviteUsers: boolean;
+  inviteUsersSuccess: boolean;
   notificationPreference: boolean;
   notificationPreferenceSuccess: boolean;
   requestDevice: boolean;
@@ -15,6 +16,7 @@ const initialState: IModalState = {
   billingInfo: false,
   billingInfoSuccess: false,
   inviteUsers: false,
+  inviteUsersSuccess: false,
   notificationPreference: false,
   notificationPreferenceSuccess: false,
   requestDevice: false,
@@ -34,6 +36,10 @@ export const modalSlice = createSlice({
     },
     openInviteUsersModal: (state) => {
       state.inviteUsers = true;
+    },
+    openInviteUsersSuccModal: (state) => {
+      state.inviteUsers = false;
+      state.inviteUsersSuccess = true;
     },
     openNotificationPrefModal: (state) => {
       state.notificationPreference = true;
@@ -61,6 +67,7 @@ export const modalSlice = createSlice({
         billingInfo: false,
         billingInfoSuccess: false,
         inviteUsers: false,
+        inviteUsersSuccess: false,
         notificationPreference: false,
         notificationPreferenceSuccess: false,
         requestDevice: false,
@@ -74,6 +81,7 @@ export const {
   openBillingInfoModal,
   openBillingInfoSuccModal,
   openInviteUsersModal,
+  openInviteUsersSuccModal,
   openNotificationPrefModal,
   openNotificationPrefSuccModal,
   openRequestDeviceModal,

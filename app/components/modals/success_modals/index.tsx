@@ -1,4 +1,3 @@
-import React from "react";
 import Modal from "..";
 import Image from "next/image";
 import { useDispatch } from "react-redux";
