@@ -139,8 +139,8 @@ function Sidebar() {
         <div className="flex flex-col gap-1 items-center">
           <Image
             src="/assets/vendor/sidebar/settings.svg"
-            width={20}
-            height={20}
+            width={22}
+            height={22}
             alt="Logo"
           />
           <p className="text-center text-white text-sm">Settings</p>

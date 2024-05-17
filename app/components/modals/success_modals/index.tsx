@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useDispatch } from "react-redux";
 import { useRouter } from "next/navigation";
 
-import Buttons from "@/components/Button";
+import Buttons from "@/components/button";
 import { closeAModal } from "@/lib/slice/modalSlice";
 
 interface ISuccessPopUp {

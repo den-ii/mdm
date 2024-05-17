@@ -19,6 +19,7 @@ module.exports = {
         secondary: "#071827",
         neutral_500: "#5C6F7F",
         neutral_300: "#E1E6EF",
+        shade: "#AAAABF",
         matte: "#1E2833",
       },
       fontFamily: {
