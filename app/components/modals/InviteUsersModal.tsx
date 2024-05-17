@@ -1,14 +1,14 @@
 import { useDispatch } from "react-redux";
 import { OnboardingStageArgs, setOnboardingStage } from "@/lib/slice/authSlice";
 import Modal from ".";
-import { closeModals } from "@/lib/slice/modalSlice";
+import { openInviteUsersSuccModal } from "@/lib/slice/modalSlice";
 
 function InviteUsersModal() {
   const dispatch = useDispatch();
 
   const inviteUser = () => {
     dispatch(setOnboardingStage(OnboardingStageArgs.Stage4));
-    dispatch(closeModals());
+    dispatch(openInviteUsersSuccModal());
   };
 
   return (

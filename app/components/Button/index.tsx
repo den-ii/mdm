@@ -5,14 +5,21 @@ interface IButtons {
   padding?: string;
   children?: React.ReactNode;
   text?: string;
+  styles?: string;
 }
 
-function Buttons({ onClick, padding = "px-4 py-3", children, text }: IButtons) {
+function Buttons({
+  onClick,
+  padding = "px-4 py-3",
+  children,
+  text,
+  styles,
+}: IButtons) {
   if (children)
     return (
       <button
         onClick={onClick}
-        className={`bg-primary_700 transition duration-500 ease-in-out ${padding} hover:bg-primary_900 rounded-lg text-white`}
+        className={`bg-primary_700 transition duration-500 ease-in-out ${padding} ${styles} hover:bg-primary_900 rounded-lg text-white`}
       >
         {children}
       </button>
@@ -21,7 +28,7 @@ function Buttons({ onClick, padding = "px-4 py-3", children, text }: IButtons) {
     return (
       <button
         onClick={onClick}
-        className={`bg-primary_700 transition duration-500 ease-in-out hover:bg-primary_900 ${padding} rounded-lg text-white`}
+        className={`bg-primary_700 transition duration-500 ease-in-out hover:bg-primary_900 ${padding} ${styles} rounded-lg text-white`}
       >
         {text}
       </button>

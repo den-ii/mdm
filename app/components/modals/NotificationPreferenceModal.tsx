@@ -2,14 +2,14 @@ import Modal from ".";
 import Image from "next/image";
 import { OnboardingStageArgs, setOnboardingStage } from "@/lib/slice/authSlice";
 import { useDispatch } from "react-redux";
-import { closeModals } from "@/lib/slice/modalSlice";
+import { openNotificationPrefSuccModal } from "@/lib/slice/modalSlice";
 
 function NotificationPreferenceModal() {
   const dispatch = useDispatch();
 
   const saveDetails = () => {
     dispatch(setOnboardingStage(OnboardingStageArgs.Stage3));
-    dispatch(closeModals());
+    dispatch(openNotificationPrefSuccModal());
   };
 
   return (
