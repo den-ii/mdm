@@ -27,6 +27,7 @@ export const modalSlice = createSlice({
       state.billingInfo = true;
     },
     openBillingInfoSuccModal: (state) => {
+      state.billingInfo = false;
       state.billingInfoSuccess = true;
     },
     openInviteUsersModal: (state) => {

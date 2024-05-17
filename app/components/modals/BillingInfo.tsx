@@ -3,14 +3,14 @@ import { OnboardingStageArgs, setOnboardingStage } from "@/lib/slice/authSlice";
 
 import Modal from ".";
 import { FormEvent, FormEventHandler } from "react";
-import { closeModals } from "@/lib/slice/modalSlice";
+import { openBillingInfoSuccModal } from "@/lib/slice/modalSlice";
 
 function BillingInfoModal() {
   const dispatch = useDispatch();
 
   const saveDetails = () => {
     dispatch(setOnboardingStage(OnboardingStageArgs.Stage2));
-    dispatch(closeModals());
+    dispatch(openBillingInfoSuccModal());
   };
 
   return (

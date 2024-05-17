@@ -5,6 +5,7 @@ import BillingInfoModal from "./BillingInfo";
 import InviteUsersModal from "./InviteUsersModal";
 import NotificationPrefModal from "./NotificationPreferenceModal";
 import RequestDevicePopUp from "./success_modals/RequestDevicePopUp";
+import BillingInfoPopUp from "./success_modals/BillingInfoPopUp";
 
 function ModalHandler() {
   const requestDeviceModal = useSelector(
@@ -15,6 +16,9 @@ function ModalHandler() {
   );
   const billingInfoModal = useSelector(
     (state: RootState) => state.modal.billingInfo
+  );
+  const billingInfoSuccModal = useSelector(
+    (state: RootState) => state.modal.billingInfoSuccess
   );
   const notificationPrefModal = useSelector(
     (state: RootState) => state.modal.notificationPreference
@@ -32,6 +36,7 @@ function ModalHandler() {
       {notificationPrefModal && <NotificationPrefModal />}
       {inviteUsersModal && <InviteUsersModal />}
       {requestDeviceSuccModal && <RequestDevicePopUp />}
+      {billingInfoSuccModal && <BillingInfoPopUp />}
       {/* ---------------------------------------------------------------------------------------- */}
     </>
   );
