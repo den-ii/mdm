@@ -67,9 +67,9 @@ function Sidebar() {
         </div>
       </Link>
       <Link
-        href="/notifications"
+        href="/notifications/messages"
         className={`  ${
-          pathname === "/notifications" ? "dash_active" : "opacity-80"
+          pathname.startsWith("/notifications") ? "dash_active" : "opacity-80"
         } mt-2 flex items-center justify-center  hover:opacity-100 w-full h-[70px] rounded-[12px]`}
       >
         <div className="flex flex-col gap-1 items-center">
@@ -83,9 +83,9 @@ function Sidebar() {
         </div>
       </Link>
       <Link
-        href="/billing"
+        href="/billings/subcriptions"
         className={`  ${
-          pathname === "/billing" ? "dash_active" : "opacity-80"
+          pathname === "/billings" ? "dash_active" : "opacity-80"
         } mt-2 flex items-center justify-center  hover:opacity-100 w-full h-[70px] rounded-[12px]`}
       >
         <div className="flex flex-col gap-1 items-center">
@@ -95,13 +95,13 @@ function Sidebar() {
             height={20}
             alt="Logo"
           />
-          <p className="text-center text-white text-sm">Billing</p>
+          <p className="text-center text-white text-sm">Billings</p>
         </div>
       </Link>
       <Link
-        href="/report"
+        href="/reports"
         className={`  ${
-          pathname === "/report" ? "dash_active" : "opacity-80"
+          pathname === "/reports" ? "dash_active" : "opacity-80"
         } mt-2 flex items-center justify-center  hover:opacity-100 w-full h-[70px] rounded-[12px]`}
       >
         <div className="flex flex-col gap-1 items-center">
@@ -111,7 +111,7 @@ function Sidebar() {
             height={20}
             alt="Logo"
           />
-          <p className="text-center text-white text-sm">Report</p>
+          <p className="text-center text-white text-sm">Reports</p>
         </div>
       </Link>
       <Link
@@ -139,8 +139,8 @@ function Sidebar() {
         <div className="flex flex-col gap-1 items-center">
           <Image
             src="/assets/vendor/sidebar/settings.svg"
-            width={20}
-            height={20}
+            width={22}
+            height={22}
             alt="Logo"
           />
           <p className="text-center text-white text-sm">Settings</p>

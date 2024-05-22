@@ -1,7 +1,7 @@
-import React from "react";
+import { redirect } from "next/navigation";
 
 function NotificationsPage() {
-  return <main></main>;
+  redirect("/notifications/messages");
 }
 
 export default NotificationsPage;

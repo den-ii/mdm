@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { useRouter } from "next/navigation";
 import { closeAModal } from "@/lib/slice/modalSlice";
 import Modal from "..";
-import Buttons from "@/components/Button";
+import Buttons from "@/components/button";
 
 function InviteUsersPopUp({}) {
   const dispatch = useDispatch();

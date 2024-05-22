@@ -28,6 +28,10 @@ a {
   background-color: #1f65fd;
 }
 
+.pages {
+  min-height: calc(100vh - 140px);
+}
+
 .modal_bg {
   background-color: rgba(0, 0, 0, 0.3);
 }
