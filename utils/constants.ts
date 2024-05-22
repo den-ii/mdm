@@ -28,9 +28,13 @@ export const baseQueryWithAuth = async (args: any, api: any, extra: any) => {
 export const paths = new Map();
 paths.set("/", "Dashboard");
 paths.set("/devices", "Device Management");
-paths.set("/customers", "Customers");
-paths.set("/notifications", "Notifications");
-paths.set("/billing", "Billing");
-paths.set("/report", "Report");
-paths.set("/team", "Team");
+paths.set("/customers", "Customer Management");
+paths.set("/notifications/devices", "Notifications and Messaging");
+paths.set("/notifications/messages", "Notifications and Messaging");
+paths.set("/billings/subcriptions", "Billings");
+paths.set("/billings/invoices", "Billings");
+paths.set("/billings/payments", "Billings");
+
+paths.set("/reports", "Reports");
+paths.set("/team", "Team Management");
 paths.set("/settings", "Settings");

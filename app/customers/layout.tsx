@@ -1,7 +1,7 @@
-import DevicesNumLayout from "@/components/devices/DevicesNumLayout";
+import CustomersNumLayout from "@/components/customers/CustomersNumLayout";
 
 export const metadata = {
-  title: "Vendor: Device Management",
+  title: "Vendor: Customer Management",
   description: "",
 };
 
@@ -9,10 +9,10 @@ interface IDevicesLayout {
   children: React.ReactNode;
 }
 
-export default function DevicesLayout({ children }: IDevicesLayout) {
+export default function CusomersLayout({ children }: IDevicesLayout) {
   return (
     <div className="flex flex-col pages">
-      <DevicesNumLayout />
+      <CustomersNumLayout />
       <div className="flex-1 flex flex-col">{children}</div>
     </div>
   );

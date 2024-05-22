@@ -17,8 +17,8 @@ function DevicesPage() {
         imageSrc="/assets/vendor/devices/no_devices.svg"
         imageWidth={150}
         imageHeight={150}
-        imageAlt="no devices assigned"
-        title="No Devices Assigned Yet"
+        imageAlt="no device assigned"
+        title="No Device Assigned Yet"
         description={`Your assigned devices will appear here. 
         DevOS Admin will allocate devices to you. Keep an eye on notifications for updates.`}
         buttonText="Request Device"

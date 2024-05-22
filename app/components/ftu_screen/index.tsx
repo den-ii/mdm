@@ -9,7 +9,7 @@ interface IFTUScreen {
   imageAlt: string;
   title: string;
   description: string;
-  buttonText: string;
+  buttonText?: string;
   buttonAction?: () => void;
 }
 
