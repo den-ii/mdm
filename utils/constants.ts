@@ -34,7 +34,6 @@ paths.set("/notifications/messages", "Notifications and Messaging");
 paths.set("/billings/subcriptions", "Billings");
 paths.set("/billings/invoices", "Billings");
 paths.set("/billings/payments", "Billings");
-
 paths.set("/reports", "Reports");
 paths.set("/team", "Team Management");
 paths.set("/settings", "Settings");

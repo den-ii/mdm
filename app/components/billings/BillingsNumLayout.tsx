@@ -2,7 +2,7 @@ import Image from "next/image";
 
 function BillingsNumLayout() {
   return (
-    <div className="flex flex-wrap gap-3 mt-5 ">
+    <div className="flex flex-wrap gap-3 mt-5">
       <div className="flex items-center gap-5 border border-[#DADAE8] rounded-lg p-3 min-w-[250px] justify-between">
         <div className="text-sm flex flex-col gap-1">
           <p className="text-neutral_500">Total Revenue</p>

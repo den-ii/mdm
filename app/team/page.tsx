@@ -1,5 +1,7 @@
+import { redirect } from "next/navigation";
+
 function TeamPage() {
-  return <main></main>;
+  redirect("/team/all");
 }
 
 export default TeamPage;
