@@ -9,6 +9,9 @@ export interface IModalState {
   notificationPreference: boolean;
   notificationPreferenceSuccess: boolean;
   requestDevice: boolean;
+  enrollCustomer: boolean;
+  enrollNewCustomer: boolean;
+  enrollExistingCustomer: boolean;
   requestDeviceSuccess: boolean;
 }
 
@@ -21,6 +24,9 @@ const initialState: IModalState = {
   notificationPreferenceSuccess: false,
   requestDevice: false,
   requestDeviceSuccess: false,
+  enrollCustomer: false,
+  enrollNewCustomer: false,
+  enrollExistingCustomer: false,
 };
 
 export const modalSlice = createSlice({
@@ -51,6 +57,17 @@ export const modalSlice = createSlice({
     openRequestDeviceModal: (state) => {
       state.requestDevice = true;
     },
+    openCustomerEnrollmentModal: (state) => {
+      state.enrollCustomer = true;
+    },
+    openEnrollNewCustomerModal: (state) => {
+      state.enrollCustomer = false;
+      state.enrollNewCustomer = true;
+    },
+    openEnrollExistingCustomerModal: (state) => {
+      state.enrollCustomer = false;
+      state.enrollExistingCustomer = true;
+    },
     openRequestDeviceSuccModal: (state) => {
       state.requestDevice = false;
       state.requestDeviceSuccess = true;
@@ -72,6 +89,9 @@ export const modalSlice = createSlice({
         notificationPreferenceSuccess: false,
         requestDevice: false,
         requestDeviceSuccess: false,
+        enrollCustomer: false,
+        enrollNewCustomer: false,
+        enrollExistingCustomer: false,
       };
     },
   },
@@ -86,6 +106,9 @@ export const {
   openNotificationPrefSuccModal,
   openRequestDeviceModal,
   openRequestDeviceSuccModal,
+  openCustomerEnrollmentModal,
+  openEnrollNewCustomerModal,
+  openEnrollExistingCustomerModal,
   closeAModal,
   closeModals,
 } = modalSlice.actions;
