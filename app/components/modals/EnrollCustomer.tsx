@@ -44,13 +44,19 @@ function EnrollCustomerModal() {
     }
   };
 
+  const heading = (
+    <div className="flex flex-col gap-1">
+      <h3 className="font-semibold text-xl">Customer Enrollment</h3>
+      <p className="font-Poppins font-normal text-sm">
+        Step <span className="text-primary_700 font-medium">1</span> of 4
+      </p>
+    </div>
+  );
+
   return (
-    <Modal heading="Customer Enrollment">
+    <Modal heading={heading}>
       <div className="flex-1 px-4 flex flex-col justify-center gap-3 mb-3">
         <div>
-          <p className="font-Poppins text-sm mb-3">
-            Step <span className="text-primary_700">1</span> of 3
-          </p>
           <p className="text-neutral_500 font-Poppins text-sm mb-4">
             Are you an Existing customer or a New customer?
           </p>

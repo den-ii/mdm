@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux";
 import { closeModals } from "@/lib/slice/modalSlice";
 
 interface IModal {
-  heading: string;
+  heading: string | React.ReactNode;
   maxWidth?: string;
   maxHeight?: string;
   children: React.ReactNode;

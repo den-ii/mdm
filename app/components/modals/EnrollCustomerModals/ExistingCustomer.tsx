@@ -13,13 +13,19 @@ function EnrollExistingCustomerModal() {
     dispatch(openRequestDeviceSuccModal());
   };
 
+  const heading = (
+    <div className="flex flex-col gap-2">
+      <h3 className="font-semibold text-xl">Existing Customer Enrollment</h3>
+      <p className="font-Poppins font-normal text-sm mb-3">
+        Step <span className="text-primary_700 font-medium">2</span> of 4
+      </p>
+    </div>
+  );
   return (
-    <Modal heading="Existing Customer Enrollment">
+    // <Modal heading="Existing Customer Enrollment">
+    <Modal heading={heading}>
       <div className="flex-1 px-4 flex flex-col justify-center gap-3 mb-3">
         <div>
-          <p className="font-Poppins text-sm mb-3">
-            Step <span className="text-primary_700">1</span> of 3
-          </p>
           <p className="text-neutral_500 font-Poppins text-sm mb-4">
             Are you an Existing customer or a New customer?
           </p>
