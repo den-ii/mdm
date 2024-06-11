@@ -5,6 +5,7 @@ Mobile Device Mangement Frontend for Sachet devices.
 **MDM** provides a standardized way for customers to manage their Sachet devices. 
 
 ## Tools
+- Typescript
 - Next.js
 - Tailwind Css
 - Redux Toolkit
