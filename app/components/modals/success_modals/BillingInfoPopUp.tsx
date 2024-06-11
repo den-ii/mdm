@@ -9,6 +9,7 @@ function BillingInfoPopUp() {
       successLeading="We have received your billing information. You'll be notified once
       it's verified and securely stored."
       buttonText="View Billings and Payment"
+      buttonAction={() => {}}
     />
   );
 }

@@ -8,6 +8,7 @@ function NotificationPreferencesPopUp() {
       successHeading="Preferences saved"
       successLeading="Your preferences have been successfully saved."
       buttonText="View Notification Settings"
+      buttonAction={() => {}}
     />
   );
 }

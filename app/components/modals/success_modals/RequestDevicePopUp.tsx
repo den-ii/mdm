@@ -8,6 +8,7 @@ function RequestDevicePopUp() {
       successHeading="Request Sent Successfully"
       successLeading="You have successfully requested for device to be assigned to you."
       buttonText="View Assigned Device"
+      buttonAction={() => {}}
     />
   );
 }

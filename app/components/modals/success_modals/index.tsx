@@ -12,6 +12,7 @@ interface ISuccessPopUp {
   successHeading: string;
   successLeading: string;
   buttonText: string;
+  buttonAction: () => void;
   maxWidth?: string;
   maxHeight?: string;
 }
@@ -22,6 +23,7 @@ function SuccessPopUp({
   successHeading,
   successLeading,
   buttonText,
+  buttonAction,
   maxWidth = "max-w-[400px]",
   maxHeight = "max-h-[532px]",
 }: ISuccessPopUp) {
@@ -53,13 +55,24 @@ function SuccessPopUp({
           </div>
         </div>
         <div className="flex mt-auto py-4 flex-col gap-2 items-center justify-center border-t border-l-neutral_500">
-          <Buttons text={buttonText} styles="text-sm" />
-          <button
+          <Buttons
+            children={buttonText}
+            styles="text-sm"
+            primary
+            onClick={buttonAction}
+          />
+          <Buttons
+            children={"Return To Dashboard"}
+            styles="text-sm"
+            onClick={handleReturnToDashboard}
+          />
+
+          {/* <button
             className="text-sm px-4 py-3 font-medium text-primary_700"
             onClick={handleReturnToDashboard}
           >
             Return To Dashboard
-          </button>
+          </button> */}
         </div>
       </div>
     </Modal>

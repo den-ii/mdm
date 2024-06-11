@@ -18,8 +18,9 @@ function index({ children }: IRootLayout) {
   if (pathName === "/login" || pathName === "/register") {
     body = <body>{children}</body>;
   } else {
+    const bg = pathName === "/" ? "bg-[#FAFAFA]" : "bg-white";
     body = (
-      <body className="flex px-4 py-5 bg-[#FAFAFA] gap-4">
+      <body className={`flex px-4 py-5 ${bg} gap-4`}>
         <Sidebar />
         <div className="flex-1">
           <Navbar />
