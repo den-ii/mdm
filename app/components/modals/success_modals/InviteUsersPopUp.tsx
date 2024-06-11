@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation";
 import { closeAModal } from "@/lib/slice/modalSlice";
 import Modal from "..";
 import Buttons from "@/components/button";
+import { useCallback } from "react";
 
 function InviteUsersPopUp({}) {
   const dispatch = useDispatch();
@@ -27,13 +28,16 @@ function InviteUsersPopUp({}) {
         </div>
       </div>
       <div className="flex mt-auto py-4 px-3 flex-col gap-2 items-center justify-center border-t border-l-neutral_500">
-        <Buttons text={"Done"} styles="text-sm block w-full max-w-[200px]" />
-        <button
-          className="text-sm px-4 py-3 font-medium text-primary_700"
+        <Buttons
+          children={"Done"}
+          styles="text-sm block w-full max-w-[200px]"
+          primary
+        />
+        <Buttons
+          children={"Return To Dashboard"}
           onClick={handleReturnToDashboard}
-        >
-          Return To Dashboard
-        </button>
+          styles="text-sm block w-full max-w-[200px]"
+        />
       </div>
     </Modal>
   );

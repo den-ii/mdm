@@ -85,7 +85,7 @@ function FTU() {
   const lBar = loadBar + "%";
   return (
     <div>
-      <h1 className="font-semibold text-xl">Hi Scarlett, Welcome to MDM</h1>
+      <h1 className="font-medium text-xl">Hi Scarlett, Welcome to MDM</h1>
       <div className="bg-white p-3 mt-2 max-w-[835px] rounded-[16px]">
         <h2 className="font-semibold font-Poppins">Setup Guide</h2>
         <p className="mt-1 text-neutral_500 text-sm">

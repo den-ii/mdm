@@ -6,33 +6,36 @@ interface IButtons {
   children?: React.ReactNode;
   text?: string;
   styles?: string;
+  primary?: boolean;
 }
 
 function Buttons({
+  primary,
   onClick,
   padding = "px-4 py-3",
   children,
-  text,
   styles,
 }: IButtons) {
-  if (children)
+  if (primary)
     return (
       <button
         onClick={onClick}
-        className={`bg-primary_700 transition duration-500 ease-in-out ${padding} ${styles} hover:bg-primary_900 rounded-lg text-white`}
+        className={`bg-primary_700 transition duration-500 ease-in-out min-w-[170px] ${padding} ${styles} hover:bg-primary_900 rounded-lg text-white`}
       >
         {children}
       </button>
     );
-  if (text)
+  else {
     return (
       <button
+        className={`bg-primary_100 transition duration-500 ease-in-out px-4 py-3 min-w-[170px]
+  rounded-lg text-primary_700 ${padding} ${styles}`}
         onClick={onClick}
-        className={`bg-primary_700 transition duration-500 ease-in-out hover:bg-primary_900 ${padding} ${styles} rounded-lg text-white`}
       >
-        {text}
+        {children}
       </button>
     );
+  }
 }
 
 export default Buttons;

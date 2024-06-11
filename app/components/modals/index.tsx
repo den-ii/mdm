@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux";
 import { closeModals } from "@/lib/slice/modalSlice";
 
 interface IModal {
-  heading: string;
+  heading: string | React.ReactNode;
   maxWidth?: string;
   maxHeight?: string;
   children: React.ReactNode;
@@ -39,7 +39,7 @@ function Modal({
       -translate-x-[50%] top-[50%] -translate-y-[50%]`}
       >
         <div className="px-4 py-4 border-b flex justify-between">
-          <h4 className="font-semibold text-xl">{heading}</h4>
+          <h4 className="font-medium text-xl">{heading}</h4>
           <button onClick={closeModal}>
             <Image
               width={32}
