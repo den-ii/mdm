@@ -1,10 +1,14 @@
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import SuccessPopUp from ".";
+import { useDispatch } from "react-redux";
+import { closeModals } from "@/lib/slice/modalSlice";
 
 function EnrollmentPopUp() {
   const router = useRouter();
+  const dispatch = useDispatch();
 
   const navigateToView = () => {
+    dispatch(closeModals());
     router.push("/customers/view");
   };
 

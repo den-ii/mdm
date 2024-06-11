@@ -11,7 +11,7 @@ interface IDevicesLayout {
 
 export default function DevicesLayout({ children }: IDevicesLayout) {
   return (
-    <div className="flex flex-col pages"> 
+    <div className="flex flex-col pages">
       <DevicesNumLayout />
       <div className="flex-1 flex flex-col">{children}</div>
     </div>
