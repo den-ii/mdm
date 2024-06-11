@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import Buttons from "../button";
+import Buttons from "../Button";
 
 interface IFTUScreen {
   imageSrc: string;

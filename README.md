@@ -1,4 +1,4 @@
-# Project Title
+# Mobile Device Management
 
 The repository for the Mobile Device Management Portal.
 
