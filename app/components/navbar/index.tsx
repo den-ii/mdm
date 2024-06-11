@@ -11,7 +11,7 @@ function Navbar() {
 
   return (
     <nav className="flex justify-between items-center">
-      <h1 className="font-bold text-2xl">{header}</h1>
+      <h1 className="font-semibold text-2xl">{header}</h1>
       <div className="flex gap-3 items-center">
         <div className="w-[30px] h-[30px] flex items-center justify-center border border-[#DADAE8] rounded-full">
           <PiBellSimpleFill fill="#5C6F7F" />

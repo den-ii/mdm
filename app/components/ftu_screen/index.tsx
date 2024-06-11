@@ -36,9 +36,11 @@ function FtuScreen({
           <h2 className="font-Poppins text-lg font-semibold">{title}</h2>
           <p className="text-neutral_500 text-sm">{description}</p>
         </div>
-        <div className="mt-4">
-          <Buttons onClick={buttonAction} text={buttonText} />
-        </div>
+        {buttonText && (
+          <div className="mt-4">
+            <Buttons onClick={buttonAction} children={buttonText} primary />
+          </div>
+        )}
       </div>
     </div>
   );

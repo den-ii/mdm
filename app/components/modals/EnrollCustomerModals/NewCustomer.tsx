@@ -2,6 +2,7 @@ import Modal from "..";
 import { useDispatch } from "react-redux";
 import {
   closeAModal,
+  openEnrollmentSuccessModal,
   openRequestDeviceSuccModal,
 } from "@/lib/slice/modalSlice";
 import { Backward } from "iconsax-react";
@@ -9,15 +10,12 @@ import AddCustomer from "./AddCustomer";
 import { useCallback, useState } from "react";
 import EnrollmentCode from "./EnrollmentCode";
 import CustomerDetails from "./CustomerDetails";
+import Buttons from "@/components/button";
 
 function EnrollNewCustomerModal() {
   const [stage, setStage] = useState(2);
   const [maxHeight, setMaxHeight] = useState("max-h-[370px]");
   const dispatch = useDispatch();
-
-  const submitRequest = () => {
-    dispatch(openRequestDeviceSuccModal());
-  };
 
   const generateHeading = () => {
     switch (stage) {
@@ -41,6 +39,8 @@ function EnrollNewCustomerModal() {
         console.log("Enroll Customer");
         setStage(4);
         break;
+      case 4:
+        dispatch(openEnrollmentSuccessModal());
       default:
         break;
     }
@@ -67,7 +67,7 @@ function EnrollNewCustomerModal() {
 
   const heading = (
     <div className="flex flex-col gap-2">
-      <h3 className="font-semibold text-xl">{generateHeading()}</h3>
+      <h3 className="font-medium text-xl">{generateHeading()}</h3>
       <div className="flex gap-2 items-center">
         <div className="cursor-pointer">
           <Backward size="24" color="#0151FD" variant="Bold" />
@@ -90,16 +90,21 @@ function EnrollNewCustomerModal() {
       </div>
       <div className="flex gap-3 justify-center py-3 border-t">
         <div className="flex flex-col gap-3">
-          <button
-            className="bg-primary_700 transition duration-500 ease-in-out hover:bg-primary_900 px-4 py-3 rounded-lg text-white"
+          <Buttons onClick={handleButtonFunc} primary>
+            {handleButtonText()}
+          </Buttons>
+          {/* <button
+            className="bg-primary_700 transition duration-500 ease-in-out hover:bg-primary_900 
+            px-4 py-3 rounded-lg text-white"
             onClick={handleButtonFunc}
           >
             {handleButtonText()}
-          </button>
+          </button> */}
           {stage4 && (
             <button
-              className="bg-primary_100 transition duration-500 ease-in-out px-4 py-3 rounded-lg text-primary_900"
-              // onClick={handleButtonFunc}
+              className="bg-primary_100 transition duration-500 ease-in-out px-4 py-3 
+            rounded-lg text-primary_700"
+              onClick={() => {}}
             >
               Update Customer Details
             </button>

@@ -46,7 +46,7 @@ function EnrollCustomerModal() {
 
   const heading = (
     <div className="flex flex-col gap-1">
-      <h3 className="font-semibold text-xl">Customer Enrollment</h3>
+      <h3 className="font-medium text-xl">Customer Enrollment</h3>
       <p className="font-Poppins font-normal text-sm">
         Step <span className="text-primary_700 font-medium">1</span> of 4
       </p>

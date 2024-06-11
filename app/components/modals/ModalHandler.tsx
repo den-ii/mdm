@@ -10,6 +10,7 @@ import NotificationPreferencesPopUp from "./success_modals/NotificationPreferenc
 import InviteUsersPopUp from "./success_modals/InviteUsersPopUp";
 import EnrollCustomerModal from "./EnrollCustomer";
 import NewCustomerModal from "./EnrollCustomerModals/NewCustomer";
+import EnrollmentPopUp from "./success_modals/Enrollment";
 import ExistingCustomerModal from "./EnrollCustomerModals/ExistingCustomer";
 
 function ModalHandler() {
@@ -27,6 +28,9 @@ function ModalHandler() {
   );
   const enrollExistingCustomerModal = useSelector(
     (state: RootState) => state.modal.enrollExistingCustomer
+  );
+  const enrollSuccModal = useSelector(
+    (state: RootState) => state.modal.enrollmentSuccess
   );
   const billingInfoModal = useSelector(
     (state: RootState) => state.modal.billingInfo
@@ -63,6 +67,7 @@ function ModalHandler() {
       {enrollCustomerModal && <EnrollCustomerModal />}
       {enrollNewCustomerModal && <NewCustomerModal />}
       {enrollExistingCustomerModal && <ExistingCustomerModal />}
+      {enrollSuccModal && <EnrollmentPopUp />}
 
       {/* ---------------------------------------------------------------------------------------- */}
     </>
@@ -70,3 +75,6 @@ function ModalHandler() {
 }
 
 export default ModalHandler;
+function state(state: unknown): unknown {
+  throw new Error("Function not implemented.");
+}

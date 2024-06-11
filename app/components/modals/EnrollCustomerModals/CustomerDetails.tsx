@@ -7,7 +7,6 @@ interface ICustomerDetails {
 
 function CustomerDetails({ handleMaxHeight }: ICustomerDetails) {
   handleMaxHeight("max-h-[470px]");
-  // useEffect(() => handleMaxHeight("max-h-[470px]"), []);
   return (
     <div className="w-full">
       <div className="flex gap-8 justify-between items-center">
