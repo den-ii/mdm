@@ -1,24 +1,25 @@
-# MDM
+# Project Title
 
-Mobile Device Mangement Frontend for Sachet devices.
+The repository for the Mobile Device Management Portal.
 
-**MDM** provides a standardized way for customers to manage their Sachet devices. 
+## Environment Variables
 
-## Tools
-- Typescript
-- Next.js
-- Tailwind Css
-- Redux Toolkit
-- RTK Query
+To run this project, you will need to add the following environment variables to your `.env` file
 
+`NEXT_PUBLIC_API` - The base URL for your API.
 
-## How to Run
+## Installation
+
+Install my-project with npm
+
 ```bash
-cd MDM
+    npm install
+
 ```
+
+Running the Project
+To start the server, run the following command
+
 ```bash
-npm install
-```
-```bash
-npm run dev
+    npm run dev
 ```

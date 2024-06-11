@@ -1,5 +1,5 @@
 import { selectToken } from "../redux/storage/memory";
-import { fetchBaseQuery } from "@reduxjs/toolkit/dist/query/react";
+import { fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 export const BASEURL = String(process.env.NEXT_PUBLIC_API);
 
