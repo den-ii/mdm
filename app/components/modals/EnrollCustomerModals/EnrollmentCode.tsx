@@ -39,7 +39,8 @@ function EnrollmentCode() {
     <input
       type="number"
       ref={(el) => (inputRefs.current[index] = el)}
-      className="block w-[60px] h-[60px] text-center focus:outline-2 text-primary_700 outline-primary_700 p-2 rounded-lg bg-primary_100"
+      className="block w-[60px] h-[60px] text-center focus:outline-2 text-primary_700 outline-primary_700 
+      p-2 rounded-lg bg-primary_100"
       key={index}
       value={code[index]}
       onKeyDown={(e) => handleEnterCode(e, index)}
