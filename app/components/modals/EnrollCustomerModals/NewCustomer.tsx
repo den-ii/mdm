@@ -10,7 +10,7 @@ import AddCustomer from "./AddCustomer";
 import { useCallback, useState } from "react";
 import EnrollmentCode from "./EnrollmentCode";
 import CustomerDetails from "./CustomerDetails";
-import Buttons from "@/components/Button";
+import Buttons from "@/components/button";
 
 function EnrollNewCustomerModal() {
   const [stage, setStage] = useState(2);

@@ -7,6 +7,7 @@ interface IButtons {
   text?: string;
   styles?: string;
   primary?: boolean;
+  noWidth?: boolean;
 }
 
 function Buttons({
@@ -15,12 +16,15 @@ function Buttons({
   padding = "px-4 py-3",
   children,
   styles,
+  noWidth,
 }: IButtons) {
   if (primary)
     return (
       <button
         onClick={onClick}
-        className={`bg-primary_700 transition duration-500 ease-in-out min-w-[170px] ${padding} ${styles} hover:bg-primary_900 rounded-lg text-white`}
+        className={`bg-primary_700 transition duration-500 ease-in-out ${
+          noWidth ? "" : "min-w-[170px]"
+        } ${padding} ${styles} hover:bg-primary_900 rounded-lg text-white`}
       >
         {children}
       </button>
@@ -28,7 +32,9 @@ function Buttons({
   else {
     return (
       <button
-        className={`bg-primary_100 transition duration-500 ease-in-out px-4 py-3 min-w-[170px]
+        className={`transition duration-500 ease-in-out hover:bg-primary_100  px-4 py-3 ${
+          noWidth ? "" : "min-w-[170px]"
+        }
   rounded-lg text-primary_700 ${padding} ${styles}`}
         onClick={onClick}
       >

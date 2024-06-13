@@ -1,14 +1,22 @@
-import Buttons from "@/components/Button";
+import Buttons from "@/components/button";
 import CustomerDevices from "@/components/customers/CustomerDevices";
 import CustomerInfo from "@/components/customers/CustomerInfo";
 import { Call, Message } from "iconsax-react";
 import Image from "next/image";
+import Link from "next/link";
 import { FaEnvelope } from "react-icons/fa6";
+import { IoIosArrowBack } from "react-icons/io";
 
 function CustomersViewPage() {
   return (
-    <div className="mt-5">
-      <div className="flex justify-between items-center">
+    <div className="mt-3">
+      <Link href="/customers" className="inline-block">
+        <button className="flex gap-1 items-center text-primary_700 transition duration-500 ease-in-out mb-3 hover:bg-primary_100 p-2 px-3 rounded-xl">
+          <IoIosArrowBack fill="#0151FD" />
+          <span className="text-primary_700 text-lg">Back</span>
+        </button>
+      </Link>
+      <div className="flex justify-between items-center ">
         <div className="flex gap-3">
           <div>
             <Image
@@ -38,11 +46,12 @@ function CustomersViewPage() {
           </div>
         </div>
         <div className="flex gap-3 items-center">
-          <Buttons
-            children="Deactivate"
-            styles="text-red-600 bg-red-50 font-medium"
-          />
-          <Buttons children="Assign Device" styles="font-medium" />
+          <button className="text-red-600 bg-red-50 font-medium transition duration-500 ease-in-out hover:shadow-md py-3 px-4 rounded-2xl">
+            Deactivate
+          </button>
+          <button className="text-primary_700 bg-primary_100 transition duration-500 ease-in-out hover:shadow-md font-medium py-3 px-4 rounded-2xl">
+            Assign Device
+          </button>
         </div>
       </div>
       <div className="flex gap-5 mt-3 w-full">

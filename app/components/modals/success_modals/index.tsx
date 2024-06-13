@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useDispatch } from "react-redux";
 import { useRouter } from "next/navigation";
 
-import Buttons from "@/components/Button";
+import Buttons from "@/components/button";
 import { closeAModal } from "@/lib/slice/modalSlice";
 
 interface ISuccessPopUp {
@@ -51,7 +51,9 @@ function SuccessPopUp({
             <h3 className="text-lg font-Poppins text-center font-semibold">
               {successHeading}
             </h3>
-            <p className="text-[0.8rem] text-center mt-2">{successLeading}</p>
+            <p className="text-sm font-light text-center mt-2">
+              {successLeading}
+            </p>
           </div>
         </div>
         <div className="flex mt-auto py-4 flex-col gap-2 items-center justify-center border-t border-l-neutral_500">

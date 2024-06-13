@@ -22,33 +22,33 @@ function CustomerDetails({ handleMaxHeight }: ICustomerDetails) {
           <div className="flex justify-between gap-8">
             <div>
               <div className="flex flex-col gap-[0.2rem] text-sm">
-                <p>Surname</p>
+                <p className="text-neutral_500">Surname</p>
                 <p>Ochiche</p>
               </div>
               <div className="flex flex-col gap-[0.2rem] text-sm mt-1">
-                <p>Phone Number</p>
+                <p className="text-neutral_500">Phone Number</p>
                 <p>+234 8091072444</p>
               </div>
             </div>
             <div>
               <div className="flex flex-col gap-[0.2rem] text-sm">
-                <p>First Name</p>
+                <p className="text-neutral_500">First Name</p>
                 <p>Deni</p>
               </div>
               <div className="flex flex-col gap-[0.2rem] text-sm mt-1">
-                <p>Gender</p>
+                <p className="text-neutral_500">Gender</p>
                 <p>M</p>
               </div>
             </div>
             <div>
               <div className="flex flex-col gap-[0.2rem] text-sm">
-                <p>Middle Name</p>
+                <p className="text-neutral_500">Middle Name</p>
                 <p>Wisdom</p>
               </div>
             </div>
           </div>
           <div className="flex flex-col gap-[0.2rem] text-sm">
-            <p>Address</p>
+            <p className="text-neutral_500">Address</p>
             <p>10 Abijo G.R.A, Lekki, Lagos</p>
           </div>
         </div>

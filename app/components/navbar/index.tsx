@@ -10,7 +10,7 @@ function Navbar() {
   let header = paths.get(pathname);
 
   return (
-    <nav className="flex justify-between items-center">
+    <nav className="flex justify-between items-center max-w-[1300px]">
       <h1 className="font-semibold text-2xl">{header}</h1>
       <div className="flex gap-3 items-center">
         <div className="w-[30px] h-[30px] flex items-center justify-center border border-[#DADAE8] rounded-full">

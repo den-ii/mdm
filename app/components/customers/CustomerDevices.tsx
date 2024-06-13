@@ -90,7 +90,7 @@ function CustomerDevices() {
                   </div>
                 </div>
                 <div className="text-sm w-[150px] ">
-                  <button className="p-2 bg-primary_700 rounded-xl text-sm text-white">
+                  <button className="p-2 bg-primary_700 rounded-xl text-sm text-white transition duration-500 ease-in-out hover:shadow-md">
                     View Details
                   </button>
                 </div>
@@ -112,7 +112,7 @@ function CustomerDevices() {
                   </div>
                 </div>
                 <div className="text-sm w-[150px] ">
-                  <button className="p-2 bg-primary_700 rounded-xl text-sm text-white">
+                  <button className="p-2 bg-primary_700 rounded-xl text-sm text-white hover:shadow-md">
                     View Details
                   </button>
                 </div>
@@ -134,7 +134,7 @@ function CustomerDevices() {
                   </div>
                 </div>
                 <div className="text-sm w-[150px] ">
-                  <button className="p-2 bg-primary_700 rounded-xl text-sm text-white">
+                  <button className="p-2 bg-primary_700 rounded-xl text-sm text-white hover:shadow-md">
                     View Details
                   </button>
                 </div>
