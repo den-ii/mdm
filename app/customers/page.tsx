@@ -56,7 +56,7 @@ function CustomersPage() {
         buttonText="Add Customer"
       /> */}
 
-      <div className="flex gap-5 mt-3 w-full max-w-[1300px]">
+      <div className="flex gap-5 mt-3 w-full">
         <div className="mt-4 border flex-1 border-neutral_300 rounded-2xl p-4">
           <div className="flex gap-3">
             <input
