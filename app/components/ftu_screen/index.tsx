@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import Buttons from "../Button";
+import Buttons from "../button";
 
 interface IFTUScreen {
   imageSrc: string;
@@ -24,7 +24,7 @@ function FtuScreen({
   buttonAction,
 }: IFTUScreen) {
   return (
-    <div className="flex-1 flex justify-center items-center">
+    <div className="flex-1 flex justify-center items-center max-w-[1440px] max-h-[500px]">
       <div className="flex items-center flex-col max-w-[600px]">
         <div className="flex items-center flex-col gap-3 text-center">
           <Image

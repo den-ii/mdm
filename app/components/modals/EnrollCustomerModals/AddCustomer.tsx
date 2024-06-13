@@ -5,11 +5,20 @@ function AddCustomer() {
     <div className="w-full">
       <div>
         <label className="mb-2">Customer's NIN</label>
-        <input className="block w-full border border-[#DADAE8] p-2 rounded-lg focus:outline-1 focus:outline-primary-700" />
+        <input
+          className="block w-full border border-[#DADAE8] p-2 rounded-lg 
+        focus:outline-1 focus:outline-primary-700 placeholder:font-light"
+          type="text"
+          placeholder="Enter NIN"
+        />
       </div>
       <div className="mt-3">
         <label className="mb2">Customer's BVN</label>
-        <input className="block w-full border border-[#DADAE8] p-2 rounded-lg focus:outline-1 focus:outline-primary-700" />
+        <input
+          className="block w-full border border-[#DADAE8] p-2 rounded-lg 
+        focus:outline-1 focus:outline-primary-700 placeholder:font-light"
+          placeholder="Enter BVN"
+        />
       </div>
     </div>
   );

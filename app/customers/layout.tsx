@@ -1,4 +1,9 @@
+import Buttons from "@/components/button";
+import AddCustomerButton from "@/components/customers/AddCustomerButton";
 import CustomersNumLayout from "@/components/customers/CustomersNumLayout";
+import { openCustomerEnrollmentModal } from "@/lib/slice/modalSlice";
+import { useCallback } from "react";
+import { useDispatch } from "react-redux";
 
 export const metadata = {
   title: "Vendor: Customer Management",
