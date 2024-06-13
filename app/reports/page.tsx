@@ -6,7 +6,7 @@ function ReportsPage() {
   const dispatch = useDispatch();
 
   return (
-    <div className="min-h-[70vh] flex items-center justify-center">
+    <div className="flex flex-1">
       <FtuScreen
         imageSrc="/assets/vendor/reports/no_reports.svg"
         imageWidth={150}

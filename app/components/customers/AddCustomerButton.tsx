@@ -12,7 +12,7 @@ function AddCustomerButton() {
     []
   );
   return (
-    <div className="max-w-[1300px] text-right mt-2">
+    <div className="text-right mt-2">
       <Buttons primary noWidth onClick={handleEnrollCustomer}>
         Add Customer
       </Buttons>
