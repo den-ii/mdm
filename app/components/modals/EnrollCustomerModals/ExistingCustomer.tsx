@@ -9,7 +9,7 @@ import { Backward } from "iconsax-react";
 import { useCallback, useState } from "react";
 import EnrollmentCode from "./EnrollmentCode";
 import CustomerDetails from "./CustomerDetails";
-import Buttons from "@/components/button";
+import Buttons from "@/components/buttons";
 import AddExistingCustomer from "./AddExistingCustomer";
 import ValidPhoneNumber from "./ValidPhoneNumber";
 

@@ -42,3 +42,6 @@ paths.set("/team/available", "Team Management");
 paths.set("/team/blocked", "Team Management");
 paths.set("/team/pending-invite", "Team Management");
 paths.set("/settings", "Settings");
+paths.set("/settings/account", "Settings");
+paths.set("/settings/security", "Settings");
+paths.set("/settings/preferences", "Settings");

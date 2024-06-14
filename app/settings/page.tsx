@@ -1,7 +1,7 @@
-import React from "react";
+import { redirect } from "next/navigation";
 
-function SettingsPage() {
-  return <main></main>;
+function page() {
+  redirect("/settings/account");
 }
 
-export default SettingsPage;
+export default page;

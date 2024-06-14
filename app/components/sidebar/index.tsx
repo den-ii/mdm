@@ -133,7 +133,7 @@ function Sidebar() {
       <Link
         href="/settings"
         className={`  ${
-          pathname === "/settings" ? "dash_active" : "opacity-80"
+          pathname.startsWith("/settings") ? "dash_active" : "opacity-80"
         } mt-2 flex items-center justify-center  hover:opacity-100 w-full h-[70px] rounded-[12px]`}
       >
         <div className="flex flex-col gap-1 items-center">
