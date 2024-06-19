@@ -25,7 +25,9 @@ function Business() {
   }
   return (
     <div className="mt-2 md:mt-7">
-      <h1 className="text-xl md:text-2xl font-semibold">Business Details</h1>
+      <h1 className="text-xl md:text-2xl font-semibold font-Poppins">
+        Business Details
+      </h1>
       <p className="mt-2 opacity-80">
         Please take a moment to setup your business.
       </p>
@@ -57,7 +59,7 @@ function Business() {
                 <input
                   placeholder="Devos Inc"
                   type="text"
-                  className="mt-1 p-3 pl-9 w-full text-sm border border-[#DADAE8] rounded-[8px] focus:outline focus:outline-1 focus:outline-black"
+                  className="placeholder:font-light mt-1 p-3 pl-9 w-full text-sm border border-[#DADAE8] rounded-[8px] focus:outline focus:outline-1 focus:outline-black"
                 />
                 <Image
                   src={"/assets/vendor/register/briefcase.svg"}

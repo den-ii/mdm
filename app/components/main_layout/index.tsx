@@ -16,7 +16,11 @@ function index({ children }: IRootLayout) {
 
   let body;
   if (pathName === "/login" || pathName === "/register") {
-    body = <body>{children}</body>;
+    body = (
+      <body>
+        <>{children}</>
+      </body>
+    );
   } else {
     const bg = pathName === "/" ? "bg-[#FAFAFA]" : "bg-white";
     body = (
@@ -24,8 +28,10 @@ function index({ children }: IRootLayout) {
         <Sidebar />
         <div className="flex-1">
           <Navbar />
-          <ModalHandler />
-          <div className="mt-3 max-w-[1300px] mx-auto">{children}</div>
+          <main className="mt-3 max-w-[1300px] mx-auto">
+            {children}
+            <ModalHandler />
+          </main>
         </div>
       </body>
     );

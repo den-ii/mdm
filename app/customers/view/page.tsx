@@ -1,4 +1,4 @@
-import Buttons from "@/components/button";
+import Buttons from "@/components/buttons";
 import CustomerDevices from "@/components/customers/CustomerDevices";
 import CustomerInfo from "@/components/customers/CustomerInfo";
 import { Call, Message } from "iconsax-react";

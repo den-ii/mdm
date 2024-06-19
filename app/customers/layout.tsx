@@ -1,4 +1,4 @@
-import Buttons from "@/components/button";
+import Buttons from "@/components/buttons";
 import AddCustomerButton from "@/components/customers/AddCustomerButton";
 import CustomersNumLayout from "@/components/customers/CustomersNumLayout";
 import { openCustomerEnrollmentModal } from "@/lib/slice/modalSlice";

@@ -1,6 +1,6 @@
 "use client";
 import React, { useCallback } from "react";
-import Buttons from "../button";
+import Buttons from "../buttons";
 import { useDispatch } from "react-redux";
 import { openCustomerEnrollmentModal } from "@/lib/slice/modalSlice";
 

@@ -7,7 +7,7 @@ import CustomerInfo from "@/components/customers/CustomerInfo";
 import CustomerDevices from "@/components/customers/CustomerDevices";
 import { FaEllipsisVertical } from "react-icons/fa6";
 import { BsFilter } from "react-icons/bs";
-import Buttons from "@/components/button";
+import Buttons from "@/components/buttons";
 
 const customers = [
   {

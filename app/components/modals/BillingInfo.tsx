@@ -22,7 +22,7 @@ function BillingInfoModal() {
       <div className="flex-1 px-4 flex flex-col gap-3  overflow-y-auto">
         <div className="mt-4">
           <div className="flex gap-2 items-center">
-            <h4 className="font-semibold ">Billing Address</h4>
+            <h4 className="font-medium font-Poppins">Billing Address</h4>
             <div className="h-[1px] flex-1 bg-[#DADAE8]"></div>
           </div>
           <div className="mt-3">
@@ -56,7 +56,7 @@ function BillingInfoModal() {
         </div>
         <div className="mt-3">
           <div className="flex gap-2 items-center">
-            <h4 className="font-semibold ">Card Details</h4>
+            <h4 className="font-medium font-Poppins">Card Details</h4>
             <div className="h-[1px] flex-1 bg-[#DADAE8]"></div>
           </div>
           <div className="mt-3">

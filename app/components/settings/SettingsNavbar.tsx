@@ -3,35 +3,47 @@
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 
-export default function NotificationsLayout() {
+export default function SettingsNavbar() {
   const pathname = usePathname();
 
-  const messagesUrl = "/notifications/messages";
-  const devicesUrl = "/notifications/devices";
+  const accountUrl = "/settings/account";
+  const securityUrl = "/settings/security";
+  const preferencesUrl = "/settings/preferences";
+
   const linkStyle =
     "bg-primary_100 border border-primary_700 text-primary_700 rounded-2xl";
 
   return (
     <nav className="flex gap-3 items-center">
       <Link
-        href={messagesUrl}
+        href={accountUrl}
         className={`font-Poppins text-sm rounded-2xl py-2 px-3 ${
-          pathname === messagesUrl
+          pathname === accountUrl
             ? linkStyle
             : "border border-[#DADAE8] text-gray-500"
         }`}
       >
-        Messaging System
+        Account
       </Link>
       <Link
-        href={devicesUrl}
+        href={securityUrl}
         className={`font-Poppins rounded-2xl text-sm py-2 px-3  ${
-          pathname === devicesUrl
+          pathname === securityUrl
             ? linkStyle
             : "border border-[#DADAE8] text-gray-500"
         }`}
       >
-        Device Notifications
+        Login & Security
+      </Link>
+      <Link
+        href={preferencesUrl}
+        className={`font-Poppins rounded-2xl text-sm py-2 px-3  ${
+          pathname === preferencesUrl
+            ? linkStyle
+            : "border border-[#DADAE8] text-gray-500"
+        }`}
+      >
+        Notifications & Preferences
       </Link>
     </nav>
   );

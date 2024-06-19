@@ -11,18 +11,19 @@ function TeamLayout() {
   const pendingInviteUrl = "/team/pending-invite";
 
   const linkStyle = "border border-primary_700 text-primary_700 ";
+  const inactiveStyle = "border border-[#DADAE8]";
   return (
-    <nav className="flex gap-1 items-center">
+    <nav className="flex gap-2 items-center">
       <Link
         href={allUrl}
-        className={`flex items-center justify-center gap-2 font-Poppins py-2 px-3 text-sm min-w-[120px] rounded-lg ${
-          pathname === allUrl ? linkStyle : "border border-[#DADAE8]"
-        } `}
+        className={`flex items-center justify-center gap-2 text-gray-500 font-Poppins py-2 px-3 text-sm rounded-2xl ${
+          pathname === allUrl ? linkStyle : inactiveStyle
+        }`}
       >
-        <span className={pathname === allUrl ? "" : ""}>All</span>
+        <span className={pathname === allUrl ? "" : "text-gray-500"}>All</span>
 
         <span
-          className={`py-[0.2rem] px-2  flex items-center justify-center rounded-full  ${
+          className={`py-[0.2rem] px-2 flex items-center justify-center rounded-full  ${
             pathname === allUrl
               ? "bg-primary_100 text-primary_700"
               : "bg-neutral_300 text-[#8A9099]"
@@ -33,11 +34,14 @@ function TeamLayout() {
       </Link>
       <Link
         href={availableUrl}
-        className={`flex items-center justify-center gap-2 font-Poppins py-2 px-3 text-sm min-w-[120px] rounded-lg ${
-          pathname === availableUrl ? linkStyle : "border border-[#DADAE8]"
-        } `}
+        className={`flex items-center justify-center gap-2 font-Poppins py-2 px-3 text-sm rounded-2xl ${
+          pathname === availableUrl ? linkStyle : inactiveStyle
+        }`}
       >
-        <span>Available</span>
+        <span className={pathname === availableUrl ? "" : "text-gray-500"}>
+          Available
+        </span>
+
         <span
           className={`py-[0.2rem] px-2  flex items-center justify-center rounded-full  ${
             pathname === availableUrl
@@ -50,11 +54,13 @@ function TeamLayout() {
       </Link>
       <Link
         href={blockedUrl}
-        className={`flex items-center justify-center gap-2 font-Poppins py-2 px-3 text-sm min-w-[120px] rounded-lg ${
-          pathname === blockedUrl ? linkStyle : "border border-[#DADAE8]"
+        className={`flex items-center justify-center gap-2 font-Poppins py-2 px-3 text-sm rounded-2xl ${
+          pathname === blockedUrl ? linkStyle : inactiveStyle
         } `}
       >
-        <span>Blocked</span>
+        <span className={pathname === blockedUrl ? "" : "text-gray-500"}>
+          Blocked
+        </span>
         <span
           className={`py-[0.2rem] px-2  flex items-center justify-center rounded-full  ${
             pathname === blockedUrl
@@ -67,11 +73,13 @@ function TeamLayout() {
       </Link>
       <Link
         href={pendingInviteUrl}
-        className={`flex items-center justify-center gap-2 font-Poppins py-2 px-3 text-sm min-w-[120px] rounded-lg ${
-          pathname === pendingInviteUrl ? linkStyle : "border border-[#DADAE8]"
+        className={`flex items-center justify-center gap-2 font-Poppins py-2 px-3 text-sm rounded-2xl ${
+          pathname === pendingInviteUrl ? linkStyle : inactiveStyle
         } `}
       >
-        <span>Pending Invite</span>
+        <span className={pathname === pendingInviteUrl ? "" : "text-gray-500"}>
+          Pending Invite
+        </span>
         <span
           className={`py-[0.2rem] px-2  flex items-center justify-center rounded-full  ${
             pathname === pendingInviteUrl
