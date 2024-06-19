@@ -20,13 +20,13 @@ function Personal({ changeScreen }: IPersonal) {
 
   return (
     <div className="mt-3 md:mt-7">
-      <h1 className="text-xl md:text-2xl font-semibold">Personal Details</h1>
-      <p className="mt-1 md:mt-2 text-[0.87rem] md:text-base opacity-80">
+      <h1 className="text-xl md:text-2xl font-medium">Personal Details</h1>
+      <p className="mt-1 md:mt-2 text-sm md:text-base opacity-80">
         Please take a moment to introduce yourself.
       </p>
       <div className="mt-10">
         <div>
-          <p className="font-semibold flex ">Profile Picture</p>
+          <p className="font-medium flex ">Profile Picture</p>
           <div className="mt-3 flex gap-3 items-center">
             <Image
               src="/assets/vendor/register/photo.svg"
@@ -47,12 +47,12 @@ function Personal({ changeScreen }: IPersonal) {
         <form className="mt-6" onSubmit={handleSubmit}>
           <div className="flex flex-col md:flex-row gap-3">
             <div className="w-full">
-              <label className="text-sm font-semibold">First Name</label>
+              <label className="text-sm font-medium">First Name</label>
               <div className="relative">
                 <input
                   placeholder="First Name"
                   type="text"
-                  className="mt-1 p-3 pl-9 w-full text-sm border border-[#DADAE8] rounded-[8px] focus:outline focus:outline-1 focus:outline-black"
+                  className="placeholder:font-light mt-1 p-3 pl-9 w-full text-sm border border-[#DADAE8] rounded-[8px] focus:outline focus:outline-1 focus:outline-black"
                 />
                 <FaUser
                   fill="#AAAABF"
@@ -62,12 +62,12 @@ function Personal({ changeScreen }: IPersonal) {
               </div>
             </div>
             <div className="w-full">
-              <label className="text-sm font-semibold">Last Name</label>
+              <label className="text-sm font-medium">Last Name</label>
               <div className="relative">
                 <input
                   placeholder="Last Name"
                   type="text"
-                  className="mt-1 p-3 pl-9 w-full text-sm border border-[#DADAE8] rounded-[8px] focus:outline focus:outline-1 focus:outline-black"
+                  className="placeholder:font-light mt-1 p-3 pl-9 w-full text-sm border border-[#DADAE8] rounded-[8px] focus:outline focus:outline-1 focus:outline-black"
                 />
                 <FaUser
                   fill="#AAAABF"
@@ -79,20 +79,20 @@ function Personal({ changeScreen }: IPersonal) {
           </div>
           <div className="flex flex-col md:flex-row gap-3 mt-3">
             <div className="w-full">
-              <label className="text-sm font-semibold">Phone Number</label>
+              <label className="text-sm font-medium">Phone Number</label>
               <input
-                placeholder="Enter First Name"
-                type="text"
-                className="mt-1 p-3 pl-9 w-full text-sm border border-[#DADAE8] rounded-[8px] focus:outline focus:outline-1 focus:outline-black"
+                placeholder="+234 805 687 6798"
+                type="tel"
+                className="placeholder:font-light mt-1 p-3 pl-9 w-full text-sm border border-[#DADAE8] rounded-[8px] focus:outline focus:outline-1 focus:outline-black"
               />
             </div>
             <div className="w-full">
-              <label className="text-sm font-semibold">Email Address</label>
+              <label className="text-sm font-medium">Email Address</label>
               <div className="relative">
                 <input
                   placeholder="vendor@info.ng"
                   type="email"
-                  className="mt-1 p-3 pl-9 w-full text-sm border border-[#DADAE8] rounded-[8px] focus:outline focus:outline-1 focus:outline-black"
+                  className="placeholder:font-light mt-1 p-3 pl-9 w-full text-sm border border-[#DADAE8] rounded-[8px] focus:outline focus:outline-1 focus:outline-black"
                 />
                 <img
                   className="absolute top-[55%] -translate-y-[50%] left-2"
@@ -106,12 +106,12 @@ function Personal({ changeScreen }: IPersonal) {
           </div>
           <div className="flex flex-col md:flex-row gap-3 mt-3">
             <div className="w-full">
-              <label className="text-sm font-semibold">Password</label>
+              <label className="text-sm font-medium">Password</label>
               <div className="relative">
                 <input
                   placeholder="***********"
                   type="password"
-                  className="mt-1 p-3 pl-9 w-full text-sm border border-[#DADAE8] rounded-[8px] focus:outline focus:outline-1 focus:outline-black"
+                  className="placeholder:font-light mt-1 p-3 pl-9 w-full text-sm border border-[#DADAE8] rounded-[8px] focus:outline focus:outline-1 focus:outline-black"
                 />
                 <img
                   className="absolute top-[50%] -translate-y-[50%] left-2"
@@ -123,12 +123,12 @@ function Personal({ changeScreen }: IPersonal) {
               </div>
             </div>
             <div className="w-full">
-              <label className="text-sm font-semibold">Confirm Password</label>
+              <label className="text-sm font-medium">Confirm Password</label>
               <div className="relative">
                 <input
                   placeholder="***********"
                   type="password"
-                  className="mt-1 p-3 pl-9 w-full text-sm border border-[#DADAE8] rounded-[8px] focus:outline focus:outline-1 focus:outline-black"
+                  className="placeholder:font-light mt-1 p-3 pl-9 w-full text-sm border border-[#DADAE8] rounded-[8px] focus:outline focus:outline-1 focus:outline-black"
                 />
                 <img
                   className="absolute top-[50%] -translate-y-[50%] left-2"

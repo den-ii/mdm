@@ -18,7 +18,7 @@ function index({ children }: IRootLayout) {
   if (pathName === "/login" || pathName === "/register") {
     body = (
       <body>
-        <main>{children}</main>
+        <>{children}</>
       </body>
     );
   } else {
@@ -28,8 +28,10 @@ function index({ children }: IRootLayout) {
         <Sidebar />
         <div className="flex-1">
           <Navbar />
-          <ModalHandler />
-          <main className="mt-3 max-w-[1300px] mx-auto">{children}</main>
+          <main className="mt-3 max-w-[1300px] mx-auto">
+            {children}
+            <ModalHandler />
+          </main>
         </div>
       </body>
     );

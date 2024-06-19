@@ -5,8 +5,8 @@ import { FaEllipsisVertical } from "react-icons/fa6";
 function CustomerDevices() {
   return (
     <div className="flex-1">
-      <div className="font-Poppins font-medium">Assigned Devices</div>
-      <div className="min-h-[300px] flex flex-col mt-2">
+      <div className="font-Poppins">Assigned Devices</div>
+      <div className="min-h-[200px] flex flex-col mt-2">
         <div className="flex gap-2">
           <div className="flex items-center gap-3 border border-[#DADAE8] rounded-2xl p-3 min-w-[160px] justify-between">
             <div className="text-sm flex flex-col gap-1">

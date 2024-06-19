@@ -105,14 +105,14 @@ function LoginPage() {
           </p>
           <form className="mt-4" onSubmit={handleSubmit}>
             <div>
-              <label htmlFor="" className="text-sm font-semibold">
+              <label htmlFor="" className="text-sm font-medium">
                 Email Address
               </label>
               <div className="relative mt-1">
                 <input
                   placeholder="vendor@info.ng"
                   type="email"
-                  className="p-3 pl-9 w-full text-sm border border-[#DADAE8] rounded-[8px] focus:outline focus:outline-1 focus:outline-black"
+                  className="placeholder:font-light p-3 pl-9 w-full text-sm border border-[#DADAE8] rounded-[8px] focus:outline focus:outline-1 focus:outline-black"
                 />
                 <img
                   className="absolute top-[50%] -translate-y-[50%] left-2"
@@ -124,14 +124,14 @@ function LoginPage() {
               </div>
             </div>
             <div className="mt-5">
-              <label htmlFor="" className="text-sm font-semibold">
+              <label htmlFor="" className="text-sm font-medium">
                 Password
               </label>
               <div className="relative mt-1">
                 <input
                   placeholder="**********"
                   type={showPassword ? "text" : "password"}
-                  className="p-3 px-9 w-full  text-sm border border-[#DADAE8] rounded-[8px] focus:outline focus:outline-1 focus:outline-black"
+                  className="placeholder:font-light p-3 px-9 w-full  text-sm border border-[#DADAE8] rounded-[8px] focus:outline focus:outline-1 focus:outline-black"
                 />
                 <img
                   className="absolute top-[50%] -translate-y-[50%] left-2"
