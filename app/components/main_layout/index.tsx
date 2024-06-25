@@ -11,11 +11,16 @@ interface IRootLayout {
   children: React.ReactNode;
 }
 
+const skipLayout: Record<string, boolean> = {
+  "/login": true,
+  "/register": true,
+  "/signed_up": true,
+};
 function index({ children }: IRootLayout) {
   const pathName = usePathname();
 
   let body;
-  if (pathName === "/login" || pathName === "/register") {
+  if (skipLayout[pathName]) {
     body = (
       <body>
         <>{children}</>

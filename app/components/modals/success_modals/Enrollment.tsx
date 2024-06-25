@@ -8,7 +8,7 @@ function EnrollmentPopUp() {
   const dispatch = useDispatch();
 
   const navigateToView = () => {
-    router.push("/customers/view");
+    router.push("/customers/1");
     dispatch(closeModals());
   };
 

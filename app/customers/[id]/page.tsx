@@ -1,13 +1,16 @@
+"use client";
 import Buttons from "@/components/buttons";
 import CustomerDevices from "@/components/customers/CustomerDevices";
 import CustomerInfo from "@/components/customers/CustomerInfo";
 import { Call, Message } from "iconsax-react";
+import { useRouter } from "next/router";
 import Image from "next/image";
 import Link from "next/link";
 import { FaEnvelope } from "react-icons/fa6";
 import { IoIosArrowBack } from "react-icons/io";
 
-function CustomersViewPage() {
+function CustomersViewPage({ params }: { params: { id: string } }) {
+  console.log("id", params.id);
   return (
     <div className="mt-3">
       <Link href="/customers" className="inline-block">

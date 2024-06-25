@@ -26,7 +26,7 @@ function NotFound() {
           href="/"
           className="mt-4 text-white font-medium bg-primary_700 py-3 px-9 rounded-lg"
         >
-          Go Home
+          Go To Dashboard
         </Link>
       </div>
     </div>

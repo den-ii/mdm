@@ -21,7 +21,7 @@ function Personal({ changeScreen }: IPersonal) {
   return (
     <div className="mt-3 md:mt-7">
       <h1 className="text-xl md:text-2xl font-medium">Personal Details</h1>
-      <p className="mt-1 md:mt-2 text-sm md:text-base opacity-80">
+      <p className="mt-1 md:mt-2 text-sm font-light">
         Please take a moment to introduce yourself.
       </p>
       <div className="mt-10">
@@ -35,7 +35,7 @@ function Personal({ changeScreen }: IPersonal) {
               alt="photo_edit"
             />
             <div>
-              <button className="bg-primary_100 text-sm font-semibold p-3 rounded-[8px] text-primary_700">
+              <button className="bg-primary_100 text-sm font-medium p-3 rounded-[8px] text-primary_700">
                 Upload Image
               </button>
               <p className="text-[0.7rem] mt-2 opacity-80">

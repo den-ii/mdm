@@ -8,27 +8,28 @@ import CustomerDevices from "@/components/customers/CustomerDevices";
 import { FaEllipsisVertical } from "react-icons/fa6";
 import { BsFilter } from "react-icons/bs";
 import Buttons from "@/components/buttons";
+import { SearchNormal1 } from "iconsax-react";
 
 const customers = [
   {
     name: "Celine Avid",
     phoneNumber: "08048328490",
     verficationDate: "1 May 2023",
-    status: "active",
+    status: "ACTIVE",
     totalDevices: 30,
   },
   {
     name: "Jason Mamoa",
     phoneNumber: "0903847590",
     verficationDate: "2 July 2023",
-    status: "inactive",
+    status: "INACTIVE",
     totalDevices: 10,
   },
   {
     name: "Bolaji Shittu",
     phoneNumber: "08059308490",
     verficationDate: "1 August 2023",
-    status: "active",
+    status: "ACTIVE",
     totalDevices: 20,
   },
 ];
@@ -57,23 +58,32 @@ function CustomersPage() {
       /> */}
 
       <div className="flex gap-5 mt-3 w-full">
-        <div className="mt-4 border flex-1 border-neutral_300 rounded-2xl p-4">
-          <div className="flex gap-3">
-            <input
-              type="text"
-              placeholder="Search Here"
-              className="text-sm focus:outline-0 focus:outline-primary border border-[#DADAE8] 
-              rounded-xl w-full block max-w-[400px] p-2"
-            />
-            <button className="py-3 px-4 text-[#DADAE8] border border-[#DADAE8] rounded-2xl flex items-center gap-2">
+        <div className="mt-4 border flex-1 border-neutral_300 rounded-2xl">
+          <div className="flex gap-3 border-b p-4 border-neutral_300">
+            <div className="relative w-full max-w-[400px]">
+              <input
+                type="text"
+                placeholder="Search Here"
+                className="placeholder:font-light text-sm focus:outline-0 transition duration-500 
+                ease-in-out focus:border-primary_700 focus:outline-primary_700 border border-[#DADAE8] 
+              rounded-xl w-full block py-3 px-7"
+              />
+              <div className="absolute top-[50%] -translate-y-[50%] left-2">
+                <SearchNormal1 size="16" color="#AAAABF" />
+              </div>
+            </div>
+            <button
+              className="py-3 px-4 transition duration-500 ease-in-out hover:border-primary_700 hover:text-primary_700 hover:shadow-md
+            border border-[#DADAE8] text-neutral_500 rounded-2xl flex items-center gap-2"
+            >
               <span>
                 <BsFilter />
               </span>
-              <span className="text-sm text-neutral_500">Filter By</span>
+              <span className="text-sm text-inherit">Filter By</span>
             </button>
           </div>
-          <div>
-            <div className="flex gap-2 mt-2 px-3 py-4">
+          <div className="p-4">
+            <div className="flex gap-2 mt-2 px-3 pb-2">
               <input type="checkbox" />
               <div className="flex gap-4 flex-1 ">
                 <div className="text-sm w-[150px]">Customer Name</div>
@@ -87,7 +97,7 @@ function CustomersPage() {
             </div>
             {customers.map((customer) => {
               const statusStyle =
-                customer.status === "active"
+                customer.status === "ACTIVE"
                   ? "bg-green-50 text-green-600"
                   : "bg-gray-100";
               return (
@@ -108,13 +118,16 @@ function CustomersPage() {
                     </div>
                     <div className="text-sm w-[150px]">
                       <div
-                        className={`max-w-[80px] text-center ${statusStyle} py-2 px-3 rounded-2xl`}
+                        className={`max-w-[100px] text-center ${statusStyle} py-2 px-3 rounded-2xl`}
                       >
                         {customer.status}
                       </div>
                     </div>
                     <div className="text-sm w-[150px] ">
-                      <button className="p-2 bg-primary_700 rounded-xl text-sm text-white transition duration-500 ease-in-out hover:shadow-md">
+                      <button
+                        className="p-2 bg-primary_700 rounded-xl text-sm text-white 
+                      transition duration-500 ease-in-out hover:shadow-md"
+                      >
                         View Details
                       </button>
                     </div>
