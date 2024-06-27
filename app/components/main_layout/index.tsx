@@ -15,7 +15,7 @@ function index({ children }: IRootLayout) {
   const pathName = usePathname();
 
   let body;
-  if (pathName === "/login" || pathName === "/register") {
+  if (pathName.includes("auth")) {
     body = (
       <body>
         <>{children}</>

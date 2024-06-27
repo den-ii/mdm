@@ -6,8 +6,9 @@ import { PiBellSimpleFill } from "react-icons/pi";
 
 function Navbar() {
   const pathname = usePathname();
+  let path = pathname.split("/")[1];
 
-  let header = paths.get(pathname);
+  let header = path ? paths.get(path) : "Dashboard";
 
   return (
     <nav className="flex justify-between items-center">

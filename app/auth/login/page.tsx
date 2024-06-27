@@ -26,7 +26,9 @@ function LoginPage() {
           style={{ color: "rgba(255, 255, 255, 0.85)" }}
         >
           Having Troubles?{" "}
-          <span className="text-white font-bold cursor-pointer">Get Help</span>
+          <span className="text-white font-semibold cursor-pointer">
+            Get Help
+          </span>
         </div>
         <div>
           <div className="mt-14">
@@ -84,9 +86,9 @@ function LoginPage() {
         </div>
       </div>
       <div className="md:w-[60%] bg-[#FBFBFD]">
-        <div className="hidden md:block text-right mx-[14px] my-[14px]">
+        <div className="hidden md:block font-light text-right mx-[14px] my-[14px]">
           Having Troubles?{" "}
-          <span className="text-primary_700 md:text-base font-bold cursor-pointer">
+          <span className="text-primary_700 md:text-base font-semibold cursor-pointer">
             Get Help
           </span>
         </div>
@@ -94,11 +96,11 @@ function LoginPage() {
           <h1 className="text-xl md:text-2xl font-semibold">
             Welcome, Great To Have You Finally Join Us
           </h1>
-          <p className="text-[#1D2433CC] text-sm mt-2 md:mt-1">
+          <p className="text-[#1D2433CC] font-light text-sm mt-2 md:mt-1">
             Don't have an account?{" "}
             <Link
               href="register"
-              className="text-sm text-primary_700 md:text-base font-semibold cursor-pointer"
+              className="text-sm text-primary_700 md:text-base font-medium cursor-pointer"
             >
               Register
             </Link>

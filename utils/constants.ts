@@ -27,21 +27,10 @@ export const baseQueryWithAuth = async (args: any, api: any, extra: any) => {
 
 export const paths = new Map();
 paths.set("/", "Dashboard");
-paths.set("/devices", "Device Management");
-paths.set("/customers", "Customer Management");
-paths.set("/customers/view", "Customer Management");
-paths.set("/notifications/devices", "Notifications and Messaging");
-paths.set("/notifications/messages", "Notifications and Messaging");
-paths.set("/billings/subcriptions", "Billings");
-paths.set("/billings/invoices", "Billings");
-paths.set("/billings/payments", "Billings");
-paths.set("/reports", "Reports");
-paths.set("/team", "Team Management");
-paths.set("/team/all", "Team Management");
-paths.set("/team/available", "Team Management");
-paths.set("/team/blocked", "Team Management");
-paths.set("/team/pending-invite", "Team Management");
-paths.set("/settings", "Settings");
-paths.set("/settings/account", "Settings");
-paths.set("/settings/security", "Settings");
-paths.set("/settings/preferences", "Settings");
+paths.set("devices", "Device Management");
+paths.set("customers", "Customer Management");
+paths.set("notifications", "Notifications and Messaging");
+paths.set("billings", "Billings");
+paths.set("reports", "Reports");
+paths.set("team", "Team Management");
+paths.set("settings", "Settings");

@@ -20,7 +20,13 @@ function TeamLayout() {
           pathname === allUrl ? linkStyle : inactiveStyle
         }`}
       >
-        <span className={pathname === allUrl ? "" : "text-gray-500"}>All</span>
+        <span
+          className={
+            pathname === allUrl ? "font-Poppins" : "font-Poppins text-gray-500"
+          }
+        >
+          All
+        </span>
 
         <span
           className={`py-[0.2rem] px-2 flex items-center justify-center rounded-full  ${
@@ -38,7 +44,13 @@ function TeamLayout() {
           pathname === availableUrl ? linkStyle : inactiveStyle
         }`}
       >
-        <span className={pathname === availableUrl ? "" : "text-gray-500"}>
+        <span
+          className={
+            pathname === availableUrl
+              ? "font-Poppins"
+              : "font-Poppins text-gray-500"
+          }
+        >
           Available
         </span>
 
@@ -58,7 +70,13 @@ function TeamLayout() {
           pathname === blockedUrl ? linkStyle : inactiveStyle
         } `}
       >
-        <span className={pathname === blockedUrl ? "" : "text-gray-500"}>
+        <span
+          className={
+            pathname === blockedUrl
+              ? "font-Poppins"
+              : "font-Poppins text-gray-500"
+          }
+        >
           Blocked
         </span>
         <span
@@ -77,7 +95,13 @@ function TeamLayout() {
           pathname === pendingInviteUrl ? linkStyle : inactiveStyle
         } `}
       >
-        <span className={pathname === pendingInviteUrl ? "" : "text-gray-500"}>
+        <span
+          className={
+            pathname === pendingInviteUrl
+              ? "font-Poppins"
+              : "font-Poppins text-gray-500"
+          }
+        >
           Pending Invite
         </span>
         <span

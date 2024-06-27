@@ -28,7 +28,7 @@ function Business() {
       <h1 className="text-xl md:text-2xl font-semibold font-Poppins">
         Business Details
       </h1>
-      <p className="mt-2 opacity-80">
+      <p className="mt-2 text-sm font-light">
         Please take a moment to setup your business.
       </p>
       <div className="mt-10">
@@ -42,7 +42,7 @@ function Business() {
               alt="photo_edit"
             />
             <div>
-              <button className="bg-primary_100 text-sm font-semibold p-3 rounded-[8px] text-primary_700">
+              <button className="bg-primary_100 text-sm font-medium p-3 rounded-[8px] text-primary_700">
                 Upload Image
               </button>
               <p className="text-[0.7rem] mt-2 opacity-80">
@@ -76,12 +76,12 @@ function Business() {
                 <input
                   placeholder="42 Saka Tinibu"
                   type="text"
-                  className="mt-1 p-3 pl-9 w-full text-sm border border-[#DADAE8] rounded-[8px] focus:outline focus:outline-1 focus:outline-black"
+                  className="placeholder:font-light mt-1 p-3 pl-9 w-full text-sm border border-[#DADAE8] rounded-[8px] focus:outline focus:outline-1 focus:outline-black"
                 />
                 <MdLocationPin
                   fill="#AAAABF"
                   size={22}
-                  className="absolute top-[50%] -translate-y-[50%] left-2"
+                  className="placeholder:font-light absolute top-[50%] -translate-y-[50%] left-2"
                 />
               </div>
             </div>
@@ -93,7 +93,7 @@ function Business() {
                 <input
                   placeholder="Lagos"
                   type="text"
-                  className="mt-1 p-3 pl-9 w-full text-sm border border-[#DADAE8] rounded-[8px] focus:outline focus:outline-1 focus:outline-black"
+                  className="placeholder:font-light mt-1 p-3 pl-9 w-full text-sm border border-[#DADAE8] rounded-[8px] focus:outline focus:outline-1 focus:outline-black"
                 />
                 <Image
                   src={"/assets/vendor/register/compass.svg"}
@@ -115,7 +115,7 @@ function Business() {
                 <input
                   placeholder="Lekki"
                   type="text"
-                  className="mt-1 p-3 pl-9 w-full text-sm border border-[#DADAE8] rounded-[8px] focus:outline focus:outline-1 focus:outline-black"
+                  className="placeholder:font-light mt-1 p-3 pl-9 w-full text-sm border border-[#DADAE8] rounded-[8px] focus:outline focus:outline-1 focus:outline-black"
                 />
                 <FaCity
                   fill="#AAAABF"

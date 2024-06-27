@@ -1,13 +1,16 @@
+"use client";
 import Buttons from "@/components/buttons";
 import CustomerDevices from "@/components/customers/CustomerDevices";
 import CustomerInfo from "@/components/customers/CustomerInfo";
 import { Call, Message } from "iconsax-react";
+import { useRouter } from "next/router";
 import Image from "next/image";
 import Link from "next/link";
 import { FaEnvelope } from "react-icons/fa6";
 import { IoIosArrowBack } from "react-icons/io";
 
-function CustomersViewPage() {
+function CustomersViewPage({ params }: { params: { id: string } }) {
+  console.log("id", params.id);
   return (
     <div className="mt-3">
       <Link href="/customers" className="inline-block">
@@ -46,10 +49,10 @@ function CustomersViewPage() {
           </div>
         </div>
         <div className="flex gap-3 items-center">
-          <button className="text-red-600 bg-red-50 font-medium transition duration-500 ease-in-out hover:shadow-md py-3 px-4 rounded-2xl">
+          <button className="bg-red-600 text-white font-medium transition duration-500 ease-in-out shadow-sm hover:shadow-md py-3 px-4 rounded-2xl">
             Deactivate
           </button>
-          <button className="text-primary_700 bg-primary_100 transition duration-500 ease-in-out hover:shadow-md font-medium py-3 px-4 rounded-2xl">
+          <button className="text-white bg-primary_700 transition duration-500 ease-in-out shadow-sm hover:shadow-md font-medium py-3 px-4 rounded-2xl">
             Assign Device
           </button>
         </div>

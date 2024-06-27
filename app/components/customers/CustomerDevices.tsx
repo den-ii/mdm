@@ -1,6 +1,7 @@
 import { BsFilter } from "react-icons/bs";
 import Image from "next/image";
 import { FaEllipsisVertical } from "react-icons/fa6";
+import { SearchNormal1 } from "iconsax-react";
 
 function CustomerDevices() {
   return (
@@ -52,21 +53,32 @@ function CustomerDevices() {
             </div>
           </div>
         </div>
-        <div className="mt-4 border flex-1 border-neutral_300 rounded-2xl p-4">
-          <div className="flex gap-3">
-            <input
-              type="text"
-              placeholder="Search Here"
-              className="text-sm focus:outline-0 focus:outline-primary border border-[#DADAE8] rounded-xl w-full block max-w-[350px] p-2"
-            />
-            <button className="py-3 px-4 text-[#DADAE8] border border-[#DADAE8] rounded-2xl flex items-center gap-2">
+        <div className="mt-4 border flex-1 border-neutral_300 rounded-2xl">
+          <div className="flex gap-3 border-b p-4 border-neutral_300">
+            <div className="relative w-full max-w-[400px]">
+              <input
+                type="text"
+                placeholder="Search Here"
+                className="placeholder:font-light text-sm focus:outline-0 transition duration-500 
+                ease-in-out focus:border-primary_700 focus:outline-primary_700 border border-[#DADAE8] 
+              rounded-xl w-full block py-3 px-7"
+              />
+              <div className="absolute top-[50%] -translate-y-[50%] left-2">
+                <SearchNormal1 size="16" color="#AAAABF" />
+              </div>
+            </div>
+
+            <button
+              className="py-3 px-4 transition duration-500 ease-in-out hover:border-primary_700 hover:text-primary_700 hover:shadow-md
+            border border-[#DADAE8] text-neutral_500 rounded-2xl flex items-center gap-2"
+            >
               <span>
                 <BsFilter />
               </span>
-              <span className="text-sm text-neutral_500">Filter By</span>
+              <span className="text-sm text-inherit">Filter By</span>
             </button>
           </div>
-          <div>
+          <div className="px-3 pb-3">
             <div className="flex gap-2 mt-2 px-3 py-4">
               <input type="checkbox" />
               <div className="flex gap-4 flex-1 ">
