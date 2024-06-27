@@ -1,6 +1,7 @@
 "use client";
 
 import Ring from "@/components/ring";
+import { Call } from "iconsax-react";
 import Image from "next/image";
 import { FormEvent, useState } from "react";
 import { FaUser } from "react-icons/fa";
@@ -50,7 +51,7 @@ function Personal({ changeScreen }: IPersonal) {
               <label className="text-sm font-medium">First Name</label>
               <div className="relative">
                 <input
-                  placeholder="First Name"
+                  placeholder="Julia"
                   type="text"
                   className="placeholder:font-light mt-1 p-3 pl-9 w-full text-sm border border-[#DADAE8] rounded-[8px] focus:outline focus:outline-1 focus:outline-black"
                 />
@@ -65,7 +66,7 @@ function Personal({ changeScreen }: IPersonal) {
               <label className="text-sm font-medium">Last Name</label>
               <div className="relative">
                 <input
-                  placeholder="Last Name"
+                  placeholder="Stratton"
                   type="text"
                   className="placeholder:font-light mt-1 p-3 pl-9 w-full text-sm border border-[#DADAE8] rounded-[8px] focus:outline focus:outline-1 focus:outline-black"
                 />
@@ -80,11 +81,20 @@ function Personal({ changeScreen }: IPersonal) {
           <div className="flex flex-col md:flex-row gap-3 mt-3">
             <div className="w-full">
               <label className="text-sm font-medium">Phone Number</label>
-              <input
-                placeholder="+234 805 687 6798"
-                type="tel"
-                className="placeholder:font-light mt-1 p-3 pl-9 w-full text-sm border border-[#DADAE8] rounded-[8px] focus:outline focus:outline-1 focus:outline-black"
-              />
+
+              <div className="relative">
+                <input
+                  placeholder="+234 805 687 6798"
+                  type="tel"
+                  className="placeholder:font-light mt-1 p-3 pl-9 w-full text-sm border border-[#DADAE8] rounded-[8px] focus:outline focus:outline-1 focus:outline-black"
+                />
+                <Call
+                  size="20"
+                  color="#aaaabf"
+                  variant="Bold"
+                  className="absolute top-[55%] -translate-y-[50%] left-2"
+                />
+              </div>
             </div>
             <div className="w-full">
               <label className="text-sm font-medium">Email Address</label>

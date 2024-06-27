@@ -42,8 +42,8 @@ function RegisterPage() {
             />
           </Link>
           <div className="text-right ">
-            <span className="text-white opacity-80">Having Troubles? </span>
-            <span className="text-white  md:text-base font-bold cursor-pointer">
+            <span className="text-white opacity-80 ">Having Troubles? </span>
+            <span className="text-white  md:text-base font-semibold cursor-pointer">
               Get Help
             </span>
           </div>
@@ -54,8 +54,8 @@ function RegisterPage() {
       </div>
       <div className="bg-[#FBFBFD] mr-2 my-2 p-4 md:w-[70%] pb-10">
         <div className="hidden md:block text-right mx-[14px]">
-          <span className="opacity-80">Having Troubles? </span>
-          <span className="text-primary_700  md:text-base font-bold cursor-pointer">
+          <span className="font-light">Having Troubles? </span>
+          <span className="text-primary_700  md:text-base font-semibold cursor-pointer">
             Get Help
           </span>
         </div>

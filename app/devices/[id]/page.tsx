@@ -31,10 +31,10 @@ function DevicePage({ params }: { params: { id: string } }) {
           </div>
         </div>
         <div className="flex gap-3 items-center">
-          <button className="text-red-600 bg-red-100 font-medium transition duration-500 ease-in-out shadow-md py-3 px-4 rounded-2xl">
+          <button className="bg-red-600 text-white font-medium transition duration-500 ease-in-out hover:shadow-md shadow-sm py-3 px-4 rounded-2xl">
             Lock Device
           </button>
-          <button className="text-primary_700 bg-primary_100 transition duration-500 ease-in-out shadow-md font-medium py-3 px-4 rounded-2xl">
+          <button className="bg-primary_700 text-white transition duration-500 ease-in-out hover:shadow-md shadow-sm font-medium py-3 px-4 rounded-2xl">
             Locate Device
           </button>
         </div>
