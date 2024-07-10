@@ -1,11 +1,11 @@
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 
-interface ICustomerDetails {
+interface CustomerDetailsProps {
   handleMaxHeight: (val: string) => void;
 }
 
-function CustomerDetails({ handleMaxHeight }: ICustomerDetails) {
+function CustomerDetails({ handleMaxHeight }: CustomerDetailsProps) {
   handleMaxHeight("max-h-[470px]");
   return (
     <div className="w-full">

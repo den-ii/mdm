@@ -85,7 +85,7 @@ function Sidebar() {
       <Link
         href="/billings/subcriptions"
         className={`  ${
-          pathname === "/billings" ? "dash_active" : "opacity-80"
+          pathname.startsWith("/billings") ? "dash_active" : "opacity-80"
         } mt-2 flex items-center justify-center  hover:opacity-100 w-full h-[70px] rounded-[12px]`}
       >
         <div className="flex flex-col gap-1 items-center">
@@ -117,7 +117,7 @@ function Sidebar() {
       <Link
         href="/team/all"
         className={`  ${
-          pathname === "/team" ? "dash_active" : "opacity-80"
+          pathname.startsWith("/team") ? "dash_active" : "opacity-80"
         } mt-2 flex items-center justify-center  hover:opacity-100 w-full h-[70px] rounded-[12px]`}
       >
         <div className="flex flex-col gap-1 items-center">

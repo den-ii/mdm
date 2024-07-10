@@ -1,14 +1,15 @@
 import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
 
-export interface IAuthState {
+export interface AuthState {
   isAuthenticated: boolean;
   token?: string;
   user?: any;
-  onboardingStage: IOnboardingStage;
+  onboardingStage: OnboardingStage;
+  tour: boolean;
 }
 
-export interface IOnboardingStage {
+export interface OnboardingStage {
   1: boolean;
   2: boolean;
   3: boolean;
@@ -22,7 +23,7 @@ export enum OnboardingStageArgs {
   Stage4 = 4,
 }
 
-const initialState: IAuthState = {
+const initialState: AuthState = {
   isAuthenticated: false,
   onboardingStage: {
     1: false,
@@ -30,6 +31,7 @@ const initialState: IAuthState = {
     3: false,
     4: false,
   },
+  tour: true,
 };
 
 export const authSlice = createSlice({
@@ -39,7 +41,7 @@ export const authSlice = createSlice({
     setAuthenticated: (state, action: PayloadAction<boolean>) => {
       state.isAuthenticated = action.payload;
     },
-    setAuth: (state, action: PayloadAction<IAuthState>) => {
+    setAuth: (state, action: PayloadAction<AuthState>) => {
       state.isAuthenticated = action.payload.isAuthenticated;
       state.user = action.payload.user;
       state.token = action.payload.token;
@@ -52,7 +54,7 @@ export const authSlice = createSlice({
       state.onboardingStage = {
         ...state.onboardingStage,
         [action.payload]: true,
-      } as IOnboardingStage;
+      } as OnboardingStage;
     },
     setToken: (state, action: PayloadAction<string>) => {
       state.token = action.payload;

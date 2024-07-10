@@ -5,11 +5,11 @@ export const metadata = {
   description: "",
 };
 
-interface IDevicesLayout {
+interface DevicesLayoutProps {
   children: React.ReactNode;
 }
 
-export default function DevicesLayout({ children }: IDevicesLayout) {
+export default function DevicesLayout({ children }: DevicesLayoutProps) {
   return (
     <div className="flex flex-col pages">
       <DevicesNumLayout />

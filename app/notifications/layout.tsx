@@ -5,13 +5,13 @@ export const metadata = {
   description: "",
 };
 
-interface INotificationsLayout {
+interface NotificationsLayoutProps {
   children: React.ReactNode;
 }
 
 export default function NotificationsLayout({
   children,
-}: INotificationsLayout) {
+}: NotificationsLayoutProps) {
   return (
     <div className="flex flex-col pages">
       <NLayout />

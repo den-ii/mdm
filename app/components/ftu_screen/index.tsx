@@ -2,7 +2,7 @@ import Image from "next/image";
 import React from "react";
 import Buttons from "../buttons";
 
-interface IFTUScreen {
+interface FTUScreenProps {
   imageSrc: string;
   imageWidth: number;
   imageHeight: number;
@@ -22,7 +22,7 @@ function FtuScreen({
   description,
   buttonText,
   buttonAction,
-}: IFTUScreen) {
+}: FTUScreenProps) {
   return (
     <div className="flex-1 flex justify-center items-center max-w-[1440px] max-h-[500px]">
       <div className="flex items-center flex-col max-w-[600px]">

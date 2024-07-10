@@ -1,11 +1,11 @@
 import { ColorRing } from "react-loader-spinner";
 
-interface IRing {
+interface RingProps {
   color: string;
   size: number;
 }
 
-function Ring({ color, size }: IRing) {
+function Ring({ color, size }: RingProps) {
   const colors = new Array(5).fill(color) as [
     string,
     string,

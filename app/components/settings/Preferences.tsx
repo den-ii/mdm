@@ -1,12 +1,12 @@
 "use client";
 import Image from "next/image";
 
-interface IPreferences {
+interface PreferencesProps {
   isModal: boolean;
   saveDetails?: () => void;
 }
 
-function Preferences({ isModal, saveDetails }: IPreferences) {
+function Preferences({ isModal, saveDetails }: PreferencesProps) {
   return (
     <>
       <div

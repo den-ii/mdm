@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import Buttons from "@/components/buttons";
 import { closeAModal } from "@/lib/slice/modalSlice";
 
-interface ISuccessPopUp {
+interface SuccessPopUpProps {
   tag: string;
   heading: string;
   successHeading: string;
@@ -26,7 +26,7 @@ function SuccessPopUp({
   buttonAction,
   maxWidth = "max-w-[400px]",
   maxHeight = "max-h-[532px]",
-}: ISuccessPopUp) {
+}: SuccessPopUpProps) {
   const dispatch = useDispatch();
   const router = useRouter();
 

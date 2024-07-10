@@ -6,11 +6,11 @@ import Image from "next/image";
 import { FormEvent, useState } from "react";
 import { FaUser } from "react-icons/fa";
 
-interface IPersonal {
+interface PersonalProps {
   changeScreen: () => void;
 }
 
-function Personal({ changeScreen }: IPersonal) {
+function Personal({ changeScreen }: PersonalProps) {
   const [loading, setLoading] = useState(false);
 
   function handleSubmit(e: FormEvent<HTMLFormElement>) {

@@ -5,11 +5,11 @@ export const metadata = {
   description: "",
 };
 
-interface ISettingsLayout {
+interface SettingsLayoutProps {
   children: React.ReactNode;
 }
 
-export default function SettingsLayout({ children }: ISettingsLayout) {
+export default function SettingsLayout({ children }: SettingsLayoutProps) {
   return (
     <div className="">
       <SettingsNavbar />

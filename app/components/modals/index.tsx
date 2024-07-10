@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useDispatch } from "react-redux";
 import { closeModals } from "@/lib/slice/modalSlice";
 
-interface IModal {
+interface ModalProps {
   heading: string | React.ReactNode;
   maxWidth?: string;
   maxHeight?: string;
@@ -15,7 +15,7 @@ function Modal({
   maxWidth = "max-w-[702px]",
   maxHeight = "max-h-[370px]",
   children,
-}: IModal) {
+}: ModalProps) {
   const dispatch = useDispatch();
 
   useEffect(() => {

@@ -7,11 +7,11 @@ import Sidebar from "../sidebar";
 import Navbar from "../navbar";
 import ModalHandler from "../modals/ModalHandler";
 
-interface IRootLayout {
+interface RootLayoutProps {
   children: React.ReactNode;
 }
 
-function index({ children }: IRootLayout) {
+function index({ children }: RootLayoutProps) {
   const pathName = usePathname();
 
   let body;
