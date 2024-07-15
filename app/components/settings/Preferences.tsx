@@ -30,7 +30,7 @@ function Preferences({ isModal, saveDetails }: IPreferences) {
             />{" "}
             <p
               className={`font-medium font-Poppins ${
-                isModal ? "text-lg" : "text-xl"
+                isModal ? "text-lg 2xl:text-xl" : "text-xl"
               }`}
             >
               Notification For Users
@@ -39,8 +39,8 @@ function Preferences({ isModal, saveDetails }: IPreferences) {
           <div className="py-2">
             <div className="flex py-2 items-center justify-between">
               <div>
-                <p className="text-sm">New User Created</p>
-                <p className="text-[0.74rem] text-neutral_500">
+                <p className="text-sm 2xl:text-lg">New User Created</p>
+                <p className="text-[0.74rem] 2xl:text-base text-neutral_500">
                   Partner can decide to get notified when a new member is
                   onboarded
                 </p>
@@ -53,8 +53,8 @@ function Preferences({ isModal, saveDetails }: IPreferences) {
             </div>
             <div className="flex py-2 items-center justify-between">
               <div>
-                <p className="text-sm">User gets blocked</p>
-                <p className="text-[0.74rem] text-neutral_500">
+                <p className="text-sm 2xl:text-lg">User gets blocked</p>
+                <p className="text-[0.74rem] 2xl:text-base text-neutral_500">
                   Partner can decide to get notified when a new order is
                   received
                 </p>
@@ -67,8 +67,8 @@ function Preferences({ isModal, saveDetails }: IPreferences) {
             </div>
             <div className="flex py-2 items-center justify-between">
               <div>
-                <p className="text-sm">User is deactivated</p>
-                <p className="text-[0.74rem] text-neutral_500">
+                <p className="text-sm 2xl:text-lg">User is deactivated</p>
+                <p className="text-[0.74rem] 2xl:text-base text-neutral_500">
                   Partner can decide to get notified when a new order is
                   received
                 </p>
@@ -97,7 +97,7 @@ function Preferences({ isModal, saveDetails }: IPreferences) {
             />{" "}
             <p
               className={`font-medium font-Poppins ${
-                isModal ? "text-lg" : "text-xl"
+                isModal ? "text-lg 2xl:text-xl" : "text-xl"
               }`}
             >
               Notification For Finance
@@ -106,8 +106,8 @@ function Preferences({ isModal, saveDetails }: IPreferences) {
           <div className="py-2">
             <div className="flex py-2 items-center justify-between">
               <div>
-                <p className="text-sm">Received new payment</p>
-                <p className="text-[0.74rem] text-neutral_500">
+                <p className="text-sm 2xl:text-lg">Received new payment</p>
+                <p className="text-[0.74rem] text-neutral_500 2xl:text-base">
                   Partner can decide to get notified when a new member is
                   onboarded
                 </p>
@@ -120,8 +120,8 @@ function Preferences({ isModal, saveDetails }: IPreferences) {
             </div>
             <div className="flex py-2 items-center justify-between">
               <div>
-                <p className="text-sm">Cancelled payment</p>
-                <p className="text-[0.74rem] text-neutral_500">
+                <p className="text-sm 2xl:text-lg">Cancelled payment</p>
+                <p className="text-[0.74rem] text-neutral_500 2xl:text-base">
                   Partner can decide to get notified when a new order is
                   received
                 </p>
@@ -134,8 +134,8 @@ function Preferences({ isModal, saveDetails }: IPreferences) {
             </div>
             <div className="flex py-2 items-center justify-between">
               <div>
-                <p className="text-sm">Cancelled trip</p>
-                <p className="text-[0.74rem] text-neutral_500">
+                <p className="text-sm 2xl:text-lg">Cancelled trip</p>
+                <p className="text-[0.74rem] text-neutral_500 2xl:text-base">
                   Partner can decide to get notified when an order has been
                   completed
                 </p>
@@ -152,7 +152,8 @@ function Preferences({ isModal, saveDetails }: IPreferences) {
       <div className="flex justify-center py-3 border-t">
         <button
           onClick={saveDetails}
-          className="bg-primary_700 transition duration-500 ease-in-out hover:bg-primary_900 px-4 py-3 rounded-lg text-white"
+          className="bg-primary_700 transition duration-500 ease-in-out hover:bg-primary_900 
+          px-4 py-3 rounded-lg text-white 2xl:text-lg"
         >
           Save Details
         </button>

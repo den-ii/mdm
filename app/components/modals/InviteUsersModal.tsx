@@ -17,40 +17,45 @@ function InviteUsersModal() {
       maxWidth="max-w-[489px]"
       maxHeight="max-h-[90%]"
     >
-      <div className="flex-1 px-4 flex flex-col gap-3  overflow-y-auto">
+      <div className="flex-1 px-4 flex flex-col gap-3 overflow-y-auto">
         <div className="mb-4">
           <div className="mt-3">
-            <label className="text-sm">Role</label>
+            <label className="text-sm 2xl:text-base">Role</label>
             <input
               type="text"
-              className="text-sm mt-2 block border rounded-lg p-2 w-full focus:outline focus:outline-1 focus:outline-black"
+              className="text-sm 2xl:text-base mt-2 block border 2xl:border-2 rounded-lg p-2 w-full 
+              focus:outline focus:outline-1 focus:outline-black"
             />
             <div className="mt-3">
-              <label className="text-sm">First Name</label>
+              <label className="text-sm 2xl:text-base">First Name</label>
               <input
                 type="text"
-                className="text-sm mt-2 block border rounded-lg p-2 w-full focus:outline focus:outline-1 focus:outline-black"
+                className="text-sm mt-2 block border 2xl:border-2
+                rounded-lg p-2 w-full focus:outline focus:outline-1 focus:outline-black"
               />
             </div>
             <div className="mt-3">
-              <label className="text-sm">Last Name</label>
+              <label className="text-sm 2xl:text-base">Last Name</label>
               <input
                 type="text"
-                className="text-sm mt-2 block border rounded-lg p-2 w-full focus:outline focus:outline-1 focus:outline-black"
+                className="text-sm 2xl:text-base mt-2 block border 2xl:border-2
+                rounded-lg p-2 w-full focus:outline focus:outline-1 focus:outline-black"
               />
             </div>
             <div className="mt-3">
-              <label className="text-sm">Email Address</label>
+              <label className="text-sm 2xl:text-base">Email Address</label>
               <input
                 type="text"
-                className="text-sm mt-2 block border rounded-lg p-2 w-full focus:outline focus:outline-1 focus:outline-black"
+                className="text-sm mt-2 block border 2xl:border-2 rounded-lg p-2 w-full 
+                focus:outline focus:outline-1 focus:outline-black"
               />
             </div>
             <div className="my-3">
-              <label className="text-sm">Phone Number</label>
+              <label className="text-sm 2xl:text-base">Phone Number</label>
               <input
                 type="text"
-                className="text-sm mt-2 block border rounded-lg p-2 w-full focus:outline focus:outline-1 focus:outline-black"
+                className="text-sm mt-2 block border 2xl:border-2 rounded-lg p-2 w-full 
+                focus:outline focus:outline-1 focus:outline-black"
               />
             </div>
           </div>
@@ -59,7 +64,8 @@ function InviteUsersModal() {
       <div className="flex justify-center py-3 border-t">
         <button
           onClick={inviteUser}
-          className="bg-primary_700 transition duration-500 ease-in-out hover:bg-primary_900 px-4 py-3 rounded-lg text-white"
+          className="bg-primary_700 transition duration-500 2xl:text-lg 
+          ease-in-out hover:bg-primary_900 px-4 py-3 rounded-lg text-white"
         >
           Invite User
         </button>
