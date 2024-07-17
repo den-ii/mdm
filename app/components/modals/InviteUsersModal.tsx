@@ -15,7 +15,7 @@ function InviteUsersModal() {
     <Modal
       heading="Invite Users"
       maxWidth="max-w-[489px]"
-      maxHeight="max-h-[90%]"
+      maxHeight="h-[85%] max-h-[700px]"
     >
       <div className="flex-1 px-4 flex flex-col gap-3 overflow-y-auto">
         <div className="mb-4">

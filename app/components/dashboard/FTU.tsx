@@ -88,7 +88,7 @@ function FTU() {
       <h1 className="text-lg 2xl:text-2xl font-medium">
         Hi Scarlett, Welcome to MDM
       </h1>
-      <div className="bg-white p-3 2xl:p-4 mt-2 max-w-[835px] 2xl:max-w-[900px] rounded-[16px]">
+      <div className="bg-white p-3 2xl:p-4 mt-2 max-w-[835px] 2xl:max-w-[80%] rounded-[16px]">
         <h2 className="font-semibold 2xl:text-xl font-Poppins">Setup Guide</h2>
         <p className="mt-1 text-neutral_500 text-sm 2xl:text-lg">
           Use this personalised guide to get your system up and running.
@@ -147,6 +147,14 @@ function FTU() {
                 src="/assets/vendor/dashboard/request_device.svg"
                 width={80}
                 height={100}
+                className="2xl:hidden"
+                alt="request devices"
+              />
+              <Image
+                src="/assets/vendor/dashboard/request_device.svg"
+                width={100}
+                height={120}
+                className="hidden 2xl:inline-block"
                 alt="request devices"
               />
             </div>
@@ -194,7 +202,15 @@ function FTU() {
                 src="/assets/vendor/dashboard/billing_info.svg"
                 width={80}
                 height={100}
+                className="2xl:hidden"
                 alt="billing information"
+              />
+              <Image
+                src="/assets/vendor/dashboard/billing_info.svg"
+                width={100}
+                height={120}
+                className="hidden 2xl:inline-block"
+                alt="request devices"
               />
             </div>
           </div>
@@ -241,7 +257,15 @@ function FTU() {
                 src="/assets/vendor/dashboard/notification_preference.svg"
                 width={80}
                 height={100}
+                className="hidden"
                 alt="notification preferences"
+              />
+              <Image
+                src="/assets/vendor/dashboard/notification_preference.svg"
+                width={120}
+                height={120}
+                className="hidden 2xl:inline-block"
+                alt="request devices"
               />
             </div>
           </div>
@@ -286,9 +310,17 @@ function FTU() {
             <div className={`${showStages[4] ? "block" : "hidden"}`}>
               <Image
                 src="/assets/vendor/dashboard/send_invites.svg"
+                className="hidden"
                 width={80}
                 height={100}
                 alt="send invites"
+              />
+              <Image
+                src="/assets/vendor/dashboard/send_invites.svg"
+                width={120}
+                height={120}
+                className="hidden 2xl:inline-block"
+                alt="request devices"
               />
             </div>
           </div>

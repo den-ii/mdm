@@ -57,14 +57,14 @@ function CustomersPage() {
         buttonText="Add Customer"
       /> */}
 
-      <div className="flex gap-5 mt-3 w-full">
+      <div className="flex gap-5 mt-3 w-full max-w-[80%]">
         <div className="mt-4 border flex-1 border-neutral_300 rounded-2xl">
           <div className="flex gap-3 border-b p-4 border-neutral_300">
-            <div className="relative w-full max-w-[400px]">
+            <div className="relative w-full max-w-[60%]">
               <input
                 type="text"
                 placeholder="Search Here"
-                className="placeholder:font-light text-sm focus:outline-0 transition duration-500 
+                className="placeholder:font-light text-sm 2xl:text-base focus:outline-0 transition duration-500 
                 ease-in-out focus:border-primary_700 focus:outline-primary_700 border border-[#DADAE8] 
               rounded-xl w-full block py-3 px-7"
               />
@@ -73,25 +73,40 @@ function CustomersPage() {
               </div>
             </div>
             <button
-              className="py-3 px-4 transition duration-500 ease-in-out hover:border-primary_700 hover:text-primary_700 hover:shadow-md
+              className="py-3 px-4 transition duration-500 ease-in-out hover:border-primary_700
+               hover:text-primary_700 hover:shadow-md
             border border-[#DADAE8] text-neutral_500 rounded-2xl flex items-center gap-2"
             >
               <span>
                 <BsFilter />
               </span>
-              <span className="text-sm text-inherit">Filter By</span>
+              <span className="text-sm 2xl:text-base text-inherit">
+                Filter By
+              </span>
             </button>
           </div>
           <div className="p-4">
             <div className="flex gap-2 mt-2 px-3 pb-2">
               <input type="checkbox" />
               <div className="flex gap-4 flex-1 ">
-                <div className="text-sm w-[150px]">Customer Name</div>
-                <div className="text-sm w-[150px]">Phone Number</div>
-                <div className="text-sm w-[150px]">Verification Date</div>
-                <div className="text-sm w-[150px]">Total Devices</div>
-                <div className="text-sm w-[150px]">Status</div>
-                <div className="text-sm w-[150px]">Action</div>
+                <div className="text-sm 2xl:text-base w-[150px] 2xl:w-[180px]">
+                  Customer Name
+                </div>
+                <div className="text-sm 2xl:text-base w-[150px] 2xl:w-[180px]">
+                  Phone Number
+                </div>
+                <div className="text-sm 2xl:text-base w-[150px] 2xl:w-[180px]">
+                  Verification Date
+                </div>
+                <div className="text-sm 2xl:text-base w-[150px] 2xl:w-[180px]">
+                  Total Devices
+                </div>
+                <div className="text-sm 2xl:text-base w-[150px] 2xl:w-[180px]">
+                  Status
+                </div>
+                <div className="text-sm 2xl:text-base w-[150px] 2xl:w-[180px]">
+                  Action
+                </div>
               </div>
               <div></div>
             </div>
@@ -104,28 +119,28 @@ function CustomersPage() {
                 <div className="flex gap-2 mt-2 px-3 py-3 border border-neutral_300 rounded-xl items-center">
                   <input type="checkbox" />
                   <div className="flex gap-4 flex-1 items-center">
-                    <div className="text-sm w-[150px] text-ellipsis overflow-x-clip ">
+                    <div className="text-sm 2xl:text-base w-[150px] 2xl:w-[180px] text-ellipsis overflow-x-clip ">
                       {customer.name}
                     </div>
-                    <div className="text-sm w-[150px]">
+                    <div className="text-sm 2xl:text-base w-[150px] 2xl:w-[180px]">
                       {customer.phoneNumber}
                     </div>
-                    <div className="text-sm w-[150px]">
+                    <div className="text-sm 2xl:text-base w-[150px] 2xl:w-[180px]">
                       {customer.verficationDate}
                     </div>
-                    <div className="text-sm w-[150px]">
+                    <div className="text-sm 2xl:text-base w-[150px] 2xl:w-[180px]">
                       {customer.totalDevices}
                     </div>
-                    <div className="text-sm w-[150px]">
+                    <div className="text-sm 2xl:text-base w-[150px] 2xl:w-[180px]">
                       <div
                         className={`max-w-[100px] text-center ${statusStyle} py-2 px-3 rounded-2xl`}
                       >
                         {customer.status}
                       </div>
                     </div>
-                    <div className="text-sm w-[150px] ">
+                    <div className="text-sm w-[150px] 2xl:text-base 2xl:w-[180px]">
                       <button
-                        className="p-2 bg-primary_700 rounded-xl text-sm text-white 
+                        className="p-2 bg-primary_700 rounded-xl text-sm 2xl:text-base text-white 
                       transition duration-500 ease-in-out hover:shadow-md"
                       >
                         View Details

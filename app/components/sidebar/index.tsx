@@ -8,7 +8,7 @@ function Sidebar() {
   const pathname = usePathname();
 
   return (
-    <nav className="bg-primary_700 sidebar p-4 px-2 2xl:px-4 rounded-[16px] w-[132px] 2xl:w-[180px] flex flex-col items-center">
+    <nav className="bg-primary_700 sidebar max-h-[900px] p-4 px-2 2xl:px-4 rounded-[16px] w-[132px] 2xl:w-[180px] flex flex-col items-center">
       <Link href="/" className="cursor-pointer mb-5">
         <Image
           src="/assets/vendor/login/mdm_logo.svg"
@@ -132,7 +132,7 @@ function Sidebar() {
       <Link
         href="/billings/subcriptions"
         className={`  ${
-          pathname === "/billings" ? "dash_active" : "opacity-80"
+          pathname.startsWith("/billings") ? "dash_active" : "opacity-80"
         } mt-2 flex items-center justify-center  hover:opacity-100 w-full h-[70px] 2xl:h-[90px] rounded-[12px]`}
       >
         <div className="flex flex-col gap-1 items-center">
@@ -184,7 +184,7 @@ function Sidebar() {
       <Link
         href="/team/all"
         className={`  ${
-          pathname === "/team" ? "dash_active" : "opacity-80"
+          pathname.startsWith("/team") ? "dash_active" : "opacity-80"
         } mt-2 flex items-center justify-center  hover:opacity-100 w-full h-[70px] 2xl:h-[90px] rounded-[12px]`}
       >
         <div className="flex flex-col gap-1 items-center">

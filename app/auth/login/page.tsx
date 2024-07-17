@@ -18,11 +18,11 @@ function LoginPage() {
   }
 
   return (
-    <main className="md:flex md:p-2 min-h-[100vh]">
+    <main className="md:flex md:p-2 min-h-screen">
       {/* SMALL SCREENS */}
       <div className="md:hidden bg-primary_900 p-4 pb-20">
         <div
-          className="text-right text-sm"
+          className="text-right text-sm 2xl:text-base"
           style={{ color: "rgba(255, 255, 255, 0.85)" }}
         >
           Having Troubles?{" "}
@@ -40,7 +40,7 @@ function LoginPage() {
                 alt="Logo"
               />
               <p
-                className="text-sm mt-1"
+                className="text-sm 2xl:text-base mt-1"
                 style={{ color: "rgba(255, 255, 255, 0.65)" }}
               >
                 Vendor Web
@@ -53,7 +53,7 @@ function LoginPage() {
         </div>
       </div>
 
-      <div className="hidden md:block bg-[url('/assets/vendor/login/background.png')] bg-cover bg-no-repeat w-[42%] min-h-screen">
+      <div className="hidden md:block bg-[url('/assets/vendor/login/background.png')] bg-cover bg-no-repeat w-[42%] min-h-[93vh]">
         <div className="mt-[2.6rem]">
           <Link href="/" className="flex flex-col items-center">
             <Image
@@ -96,25 +96,25 @@ function LoginPage() {
           <h1 className="text-xl md:text-2xl font-semibold">
             Welcome, Great To Have You Finally Join Us
           </h1>
-          <p className="text-[#1D2433CC] font-light text-sm mt-2 md:mt-1">
+          <p className="text-[#1D2433CC] font-light text-sm 2xl:text-base mt-2 md:mt-1">
             Don't have an account?{" "}
             <Link
               href="register"
-              className="text-sm text-primary_700 md:text-base font-medium cursor-pointer"
+              className="text-sm 2xl:text-base text-primary_700 md:text-base font-medium cursor-pointer"
             >
               Register
             </Link>
           </p>
           <form className="mt-4" onSubmit={handleSubmit}>
             <div>
-              <label htmlFor="" className="text-sm font-medium">
+              <label htmlFor="" className="text-sm 2xl:text-base font-medium">
                 Email Address
               </label>
               <div className="relative mt-1">
                 <input
                   placeholder="vendor@info.ng"
                   type="email"
-                  className="placeholder:font-light p-3 pl-9 w-full text-sm border border-[#DADAE8] rounded-[8px] focus:outline focus:outline-1 focus:outline-black"
+                  className="placeholder:font-light p-3 pl-9 w-full text-sm 2xl:text-base border border-[#DADAE8] rounded-[8px] focus:outline focus:outline-1 focus:outline-black"
                 />
                 <img
                   className="absolute top-[50%] -translate-y-[50%] left-2"
@@ -126,14 +126,15 @@ function LoginPage() {
               </div>
             </div>
             <div className="mt-5">
-              <label htmlFor="" className="text-sm font-medium">
+              <label htmlFor="" className="text-sm 2xl:text-base font-medium">
                 Password
               </label>
               <div className="relative mt-1">
                 <input
                   placeholder="**********"
                   type={showPassword ? "text" : "password"}
-                  className="placeholder:font-light p-3 px-9 w-full  text-sm border border-[#DADAE8] rounded-[8px] focus:outline focus:outline-1 focus:outline-black"
+                  className="placeholder:font-light p-3 px-9 w-full  text-sm 2xl:text-base
+                   border border-[#DADAE8] rounded-[8px] focus:outline focus:outline-1 focus:outline-black"
                 />
                 <img
                   className="absolute top-[50%] -translate-y-[50%] left-2"

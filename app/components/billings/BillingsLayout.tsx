@@ -19,7 +19,7 @@ export default function BillingsLayout() {
     <nav className="flex gap-1 items-center">
       <Link
         href={subcriptionsUrl}
-        className={`font-Poppins py-2 px-3 text-sm text-center rounded-2xl ${
+        className={`font-Poppins py-2 px-3 text-sm 2xl:text-base text-center rounded-2xl ${
           pathname === subcriptionsUrl ? linkStyle : inactiveStyle
         } `}
       >
@@ -27,7 +27,7 @@ export default function BillingsLayout() {
       </Link>
       <Link
         href={paymentsUrl}
-        className={`font-Poppins py-2 px-3 text-sm text-center rounded-2xl  ${
+        className={`font-Poppins py-2 px-3 text-sm 2xl:text-base text-center rounded-2xl  ${
           pathname === paymentsUrl ? linkStyle : inactiveStyle
         }`}
       >
@@ -35,7 +35,7 @@ export default function BillingsLayout() {
       </Link>
       <Link
         href={invoicesUrl}
-        className={`font-Poppins py-2 px-3 text-sm text-center rounded-2xl ${
+        className={`font-Poppins py-2 px-3 text-sm 2xl:text-base text-center rounded-2xl ${
           pathname === invoicesUrl ? linkStyle : inactiveStyle
         }`}
       >

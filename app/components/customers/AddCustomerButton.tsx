@@ -13,7 +13,12 @@ function AddCustomerButton() {
   );
   return (
     <div className="text-right mt-2">
-      <Buttons primary noWidth onClick={handleEnrollCustomer}>
+      <Buttons
+        primary
+        noWidth
+        onClick={handleEnrollCustomer}
+        styles="2xl:text-lg"
+      >
         Add Customer
       </Buttons>
     </div>
