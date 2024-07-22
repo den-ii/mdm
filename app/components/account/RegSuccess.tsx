@@ -38,16 +38,16 @@ function RegSuccess({
         </div>
       </div>
       <div className="w-[60%] bg-[#FBFBFD] flex flex-col">
-        <div className="hidden md:block font-light text-right mx-[14px] my-[14px]">
+        <div className="hidden md:block font-light text-right 2xl:text-lg mx-[14px] my-[14px]">
           Having Troubles?{" "}
-          <span className="text-primary_700 md:text-base font-semibold cursor-pointer">
+          <span className="text-primary_700 md:text-base 2xl:text-lg font-semibold cursor-pointer">
             Get Help
           </span>
         </div>
         <div className="flex-1 flex flex-col items-center justify-center w-[90%] max-w-[625px] mx-auto gap-2">
           <Image src={image} width={200} height={200} alt={imageAlt} />
           <h2 className="font-semibold mt-2 text-3xl text-center">{title}</h2>
-          <p className="mt-2 text-center">{message}</p>
+          <p className="mt-2 text-center 2xl:text-lg">{message}</p>
           {link && (
             <Link
               href={link}

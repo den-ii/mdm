@@ -28,7 +28,7 @@ function index({ children }: IRootLayout) {
         <Sidebar />
         <div className="flex-1">
           <Navbar />
-          <main className="mt-3 max-w-[1300px] mx-auto">
+          <main className="mt-3">
             {children}
             <ModalHandler />
           </main>

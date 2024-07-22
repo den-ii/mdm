@@ -34,7 +34,9 @@ function FtuScreen({
             alt={imageAlt}
           />
           <h2 className="font-Poppins text-lg font-semibold">{title}</h2>
-          <p className="text-neutral_500 text-sm">{description}</p>
+          <p className="text-neutral_500 text-sm 2xl:text-base">
+            {description}
+          </p>
         </div>
         {buttonText && (
           <div className="mt-4">

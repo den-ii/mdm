@@ -28,12 +28,12 @@ function Business() {
       <h1 className="text-xl md:text-2xl font-semibold font-Poppins">
         Business Details
       </h1>
-      <p className="mt-2 text-sm font-light">
+      <p className="mt-2 text-sm 2xl:text-base font-light">
         Please take a moment to setup your business.
       </p>
       <div className="mt-10">
         <div>
-          <p className="font-semibold flex ">Business Logo</p>
+          <p className="font-semibold flex">Business Logo</p>
           <div className="mt-3 flex gap-3 items-center">
             <Image
               src="/assets/vendor/register/photo.svg"
@@ -42,10 +42,10 @@ function Business() {
               alt="photo_edit"
             />
             <div>
-              <button className="bg-primary_100 text-sm font-medium p-3 rounded-[8px] text-primary_700">
+              <button className="bg-primary_100 text-sm 2xl:text-base font-medium p-3 rounded-[8px] text-primary_700">
                 Upload Image
               </button>
-              <p className="text-[0.7rem] mt-2 opacity-80">
+              <p className="text-[0.7rem] 2xl:text-sm mt-2 opacity-80">
                 .png or .jpg files up to 8MB. Recommended size is 72 x 72
               </p>
             </div>
@@ -54,12 +54,15 @@ function Business() {
         <form className="mt-6" onSubmit={handleSubmit}>
           <div className="">
             <div className="w-full">
-              <label className="text-sm font-semibold">Business Name</label>
+              <label className="text-sm 2xl:text-base font-semibold">
+                Business Name
+              </label>
               <div className="relative">
                 <input
                   placeholder="Devos Inc"
                   type="text"
-                  className="placeholder:font-light mt-1 p-3 pl-9 w-full text-sm border border-[#DADAE8] rounded-[8px] focus:outline focus:outline-1 focus:outline-black"
+                  className="placeholder:font-light mt-1 p-3 pl-9 w-full text-sm 2xl:text-base
+                   border border-[#DADAE8] rounded-[8px] focus:outline focus:outline-1 focus:outline-black"
                 />
                 <Image
                   src={"/assets/vendor/register/briefcase.svg"}
@@ -71,12 +74,15 @@ function Business() {
               </div>
             </div>
             <div className="w-full mt-3">
-              <label className="text-sm font-semibold">Business Address</label>
+              <label className="text-sm 2xl:text-base font-semibold">
+                Business Address
+              </label>
               <div className="relative">
                 <input
                   placeholder="42 Saka Tinibu"
                   type="text"
-                  className="placeholder:font-light mt-1 p-3 pl-9 w-full text-sm border border-[#DADAE8] rounded-[8px] focus:outline focus:outline-1 focus:outline-black"
+                  className="placeholder:font-light mt-1 p-3 pl-9 w-full text-sm 2xl:text-base
+                   border border-[#DADAE8] rounded-[8px] focus:outline focus:outline-1 focus:outline-black"
                 />
                 <MdLocationPin
                   fill="#AAAABF"
@@ -88,12 +94,14 @@ function Business() {
           </div>
           <div className="flex gap-3 mt-3">
             <div className="w-full">
-              <label className="text-sm font-semibold">State</label>
+              <label className="text-sm 2xl:text-base font-semibold">
+                State
+              </label>
               <div className="relative">
                 <input
                   placeholder="Lagos"
                   type="text"
-                  className="placeholder:font-light mt-1 p-3 pl-9 w-full text-sm border border-[#DADAE8] rounded-[8px] focus:outline focus:outline-1 focus:outline-black"
+                  className="placeholder:font-light mt-1 p-3 pl-9 w-full text-sm 2xl:text-base border border-[#DADAE8] rounded-[8px] focus:outline focus:outline-1 focus:outline-black"
                 />
                 <Image
                   src={"/assets/vendor/register/compass.svg"}
@@ -110,12 +118,14 @@ function Business() {
               </div>
             </div>
             <div className="w-full">
-              <label className="text-sm font-semibold">City</label>
+              <label className="text-sm 2xl:text-base font-semibold">
+                City
+              </label>
               <div className="relative">
                 <input
                   placeholder="Lekki"
                   type="text"
-                  className="placeholder:font-light mt-1 p-3 pl-9 w-full text-sm border border-[#DADAE8] rounded-[8px] focus:outline focus:outline-1 focus:outline-black"
+                  className="placeholder:font-light mt-1 p-3 pl-9 w-full text-sm 2xl:text-base border border-[#DADAE8] rounded-[8px] focus:outline focus:outline-1 focus:outline-black"
                 />
                 <FaCity
                   fill="#AAAABF"
@@ -125,8 +135,8 @@ function Business() {
               </div>
             </div>
           </div>
-          <div className="mt-3">
-            <p className="opacity-90 text-sm">
+          {/* <div className="mt-3">
+            <p className="opacity-90 text-sm 2xl:text-base">
               *Select the quantity of sachet device you want
             </p>
             <DeviceQty
@@ -135,7 +145,7 @@ function Business() {
               decreaseDevice={decreaseDevice}
               handleChange={handleDeviceChange}
             />
-          </div>
+          </div> */}
           <div className="mt-8">
             <button
               className="max-w-[1000px] mx-auto bg-primary_700 flex justify-center items-center font-semibold 

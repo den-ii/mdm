@@ -15,7 +15,7 @@ export default function NotificationsLayout() {
     <nav className="flex gap-3 items-center">
       <Link
         href={messagesUrl}
-        className={`font-Poppins text-sm rounded-2xl py-2 px-3 ${
+        className={`font-Poppins text-sm 2xl:text-base rounded-2xl py-2 px-3 ${
           pathname === messagesUrl
             ? linkStyle
             : "border border-[#DADAE8] text-gray-500"
@@ -25,7 +25,7 @@ export default function NotificationsLayout() {
       </Link>
       <Link
         href={devicesUrl}
-        className={`font-Poppins rounded-2xl text-sm py-2 px-3  ${
+        className={`font-Poppins rounded-2xl text-sm 2xl:text-base  py-2 px-3  ${
           pathname === devicesUrl
             ? linkStyle
             : "border border-[#DADAE8] text-gray-500"

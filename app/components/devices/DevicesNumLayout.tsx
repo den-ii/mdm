@@ -9,10 +9,12 @@ function DevicesNumLayout() {
     <>
       {onlyDevices && (
         <div className="flex flex-wrap gap-3 ">
-          <div className="flex items-center gap-3 border border-[#DADAE8] rounded-lg p-3 min-w-[160px] justify-between">
+          <div className="flex items-center gap-3 border border-[#DADAE8] rounded-lg p-3 min-w-[160px] 2xl:min-w-[190px] justify-between">
             <div className="text-sm flex flex-col gap-1">
-              <p className="text-neutral_500 font-Poppins">Configured</p>
-              <p className="font-medium">0</p>
+              <p className="text-neutral_500 font-Poppins 2xl:text-lg">
+                Configured
+              </p>
+              <p className="font-medium 2xl:text-lg">0</p>
             </div>
             <div>
               <Image
@@ -23,10 +25,12 @@ function DevicesNumLayout() {
               />
             </div>
           </div>
-          <div className="flex items-center gap-3 border border-[#DADAE8] rounded-lg p-3 min-w-[160px] justify-between">
+          <div className="flex items-center gap-3 border border-[#DADAE8] rounded-lg p-3 min-w-[160px] 2xl:min-w-[190px] justify-between">
             <div className="text-sm flex flex-col gap-1">
-              <p className="text-neutral_500 font-Poppins">Assigned</p>
-              <p className="font-medium">0</p>
+              <p className="text-neutral_500 font-Poppins 2xl:text-lg">
+                Assigned
+              </p>
+              <p className="font-medium 2xl:text-lg">0</p>
             </div>
             <div>
               <Image
@@ -37,10 +41,12 @@ function DevicesNumLayout() {
               />
             </div>
           </div>
-          <div className="flex items-center gap-3 border border-[#DADAE8] rounded-lg p-3 min-w-[160px] justify-between">
+          <div className="flex items-center gap-3 border border-[#DADAE8] rounded-lg p-3 min-w-[160px] 2xl:min-w-[190px] justify-between">
             <div className="text-sm flex flex-col gap-1">
-              <p className="text-neutral_500 font-Poppins">UnAssigned</p>{" "}
-              <p className="font-medium">0</p>
+              <p className="text-neutral_500 font-Poppins 2xl:text-lg">
+                UnAssigned
+              </p>{" "}
+              <p className="font-medium 2xl:text-lg">0</p>
             </div>
             <div>
               <Image
@@ -51,10 +57,12 @@ function DevicesNumLayout() {
               />
             </div>
           </div>
-          <div className="flex items-center gap-3 border border-[#DADAE8] rounded-lg p-3 min-w-[160px] justify-between">
+          <div className="flex items-center gap-3 border border-[#DADAE8] rounded-lg p-3 min-w-[160px] 2xl:min-w-[190px] justify-between">
             <div className="text-sm flex flex-col gap-1">
-              <p className="text-neutral_500 font-Poppins">Activated</p>{" "}
-              <p className="font-medium">0</p>
+              <p className="text-neutral_500 font-Poppins 2xl:text-lg">
+                Activated
+              </p>{" "}
+              <p className="font-medium 2xl:text-lg">0</p>
             </div>
             <div>
               <Image
@@ -65,10 +73,12 @@ function DevicesNumLayout() {
               />
             </div>
           </div>
-          <div className="flex items-center gap-3 border border-[#DADAE8] rounded-lg p-3 min-w-[160px] justify-between">
+          <div className="flex items-center gap-3 border border-[#DADAE8] rounded-lg p-3 min-w-[160px] 2xl:min-w-[190px] justify-between">
             <div className="text-sm flex flex-col gap-1">
-              <p className="text-neutral_500 font-Poppins">Locked</p>{" "}
-              <p className="font-medium">0</p>
+              <p className="text-neutral_500 font-Poppins 2xl:text-lg">
+                Locked
+              </p>{" "}
+              <p className="font-medium 2xl:text-lg">0</p>
             </div>
             <div>
               <Image

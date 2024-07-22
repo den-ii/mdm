@@ -5,8 +5,10 @@ function BillingsNumLayout() {
     <div className="flex flex-wrap gap-3 mt-5">
       <div className="flex items-center gap-5 border border-[#DADAE8] rounded-lg p-3 min-w-[250px] justify-between">
         <div className="text-sm flex flex-col gap-1">
-          <p className="text-neutral_500 font-Poppins">Total Revenue</p>
-          <p className="font-medium">0</p>
+          <p className="text-neutral_500 font-Poppins 2xl:text-[1.15rem]">
+            Total Revenue
+          </p>
+          <p className="font-medium 2xl:text-[1.15rem]">0</p>
         </div>
         <div>
           <Image
@@ -19,8 +21,10 @@ function BillingsNumLayout() {
       </div>
       <div className="flex items-center gap-3 border border-[#DADAE8] rounded-lg p-3 min-w-[250px] justify-between">
         <div className="text-sm flex flex-col gap-1">
-          <p className="text-neutral_500 font-Poppins">Outstanding Payments</p>
-          <p className="font-medium">0</p>
+          <p className="text-neutral_500 font-Poppins 2xl:text-[1.15rem]">
+            Outstanding Payments
+          </p>
+          <p className="font-medium 2xl:text-[1.15rem]">0</p>
         </div>
         <div>
           <Image
@@ -32,9 +36,11 @@ function BillingsNumLayout() {
         </div>
       </div>
       <div className="flex items-center gap-5 border border-[#DADAE8] rounded-lg p-3 min-w-[250px] justify-between">
-        <div className="text-sm flex flex-col gap-1">
-          <p className="text-neutral_500 font-Poppins">Subscription Due</p>{" "}
-          <p className="font-medium">0</p>
+        <div className="text-sm 2xl:text-base flex flex-col gap-1">
+          <p className="text-neutral_500 font-Poppins 2xl:text-[1.15rem]">
+            Subscription Due
+          </p>{" "}
+          <p className="font-medium 2xl:text-[1.15rem]">0</p>
         </div>
         <div>
           <Image

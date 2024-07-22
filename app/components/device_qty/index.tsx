@@ -24,9 +24,17 @@ function DeviceQty({
             width={20}
             height={20}
             alt="device"
+            className="2xl:hidden"
+          />
+          <Image
+            src="/assets/devices/blue.svg"
+            width={26}
+            height={26}
+            alt="device"
+            className="hidden 2xl:inline-block"
           />
         </div>
-        <div className="font-semibold text-sm">Sachet Device</div>
+        <div className="font-semibold text-sm 2xl:text-lg">Sachet Device</div>
       </div>
       <div className="flex gap-3 items-center">
         <div
@@ -45,7 +53,8 @@ function DeviceQty({
             type="number"
             value={deviceNo}
             onChange={handleChange}
-            className="block font-semibold w-[40px] text-center p-2 appearance-none outline-none border bg-[#F8F9FC] border-[#E1E6EF] rounded-[8px]"
+            className="block font-semibold w-[40px] text-center p-2 appearance-none 
+            outline-none border bg-[#F8F9FC] border-[#E1E6EF] rounded-[8px] 2xl:text-lg"
           />
         </div>
         <div

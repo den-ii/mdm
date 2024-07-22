@@ -31,15 +31,21 @@ function DevicePage({ params }: { params: { id: string } }) {
           </div>
         </div>
         <div className="flex gap-3 items-center">
-          <button className="bg-red-600 text-white font-medium transition duration-500 ease-in-out hover:shadow-md shadow-sm py-3 px-4 rounded-2xl">
+          <button
+            className="bg-red-600 text-white font-medium transition duration-500 ease-in-out 
+          hover:shadow-md shadow-sm py-3 px-4 rounded-2xl 2xl:text-lg"
+          >
             Lock Device
           </button>
-          <button className="bg-primary_700 text-white transition duration-500 ease-in-out hover:shadow-md shadow-sm font-medium py-3 px-4 rounded-2xl">
+          <button
+            className="bg-primary_700 text-white transition duration-500 ease-in-out 
+          hover:shadow-md shadow-sm font-medium py-3 px-4 rounded-2xl 2xl:text-lg"
+          >
             Locate Device
           </button>
         </div>
       </div>
-      <div className="bg-[#F2F2FA] py-6 text-center text-sm rounded-xl mt-5 font-Poppins">
+      <div className="bg-[#F2F2FA] py-6 text-center text-sm 2xl:text-base rounded-xl mt-5 font-Poppins">
         This device has been assigned.{" "}
         <span className="font-Poppins text-primary_700 font-medium text-inherit">
           View Customer

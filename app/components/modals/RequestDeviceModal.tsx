@@ -22,7 +22,9 @@ function RequestDeviceModal() {
   return (
     <Modal heading="Request Device">
       <div className="flex-1 px-4 flex flex-col justify-center gap-3">
-        <p>Select the quantity of sachet device you want</p>
+        <p className="2xl:text-lg">
+          Select the quantity of sachet device you want
+        </p>
         <DeviceQty
           deviceNo={deviceNo}
           increaseDevice={increaseDevice}
@@ -32,7 +34,8 @@ function RequestDeviceModal() {
       </div>
       <div className="flex justify-center py-3 border-t">
         <button
-          className="bg-primary_700 transition duration-500 ease-in-out hover:bg-primary_900 px-4 py-3 rounded-lg text-white"
+          className="bg-primary_700 transition duration-500 ease-in-out hover:bg-primary_900 
+          px-4 py-3 rounded-lg text-white 2xl:text-lg"
           onClick={submitRequest}
         >
           Submit Request

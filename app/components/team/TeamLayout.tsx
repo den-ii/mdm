@@ -16,7 +16,7 @@ function TeamLayout() {
     <nav className="flex gap-2 items-center">
       <Link
         href={allUrl}
-        className={`flex items-center justify-center gap-2 text-gray-500 font-Poppins py-2 px-3 text-sm rounded-2xl ${
+        className={`flex items-center justify-center gap-2 text-gray-500 font-Poppins py-2 px-3 text-sm 2xl:text-base rounded-2xl ${
           pathname === allUrl ? linkStyle : inactiveStyle
         }`}
       >
@@ -40,7 +40,7 @@ function TeamLayout() {
       </Link>
       <Link
         href={availableUrl}
-        className={`flex items-center justify-center gap-2 font-Poppins py-2 px-3 text-sm rounded-2xl ${
+        className={`flex items-center justify-center gap-2 font-Poppins py-2 px-3 text-sm 2xl:text-base rounded-2xl ${
           pathname === availableUrl ? linkStyle : inactiveStyle
         }`}
       >
@@ -66,7 +66,7 @@ function TeamLayout() {
       </Link>
       <Link
         href={blockedUrl}
-        className={`flex items-center justify-center gap-2 font-Poppins py-2 px-3 text-sm rounded-2xl ${
+        className={`flex items-center justify-center gap-2 font-Poppins py-2 px-3 text-sm 2xl:text-base rounded-2xl ${
           pathname === blockedUrl ? linkStyle : inactiveStyle
         } `}
       >
@@ -91,7 +91,7 @@ function TeamLayout() {
       </Link>
       <Link
         href={pendingInviteUrl}
-        className={`flex items-center justify-center gap-2 font-Poppins py-2 px-3 text-sm rounded-2xl ${
+        className={`flex items-center justify-center gap-2 font-Poppins py-2 px-3 text-sm 2xl:text-base rounded-2xl ${
           pathname === pendingInviteUrl ? linkStyle : inactiveStyle
         } `}
       >

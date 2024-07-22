@@ -22,12 +22,12 @@ function Personal({ changeScreen }: IPersonal) {
   return (
     <div className="mt-3 md:mt-7">
       <h1 className="text-xl md:text-2xl font-medium">Personal Details</h1>
-      <p className="mt-1 md:mt-2 text-sm font-light">
+      <p className="mt-1 md:mt-2 text-sm 2xl:text-base font-light">
         Please take a moment to introduce yourself.
       </p>
       <div className="mt-10">
         <div>
-          <p className="font-medium flex ">Profile Picture</p>
+          <p className="font-medium flex">Profile Picture</p>
           <div className="mt-3 flex gap-3 items-center">
             <Image
               src="/assets/vendor/register/photo.svg"
@@ -36,10 +36,10 @@ function Personal({ changeScreen }: IPersonal) {
               alt="photo_edit"
             />
             <div>
-              <button className="bg-primary_100 text-sm font-medium p-3 rounded-[8px] text-primary_700">
+              <button className="bg-primary_100 text-sm 2xl:text-base font-medium p-3 rounded-[8px] text-primary_700">
                 Upload Image
               </button>
-              <p className="text-[0.7rem] mt-2 opacity-80">
+              <p className="text-[0.7rem] 2xl:text-sm mt-2 opacity-80">
                 .png or .jpg files up to 8MB. Recommended size is 72 x 72
               </p>
             </div>
@@ -48,12 +48,14 @@ function Personal({ changeScreen }: IPersonal) {
         <form className="mt-6" onSubmit={handleSubmit}>
           <div className="flex flex-col md:flex-row gap-3">
             <div className="w-full">
-              <label className="text-sm font-medium">First Name</label>
+              <label className="text-sm 2xl:text-base font-medium">
+                First Name
+              </label>
               <div className="relative">
                 <input
                   placeholder="Julia"
                   type="text"
-                  className="placeholder:font-light mt-1 p-3 pl-9 w-full text-sm border border-[#DADAE8] rounded-[8px] focus:outline focus:outline-1 focus:outline-black"
+                  className="placeholder:font-light mt-1 p-3 pl-9 w-full text-sm 2xl:text-base border border-[#DADAE8] rounded-[8px] focus:outline focus:outline-1 focus:outline-black"
                 />
                 <FaUser
                   fill="#AAAABF"
@@ -63,12 +65,14 @@ function Personal({ changeScreen }: IPersonal) {
               </div>
             </div>
             <div className="w-full">
-              <label className="text-sm font-medium">Last Name</label>
+              <label className="text-sm 2xl:text-base font-medium">
+                Last Name
+              </label>
               <div className="relative">
                 <input
                   placeholder="Stratton"
                   type="text"
-                  className="placeholder:font-light mt-1 p-3 pl-9 w-full text-sm border border-[#DADAE8] rounded-[8px] focus:outline focus:outline-1 focus:outline-black"
+                  className="placeholder:font-light mt-1 p-3 pl-9 w-full text-sm 2xl:text-base border border-[#DADAE8] rounded-[8px] focus:outline focus:outline-1 focus:outline-black"
                 />
                 <FaUser
                   fill="#AAAABF"
@@ -80,13 +84,16 @@ function Personal({ changeScreen }: IPersonal) {
           </div>
           <div className="flex flex-col md:flex-row gap-3 mt-3">
             <div className="w-full">
-              <label className="text-sm font-medium">Phone Number</label>
+              <label className="text-sm font-medium 2xl:text-base">
+                Phone Number
+              </label>
 
               <div className="relative">
                 <input
                   placeholder="+234 805 687 6798"
                   type="tel"
-                  className="placeholder:font-light mt-1 p-3 pl-9 w-full text-sm border border-[#DADAE8] rounded-[8px] focus:outline focus:outline-1 focus:outline-black"
+                  className="placeholder:font-light mt-1 p-3 pl-9 w-full text-sm 2xl:text-base 
+                  border border-[#DADAE8] rounded-[8px] focus:outline focus:outline-1 focus:outline-black"
                 />
                 <Call
                   size="20"
@@ -97,12 +104,15 @@ function Personal({ changeScreen }: IPersonal) {
               </div>
             </div>
             <div className="w-full">
-              <label className="text-sm font-medium">Email Address</label>
+              <label className="text-sm 2xl:text-base font-medium">
+                Email Address
+              </label>
               <div className="relative">
                 <input
                   placeholder="vendor@info.ng"
                   type="email"
-                  className="placeholder:font-light mt-1 p-3 pl-9 w-full text-sm border border-[#DADAE8] rounded-[8px] focus:outline focus:outline-1 focus:outline-black"
+                  className="placeholder:font-light mt-1 p-3 pl-9 w-full text-sm 2xl:text-base
+                   border border-[#DADAE8] rounded-[8px] focus:outline focus:outline-1 focus:outline-black"
                 />
                 <img
                   className="absolute top-[55%] -translate-y-[50%] left-2"
@@ -116,12 +126,15 @@ function Personal({ changeScreen }: IPersonal) {
           </div>
           <div className="flex flex-col md:flex-row gap-3 mt-3">
             <div className="w-full">
-              <label className="text-sm font-medium">Password</label>
+              <label className="text-sm 2xl:text-base font-medium">
+                Password
+              </label>
               <div className="relative">
                 <input
                   placeholder="***********"
                   type="password"
-                  className="placeholder:font-light mt-1 p-3 pl-9 w-full text-sm border border-[#DADAE8] rounded-[8px] focus:outline focus:outline-1 focus:outline-black"
+                  className="placeholder:font-light mt-1 p-3 pl-9 w-full text-sm 2xl:text-base 
+                  border border-[#DADAE8] rounded-[8px] focus:outline focus:outline-1 focus:outline-black"
                 />
                 <img
                   className="absolute top-[50%] -translate-y-[50%] left-2"
@@ -133,12 +146,14 @@ function Personal({ changeScreen }: IPersonal) {
               </div>
             </div>
             <div className="w-full">
-              <label className="text-sm font-medium">Confirm Password</label>
+              <label className="text-sm 2xl:text-base font-medium">
+                Confirm Password
+              </label>
               <div className="relative">
                 <input
                   placeholder="***********"
                   type="password"
-                  className="placeholder:font-light mt-1 p-3 pl-9 w-full text-sm border border-[#DADAE8] rounded-[8px] focus:outline focus:outline-1 focus:outline-black"
+                  className="placeholder:font-light mt-1 p-3 pl-9 w-full text-sm 2xl:text-base border border-[#DADAE8] rounded-[8px] focus:outline focus:outline-1 focus:outline-black"
                 />
                 <img
                   className="absolute top-[50%] -translate-y-[50%] left-2"
