@@ -6,10 +6,10 @@ export const metadata = {
   description: "",
 };
 
-interface IRootLayout {
+interface RootLayoutProps {
   children: React.ReactNode;
 }
 
-export default function RootLayout({ children }: IRootLayout) {
+export default function RootLayout({ children }: RootLayoutProps) {
   return <MainLayout children={children} />;
 }

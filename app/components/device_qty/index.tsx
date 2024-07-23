@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { useState } from "react";
 
-interface IDeviceQty {
+interface DeviceQtyProps {
   deviceNo: number;
   increaseDevice: () => void;
   decreaseDevice: () => void;
@@ -13,7 +13,7 @@ function DeviceQty({
   increaseDevice,
   decreaseDevice,
   handleChange,
-}: IDeviceQty) {
+}: DeviceQtyProps) {
   return (
     <div className="flex justify-between mt-2">
       <div className="flex gap-2 items-center ">

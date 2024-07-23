@@ -12,6 +12,7 @@ import EnrollCustomerModal from "./EnrollCustomer";
 import NewCustomerModal from "./EnrollCustomerModals/NewCustomer";
 import EnrollmentPopUp from "./success_modals/Enrollment";
 import ExistingCustomerModal from "./EnrollCustomerModals/ExistingCustomer";
+import PopUp from "../tour/PopUp";
 
 function ModalHandler() {
   const requestDeviceModal = useSelector(
@@ -69,6 +70,10 @@ function ModalHandler() {
       {enrollExistingCustomerModal && <ExistingCustomerModal />}
       {enrollSuccModal && <EnrollmentPopUp />}
 
+      {/* ---------------------------------------------------------------------------------------- */}
+
+      {/* -----------------------------------  Tour Guide ------------------------------------------ */}
+      <>{/* <PopUp /> */}</>
       {/* ---------------------------------------------------------------------------------------- */}
     </>
   );

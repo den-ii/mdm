@@ -10,11 +10,11 @@ export const metadata = {
   description: "",
 };
 
-interface IDevicesLayout {
+interface DevicesLayoutProps {
   children: React.ReactNode;
 }
 
-export default function CusomersLayout({ children }: IDevicesLayout) {
+export default function CusomersLayout({ children }: DevicesLayoutProps) {
   return (
     <div className="flex flex-col pages">
       <CustomersNumLayout />

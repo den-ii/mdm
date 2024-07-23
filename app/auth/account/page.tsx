@@ -1,7 +1,7 @@
 import { redirect } from "next/navigation";
 
 function AccountPage() {
-  redirect("/auth/login");
+  redirect("/");
 }
 
 export default AccountPage;

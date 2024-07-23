@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-interface ISignedUpPage {
+interface SignedUpPageProps {
   image: string;
   imageAlt: string;
   title: string;
@@ -17,7 +17,7 @@ function RegSuccess({
   message,
   link,
   linkMsg,
-}: ISignedUpPage) {
+}: SignedUpPageProps) {
   return (
     <div className="flex p-2 min-h-screen">
       <div className="w-[40%] bg-primary_900 relative p-4">

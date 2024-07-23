@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
 
-export interface IModalState {
+export interface ModalState {
   billingInfo: boolean;
   billingInfoSuccess: boolean;
   inviteUsers: boolean;
@@ -16,7 +16,7 @@ export interface IModalState {
   requestDeviceSuccess: boolean;
 }
 
-const initialState: IModalState = {
+const initialState: ModalState = {
   billingInfo: false,
   billingInfoSuccess: false,
   inviteUsers: false,
@@ -80,10 +80,10 @@ export const modalSlice = createSlice({
       state.requestDeviceSuccess = true;
     },
     closeAModal: (state, action: PayloadAction<string>) => {
-      if (state[action.payload as keyof IModalState] === undefined) {
+      if (state[action.payload as keyof ModalState] === undefined) {
         return state;
       }
-      state[action.payload as keyof IModalState] = false;
+      state[action.payload as keyof ModalState] = false;
     },
     closeModals: (state) => {
       return {

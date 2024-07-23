@@ -1,6 +1,6 @@
 import React from "react";
 
-interface IButtons {
+interface ButtonsProps {
   onClick?: () => void;
   padding?: string;
   children?: React.ReactNode;
@@ -17,7 +17,7 @@ function Buttons({
   children,
   styles,
   noWidth,
-}: IButtons) {
+}: ButtonsProps) {
   if (primary)
     return (
       <button
