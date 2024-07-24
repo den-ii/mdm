@@ -4,6 +4,7 @@ import { authApi } from "./services/authApi";
 import storage from "redux-persist/lib/storage";
 import authReducer from "./slice/authSlice";
 import modalReducer from "./slice/modalSlice";
+import deviceTourReducer from "./slice/deviceTourSlice";
 
 const persistConfig = { key: "auth", storage };
 
@@ -14,6 +15,7 @@ export const store = configureStore({
     [authApi.reducerPath]: authApi.reducer,
     auth: persistAuthReducer,
     modal: modalReducer,
+    deviceTour: deviceTourReducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat(authApi.middleware),
