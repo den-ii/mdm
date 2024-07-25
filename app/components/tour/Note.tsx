@@ -1,8 +1,9 @@
 import Image from "next/image";
+import React from "react";
 
 interface NoteProps {
   title: string;
-  body: string;
+  body: string | React.ReactNode;
   steps: number;
   active: number;
   handleTourStage: (val: number) => void;
@@ -40,7 +41,7 @@ function Note({
   const done = steps === active;
 
   const handleNextDone = () => {
-    if (steps != active) {
+    if (steps > active) {
       handleTourStage(active + 1);
     } else {
       handleTourStage(0);

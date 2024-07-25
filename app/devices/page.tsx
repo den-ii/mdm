@@ -1,6 +1,6 @@
 "use client";
 import { useCallback } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import FtuScreen from "@/components/ftu_screen";
 import { openRequestDeviceModal } from "@/lib/slice/modalSlice";
 import { SearchNormal1 } from "iconsax-react";
@@ -8,6 +8,8 @@ import { BsFilter } from "react-icons/bs";
 import { FaEllipsisVertical } from "react-icons/fa6";
 import { redirect } from "next/navigation";
 import Link from "next/link";
+import { RootState } from "@/lib/store";
+import { closeTour, setTourStage } from "@/lib/slice/deviceTourSlice";
 
 const devices = [
   {
@@ -31,17 +33,33 @@ const devices = [
 ];
 
 function DevicesPage() {
+  const tour = useSelector((state: RootState) => state.deviceTour.tour);
+  const tourStage = useSelector(
+    (state: RootState) => state.deviceTour.tourStage
+  );
   const dispatch = useDispatch();
 
   const handleButtonAction = useCallback(() => {
     dispatch(openRequestDeviceModal());
   }, []);
 
+  console.log("tourStage", tourStage);
+
+  const tourStage2 = tour && tourStage === 2;
+
+  const handleCloseTour = () => {
+    dispatch(closeTour());
+  };
+
+  const handleTourStage = (val: number) => {
+    dispatch(setTourStage(val));
+  };
+
   const handleViewDevice = (imei: string) => redirect(`/devices/${imei}`);
 
   return (
     <div className="flex-1 flex">
-      {/* <FtuScreen
+      <FtuScreen
         imageSrc="/assets/vendor/devices/no_devices.svg"
         imageWidth={150}
         imageHeight={150}
@@ -51,8 +69,16 @@ function DevicesPage() {
         DevOS Admin will allocate devices to you. Keep an eye on notifications for updates.`}
         buttonText="Request Device"
         buttonAction={handleButtonAction}
-      /> */}
-      <div className="flex gap-5 mt-3 w-full max-w-[80%]">
+        tour={tourStage2}
+        tourNoteTitle="Request Device"
+        tourNoteBody={`If you need to request devices, click the "Request device" button. 
+        This will open a popup where you can specify the quantity of devices you need. Once submitted, the admins will be notified of your request and will process it accordingly.`}
+        tourSteps={2}
+        tourActive={2}
+        handleTourStage={handleTourStage}
+        closeTour={handleCloseTour}
+      />
+      {/* <div className="flex gap-5 mt-3 w-full max-w-[80%]">
         <div className="mt-4 border flex-1 border-neutral_300 2xl:border-2 rounded-2xl">
           <div className="flex gap-3 border-b 2xl:border-b-2  p-4 border-neutral_300">
             <div className="relative w-full max-w-[60%]">
@@ -157,7 +183,7 @@ function DevicesPage() {
             })}
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
